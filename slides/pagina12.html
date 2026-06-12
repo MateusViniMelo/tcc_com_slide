@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      html,body{height:100%;margin:0;padding:0}
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background-color: #F4F4F4;
+        font-family: 'Inter', sans-serif;
+        color: #34495E;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #2C3E50;
+        box-sizing: border-box;
+      }
+      .header {
+        height: 84px;
+        padding-top: 25px;
+        padding-left: 60px;
+        border-bottom: 1px solid #2C3E50;
+        box-sizing: border-box;
+      }
+      h2 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 38px;
+        color: #2C3E50;
+        margin: 0;
+      }
+      .main-content {
+        display: flex;
+        flex: 1;
+      }
+      .left-panel {
+        flex: 1;
+        padding: 40px 60px;
+        border-right: 1px solid #2C3E50;
+      }
+      .right-panel {
+        flex: 1;
+        padding: 40px 60px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(52, 152, 219, 0.05);
+      }
+      h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 32px;
+        color: #2980B9;
+        margin: 0 0 20px 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        font-size: 28px;
+        margin-bottom: 20px;
+        line-height: 1.4;
+        display: flex;
+        align-items: flex-start;
+      }
+      li i {
+        color: #2980B9;
+        margin-right: 15px;
+        margin-top: 10px;
+        font-size: 24px;
+      }
+      .highlight {
+        font-weight: 700;
+        color: #2C3E50;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>Mapa Cidadão: Crowdsourcing na Prática</h2>
+        </div>
+        <div class="main-content">
+            <div class="left-panel">
+                <h3>Funcionalidades Colaborativas</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> <span>Registro de ocorrências urbanas (alagamento, lixo, iluminação).</span></li>
+                    <li><i class="fas fa-thumbs-up"></i> <span>Mecanismo de <span class="highlight">validação social</span> através de "likes".</span></li>
+                    <li><i class="fas fa-check-double"></i> <span>Possibilidade de encerrar registros já resolvidos.</span></li>
+                </ul>
+            </div>
+            <div class="right-panel">
+                <h3>Valor Social e Cívico</h3>
+                <ul>
+                    <li><i class="fas fa-city"></i> <span>Construção coletiva do <span class="highlight">conhecimento urbano</span>.</span></li>
+                    <li><i class="fas fa-hands-helping"></i> <span>Fortalecimento das <span class="highlight">tecnologias cívicas</span> e engajamento.</span></li>
+                    <li><i class="fas fa-brain"></i> <span>Foco na interpretação espacial além da simples localização.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

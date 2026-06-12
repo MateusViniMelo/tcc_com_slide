@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      html,body{height:100%;margin:0;padding:0}
+      .slide-container {
+        width: 1280px;
+        height: 720px;
+        max-height: 720px;
+        overflow: hidden;
+        background-color: #F4F4F4;
+        font-family: 'Inter', sans-serif;
+        color: #34495E;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #2C3E50;
+        box-sizing: border-box;
+      }
+      .header {
+        height: 84px;
+        padding-top: 25px;
+        padding-left: 60px;
+        border-bottom: 1px solid #2C3E50;
+        box-sizing: border-box;
+      }
+      h2 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 38px;
+        color: #2C3E50;
+        margin: 0;
+      }
+      .main-content {
+        padding: 32px 60px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
+      }
+      .results-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 24px;
+        flex: 1;
+        min-height: 0;
+      }
+      .result-card {
+        background-color: white;
+        padding: 24px 22px;
+        border-left: 5px solid #3498DB;
+        min-height: 0;
+        overflow: hidden;
+      }
+      .result-title {
+        font-weight: 700;
+        font-size: 27px;
+        margin-bottom: 12px;
+        color: #2C3E50;
+      }
+      .result-desc {
+        font-size: 23px;
+        line-height: 1.3;
+      }
+      .result-desc + .result-desc {
+        margin-top: 10px;
+        font-size: 21px;
+        color: #7F8C8D;
+      }
+      .highlight {
+        font-weight: 700;
+        color: #2980B9;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>Resultados: Espaciabilidade (D1–D6)</h2>
+        </div>
+        <div class="main-content">
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-title"><i class="fas fa-compass"></i> D1: Orientação e Direção</div>
+                    <div class="result-desc">P3 avaliou as ocorrências como <span class="highlight">de fácil entendimento</span>; cenário da persona João concluído com desempenho OK.</div>
+                    <div class="result-desc"><i class="fas fa-info-circle"></i> Crítica (P2): ausência de integração com a <span class="highlight">localização do usuário</span> para reforçar proximidade territorial.</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-title"><i class="fas fa-th"></i> D2: Padrões Espaciais</div>
+                    <div class="result-desc">P2 identificou <span class="highlight">concentrações</span> em área específica; P3 considerou o ícone de alagamento <span class="highlight">eficaz</span> para áreas de risco.</div>
+                    <div class="result-desc"><i class="fas fa-info-circle"></i> Crítica (P1): não encontrou <span class="highlight">filtros ou agrupamentos</span> para comparar intensidade entre regiões.</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-title"><i class="fas fa-link"></i> D4: Associações Espaciais</div>
+                    <div class="result-desc">P2 percebeu <span class="highlight">conjuntos de problemas no mesmo bairro</span>; P3 reconheceu o <span class="highlight">potencial analítico</span> da ferramenta.</div>
+                    <div class="result-desc"><i class="fas fa-info-circle"></i> Crítica (P1): pontos sem <span class="highlight">recorrência</span>; P2 sugeriu filtros temporais para sustentar hipóteses espaciais.</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-title"><i class="fas fa-map-marker-alt"></i> D6: Tipos Espaciais</div>
+                    <div class="result-desc">P2 destacou a <span class="highlight">legenda lateral</span> e o clique no marcador como apoio à distinção entre categorias.</div>
+                    <div class="result-desc"><i class="fas fa-info-circle"></i> Crítica (P2/P3): cores semelhantes e ícones de <span class="highlight">iluminação e pavimentação</span> pouco distintos à distância.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

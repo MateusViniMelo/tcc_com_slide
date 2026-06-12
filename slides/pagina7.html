@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      html,body{height:100%;margin:0;padding:0}
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background-color: #F4F4F4;
+        font-family: 'Inter', sans-serif;
+        color: #34495E;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #2C3E50;
+        box-sizing: border-box;
+      }
+      .header {
+        height: 84px;
+        padding-top: 25px;
+        padding-left: 60px;
+        border-bottom: 1px solid #2C3E50;
+        box-sizing: border-box;
+      }
+      h2 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 38px;
+        color: #2C3E50;
+        margin: 0;
+      }
+      .main-content {
+        display: flex;
+        flex: 1;
+      }
+      .left-panel {
+        flex: 1;
+        padding: 40px 60px;
+        border-right: 1px solid #2C3E50;
+      }
+      .right-panel {
+        flex: 1;
+        padding: 40px 60px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(52, 152, 219, 0.05);
+      }
+      h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 32px;
+        color: #E74C3C;
+        margin: 0 0 20px 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        font-size: 28px;
+        margin-bottom: 20px;
+        line-height: 1.4;
+        display: flex;
+        align-items: flex-start;
+      }
+      li i {
+        color: #3498DB;
+        margin-right: 15px;
+        margin-top: 10px;
+        font-size: 24px;
+      }
+      .highlight {
+        font-weight: 700;
+        color: #2C3E50;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>Aplicação Prática do MIE</h2>
+        </div>
+        <div class="main-content">
+            <div class="left-panel">
+                <h3>Etapas da Inspeção</h3>
+                <ul>
+                    <li><i class="fas fa-list-ol"></i> <span>Definição de <span class="highlight">tarefas representativas</span> de uso do mapa.</span></li>
+                    <li><i class="fas fa-search-location"></i> <span>Exploração sistemática da interface pelo especialista.</span></li>
+                    <li><i class="fas fa-exclamation-triangle"></i> <span>Registro de rupturas no <span class="highlight">raciocínio espacial</span>.</span></li>
+                </ul>
+            </div>
+            <div class="right-panel">
+                <h3>Foco da Avaliação</h3>
+                <ul>
+                    <li><i class="fas fa-brain"></i> <span>Simulação da <span class="highlight">carga cognitiva</span> do usuário.</span></li>
+                    <li><i class="fas fa-chart-line"></i> <span>Análise das 6 dimensões (D1 a D6) da espaciabilidade.</span></li>
+                    <li><i class="fas fa-file-alt"></i> <span>Geração de um relatório de <span class="highlight">recomendações de design</span>.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

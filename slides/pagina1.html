@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      html, body { height: 100%; margin: 0; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background-color: #F4F4F4;
+        font-family: 'Inter', sans-serif;
+        color: #34495E;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+      }
+      .topographic-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        pointer-events: none;
+      }
+      .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        border: 1px solid #2C3E50;
+        margin: 10px;
+        z-index: 1;
+      }
+      .left-panel {
+        padding: 40px 60px 10px 60px; /* keep top padding for title consistency, reduce bottom padding */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-right: 1px solid #2C3E50;
+      }
+      .right-panel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2C3E50;
+        color: #F4F4F4;
+      }
+      .logo-container {
+        margin-bottom: 20px; /* keep original spacing above title */
+      }
+      .logo-ufpa {
+        width: 120px;
+        height: auto;
+        object-fit: contain;
+      }
+      h1 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 44px;
+        color: #2C3E50;
+        line-height: 1.2;
+        margin-bottom: 10px; /* reduced to save vertical space */
+      }
+      .authors {
+        font-size: 22px;
+        margin-bottom: 6px;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* put authors into two columns to save height */
+        gap: 4px 12px;
+      }
+      .authors p { margin: 2px 0; }
+      .institution {
+        font-size: 20px;
+        color: #E74C3C;
+        font-weight: 700;
+        margin-top: 6px; /* reduced gap */
+      }
+      .map-icon {
+        font-size: 200px;
+        color: #E74C3C;
+      }
+    </style>
+</head>
+<body><div class="slide-container">
+        <svg class="topographic-bg" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,100 Q320,150 640,100 T1280,100" fill="none" stroke="#2C3E50" stroke-width="1"></path>
+            <path d="M0,200 Q320,250 640,200 T1280,200" fill="none" stroke="#2C3E50" stroke-width="1"></path>
+            <path d="M0,300 Q320,350 640,300 T1280,300" fill="none" stroke="#2C3E50" stroke-width="1"></path>
+            <path d="M0,400 Q320,450 640,400 T1280,400" fill="none" stroke="#2C3E50" stroke-width="1"></path>
+            <path d="M0,500 Q320,550 640,500 T1280,500" fill="none" stroke="#2C3E50" stroke-width="1"></path>
+        </svg>
+        <div class="content-grid">
+            <div class="left-panel">
+                <div class="logo-container">
+                    <img src="https://private-us-east-1.manuscdn.com/sessionFile/hgwygMoZbo8v2GuPcDzN1L/sandbox/slides_resource_iv15uc27v0y7euf19eu8m-02ba087d-e2b-prod-us2_1780359969469_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9CcmFzYW9fVUZQQS1yZW1vdmViZy1wcmV2aWV3.png?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvaGd3eWdNb1pibzh2Mkd1UGNEek4xTC9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pdjE1dWMyN3YweTdldWYxOWV1OG0tMDJiYTA4N2QtZTJiLXByb2QtdXMyXzE3ODAzNTk5Njk0NjlfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5Q2NtRnpZVzlmVlVaUVFTMXlaVzF2ZG1WaVp5MXdjbVYyYVdWMy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xNTYwLGhfMTU2MC9mb3JtYXQsd2VicCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ckXb52gxb~NHMZepHgomt4DbwJ6MAqMvpAkeij6MQrUtiqyq7LcIvPbOwDU3VJxR3u4CMPxRsYI5kE09ilz-BCwRqCLkQVbcSrDua~6LRpJ4-eXfp6H7GiSSoQYGBVgouNEQ7oMVrg7~D6WqQ5GPNFPjI0ISNhw5vXmdE7Gj7FZ006ZgF~NEhpjUxy~P4AKJuccpwJP7XiVQZOPU9lP2AI43iX5MSfcnBsfkJ6rJH2NH6FfvTDzEVjEKi6qFQ7LPJnuGzLug56AfhLqSSxUZ1Dn2B~LwxuckbqW9haxr6nekNw0d2mW61CS0pzLOZILUluRtGBOxkdwIPo401n7oPA__" alt="Logo UFPA" class="logo-ufpa" style="display: inline-block; transform: translate(188.2px, 0px);">
+                </div>
+                <h1>Mapa Cidadão: Uma Aplicação de Crowdsourcing com Ênfase em Espaciabilidade</h1>
+                <div class="authors">
+                    <p>Mateus Vinicius S. Melo</p>
+                    <p>André Avelino da Silva Neto</p>
+                    <p>Marcelle Pereira Mota</p>
+                </div>
+                <div class="institution">
+                    <p></p>Universidade Federal do Pará - UFPA<p></p>
+                </div>
+            </div>
+            <div class="right-panel">
+                <i class="fas fa-map-marker-alt map-icon" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+<lt-toolbar contenteditable="false" data-lt-adjust-appearance="true" data-lt-force-appearance="light" style="display: none;"><lt-div class="lt-toolbar__wrapper" style="left: 553px; position: absolute !important; top: 672px !important; bottom: auto !important; z-index: 1; opacity: 1 !important; pointer-events: all !important;"><lt-div class="lt-toolbar__status-icon lt-toolbar__status-icon--trial-ended"><lt-span class="lt-icon__tooltip lt-icon__tooltip--top-right">Seu período de teste Premium terminou</lt-span></lt-div><lt-div class="lt-toolbar__premium-icon-dot"></lt-div></lt-div></lt-toolbar></body>
+</html>

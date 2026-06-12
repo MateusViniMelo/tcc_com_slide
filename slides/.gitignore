@@ -1,0 +1,15 @@
+# Dependências Node.js
+node_modules/
+
+# PDF gerado
+apresentacao.pdf
+
+# Arquivos temporários de debug
+debug-*
+test-*
+render-*
+
+# Logs npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

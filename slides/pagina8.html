@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      html,body{height:100%;margin:0;padding:0}
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background-color: #F4F4F4;
+        font-family: 'Inter', sans-serif;
+        color: #34495E;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #2C3E50;
+        box-sizing: border-box;
+      }
+      .header {
+        height: 84px;
+        padding-top: 25px;
+        padding-left: 60px;
+        border-bottom: 1px solid #2C3E50;
+        box-sizing: border-box;
+      }
+      h2 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 38px;
+        color: #2C3E50;
+        margin: 0;
+      }
+      .main-content {
+        display: flex;
+        flex: 1;
+      }
+      .left-panel {
+        flex: 1;
+        padding: 40px 60px;
+        border-right: 1px solid #2C3E50;
+      }
+      .right-panel {
+        flex: 1;
+        padding: 40px 60px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(46, 204, 113, 0.05);
+      }
+      h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 32px;
+        color: #27AE60;
+        margin: 0 0 20px 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        font-size: 28px;
+        margin-bottom: 20px;
+        line-height: 1.4;
+        display: flex;
+        align-items: flex-start;
+      }
+      li i {
+        color: #27AE60;
+        margin-right: 15px;
+        margin-top: 10px;
+        font-size: 24px;
+      }
+      .highlight {
+        font-weight: 700;
+        color: #2C3E50;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>Crowdsourcing e Georreferenciamento</h2>
+        </div>
+        <div class="main-content">
+            <div class="left-panel">
+                <h3>Inteligência Coletiva</h3>
+                <ul>
+                    <li><i class="fas fa-users"></i> <span>Atividades distribuídas realizadas por um <span class="highlight">grande número de indivíduos</span>.</span></li>
+                    <li><i class="fas fa-mobile-alt"></i> <span>Plataformas digitais como mediadoras da <span class="highlight">participação cidadã</span>.</span></li>
+                    <li><i class="fas fa-database"></i> <span>VGI: O usuário como produtor voluntário de dados espaciais.</span></li>
+                </ul>
+            </div>
+            <div class="right-panel">
+                <h3>Impacto Urbano</h3>
+                <ul>
+                    <li><i class="fas fa-chart-line"></i> <span><span class="highlight">Escalabilidade:</span> Cobertura de grandes áreas territoriais.</span></li>
+                    <li><i class="fas fa-sync"></i> <span><span class="highlight">Atualização:</span> Dados em tempo real sobre a infraestrutura da cidade.</span></li>
+                    <li><i class="fas fa-eye"></i> <span>Transparência pública e apoio à governança urbana.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

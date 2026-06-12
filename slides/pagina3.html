@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      html,body{height:100%;margin:0;padding:0}
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background-color: #F4F4F4;
+        font-family: 'Inter', sans-serif;
+        color: #34495E;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #2C3E50;
+        box-sizing: border-box;
+      }
+      .header {
+        height: 84px;
+        padding-top: 25px;
+        padding-left: 60px;
+        border-bottom: 1px solid #2C3E50;
+        box-sizing: border-box;
+      }
+      h2 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 38px;
+        color: #2C3E50;
+        margin: 0;
+      }
+      .main-content {
+        display: flex;
+        flex: 1;
+      }
+      .left-panel {
+        flex: 1.2;
+        padding: 40px 60px;
+        border-right: 1px solid #2C3E50;
+      }
+      .right-panel {
+        flex: 0.8;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(52, 152, 219, 0.05);
+      }
+      h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 32px;
+        color: #E74C3C;
+        margin: 0 0 20px 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        font-size: 28px;
+        margin-bottom: 25px;
+        line-height: 1.4;
+        display: flex;
+        align-items: flex-start;
+      }
+      li i {
+        color: #3498DB;
+        margin-right: 15px;
+        margin-top: 10px;
+        font-size: 24px;
+      }
+      .highlight {
+        font-weight: 700;
+        color: #2C3E50;
+      }
+      .concept-box {
+        text-align: center;
+        padding: 30px;
+        border: 2px solid #2C3E50;
+        background-color: white;
+      }
+      .concept-box i {
+        font-size: 80px;
+        color: #E74C3C;
+        margin-bottom: 20px;
+      }
+      .concept-box p {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>O Conceito de Espaciabilidade</h2>
+        </div>
+        <div class="main-content">
+            <div class="left-panel">
+                <h3>Um Novo Critério em IHC</h3>
+                <ul>
+                    <li><i class="fas fa-plus-circle"></i> <span>Proposto para preencher a <span class="highlight">lacuna</span> dos critérios clássicos (Usabilidade, UX).</span></li>
+                    <li><i class="fas fa-brain"></i> <span>Capacidade do design de <span class="highlight">estimular o pensamento espacial</span> do usuário.</span></li>
+                    <li><i class="fas fa-map"></i> <span>Foco na interpretação e análise de <span class="highlight">dados georreferenciados</span>.</span></li>
+                </ul>
+            </div>
+            <div class="right-panel">
+                <div class="concept-box">
+                    <i class="fas fa-compass"></i>
+                    <p>Espaciabilidade</p>
+                </div>
+                <p style="margin-top: 30px; font-size: 24px; text-align: center; font-style: italic;">
+                    "Capacidade da interface de apoiar processos de compreensão de dados espaciais."
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

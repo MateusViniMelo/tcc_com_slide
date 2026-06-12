@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      html,body{height:100%;margin:0;padding:0}
+      .slide-container {
+        width: 1280px;
+        height: 720px;
+        max-height: 720px;
+        overflow: hidden;
+        background-color: #F4F4F4;
+        font-family: 'Inter', sans-serif;
+        color: #34495E;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #2C3E50;
+        box-sizing: border-box;
+      }
+      .header {
+        height: 84px;
+        padding-top: 25px;
+        padding-left: 60px;
+        border-bottom: 1px solid #2C3E50;
+        box-sizing: border-box;
+      }
+      h2 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 38px;
+        color: #2C3E50;
+        margin: 0;
+      }
+      .main-content {
+        display: flex;
+        flex: 1;
+        min-height: 0;
+      }
+      .text-panel {
+        flex: 1;
+        padding: 40px 60px;
+        border-right: 1px solid #2C3E50;
+      }
+      .visual-panel {
+        flex: 1;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(231, 76, 60, 0.05);
+      }
+      h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 32px;
+        color: #E74C3C;
+        margin: 0 0 20px 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        font-size: 28px;
+        margin-bottom: 20px;
+        line-height: 1.4;
+        display: flex;
+        align-items: flex-start;
+      }
+      li i {
+        color: #3498DB;
+        margin-right: 15px;
+        margin-top: 10px;
+        font-size: 24px;
+      }
+      .highlight {
+        font-weight: 700;
+        color: #2C3E50;
+      }
+      .triad-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        text-align: center;
+      }
+      .triad-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .triad-item i {
+        font-size: 64px;
+        color: #2C3E50;
+        margin-bottom: 15px;
+      }
+      .triad-item span {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+      }
+      .interaction-arrow {
+        font-size: 32px;
+        color: #E74C3C;
+      }
+      .quote-box {
+        margin-top: 40px;
+        padding: 20px;
+        border-left: 5px solid #E74C3C;
+        background-color: white;
+        font-style: italic;
+        font-size: 24px;
+        width: 80%;
+        line-height: 1.4;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <h2>Considerações Finais: Síntese</h2>
+        </div>
+        <div class="main-content">
+            <div class="text-panel">
+                <h3>Contribuições e Perspectivas</h3>
+                <ul>
+                    <li><i class="fas fa-compass"></i> <span>Investigou a <span class="highlight">espaciabilidade</span> como orientação para sistemas colaborativos, concebendo o Mapa Cidadão como <span class="highlight">artefato cognitivo</span>.</span></li>
+                    <li><i class="fas fa-check-double"></i> <span>Achados positivos: apoia <span class="highlight">orientação e localização</span> (D1) e permite <span class="highlight">identificação inicial de padrões</span> espaciais via marcadores.</span></li>
+                    <li><i class="fas fa-tools"></i> <span>Direções futuras: incluir <span class="highlight">filtros, agregação e visualização analítica</span> (D2, D4) e aprimorar <span class="highlight">simbologia</span> para legibilidade (D6).</span></li>
+                </ul>
+            </div>
+            <div class="visual-panel">
+                <div class="triad-container">
+                    <div class="triad-item">
+                        <i class="fas fa-compass"></i>
+                        <span>Proposta</span>
+                    </div>
+                    <div class="interaction-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="triad-item">
+                        <i class="fas fa-check-double"></i>
+                        <span>Achados</span>
+                    </div>
+                    <div class="interaction-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="triad-item">
+                        <i class="fas fa-tools"></i>
+                        <span>Futuro</span>
+                    </div>
+                </div>
+                <div class="quote-box">
+                    "Dados georreferenciados por si só não promovem compreensão territorial — é preciso avançar em ferramentas analíticas em plataformas de mapeamento colaborativo urbano."
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
