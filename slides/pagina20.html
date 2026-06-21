@@ -24,6 +24,7 @@
         padding-left: 60px;
         border-bottom: 1px solid #2C3E50;
         box-sizing: border-box;
+        flex-shrink: 0;
       }
       h2 {
         font-family: 'Space Grotesk', sans-serif;
@@ -32,47 +33,73 @@
         margin: 0;
       }
       .main-content {
-        padding: 32px 60px;
         display: flex;
         flex-direction: column;
         flex: 1;
         min-height: 0;
+        padding: 16px 24px;
         overflow: hidden;
       }
+      .headers-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 12px;
+        flex-shrink: 0;
+      }
+      .column-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 26px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .findings-title {
+        color: #2980B9;
+        padding-right: 12px;
+        border-right: 1px solid #2C3E50;
+      }
+      .suggestions-title {
+        color: #D35400;
+        padding-left: 12px;
+      }
+      .column-title i { font-size: 22px; }
       .results-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 24px;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 12px;
         flex: 1;
         min-height: 0;
       }
-      .result-card {
+      .dim-item {
         background-color: white;
-        padding: 24px 22px;
-        border-left: 5px solid #3498DB;
+        padding: 14px 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         min-height: 0;
         overflow: hidden;
+        box-sizing: border-box;
       }
-      .result-title {
+      .dim-item.finding { border-left: 5px solid #3498DB; }
+      .dim-item.suggestion { border-left: 5px solid #E67E22; }
+      .dim-item--spacer { visibility: hidden; }
+      .dim-label {
         font-weight: 700;
-        font-size: 27px;
-        margin-bottom: 12px;
+        font-size: 22px;
+        margin-bottom: 6px;
         color: #2C3E50;
       }
-      .result-desc {
-        font-size: 23px;
+      .dim-text {
+        font-size: 18px;
         line-height: 1.3;
+        margin: 0;
       }
-      .result-desc + .result-desc {
-        margin-top: 10px;
-        font-size: 21px;
-        color: #7F8C8D;
-      }
-      .highlight {
-        font-weight: 700;
-        color: #2980B9;
-      }
+      .highlight { font-weight: 700; }
+      .finding .highlight { color: #2980B9; }
+      .suggestion .highlight { color: #D35400; }
     </style>
 </head>
 <body>
@@ -81,26 +108,42 @@
             <h2>Resultados: Espaciabilidade (D1–D6)</h2>
         </div>
         <div class="main-content">
+            <div class="headers-row">
+                <h3 class="column-title findings-title"><i class="fas fa-check-circle"></i> Aspectos Favoráveis</h3>
+                <h3 class="column-title suggestions-title"><i class="fas fa-lightbulb"></i> Limitações e Recomendações</h3>
+            </div>
             <div class="results-grid">
-                <div class="result-card">
-                    <div class="result-title"><i class="fas fa-compass"></i> D1: Orientação e Direção</div>
-                    <div class="result-desc">P3 avaliou as ocorrências como <span class="highlight">de fácil entendimento</span>; cenário da persona João concluído com desempenho OK.</div>
-                    <div class="result-desc"><i class="fas fa-info-circle"></i> Crítica (P2): ausência de integração com a <span class="highlight">localização do usuário</span> para reforçar proximidade territorial.</div>
+                <div class="dim-item finding">
+                    <div class="dim-label"><i class="fas fa-compass"></i> D1: Orientação e Direção</div>
+                    <p class="dim-text">P3 avaliou as ocorrências como <span class="highlight">de fácil entendimento</span>; cenário da persona João concluído com desempenho OK.</p>
                 </div>
-                <div class="result-card">
-                    <div class="result-title"><i class="fas fa-th"></i> D2: Padrões Espaciais</div>
-                    <div class="result-desc">P2 identificou <span class="highlight">concentrações</span> em área específica; P3 considerou o ícone de alagamento <span class="highlight">eficaz</span> para áreas de risco.</div>
-                    <div class="result-desc"><i class="fas fa-info-circle"></i> Crítica (P1): não encontrou <span class="highlight">filtros ou agrupamentos</span> para comparar intensidade entre regiões.</div>
+                <div class="dim-item suggestion">
+                    <div class="dim-label"><i class="fas fa-compass"></i> D1: Orientação e Direção</div>
+                    <p class="dim-text">P2: integrar a <span class="highlight">localização do usuário</span> para reforçar proximidade territorial.</p>
                 </div>
-                <div class="result-card">
-                    <div class="result-title"><i class="fas fa-link"></i> D4: Associações Espaciais</div>
-                    <div class="result-desc">P2 percebeu <span class="highlight">conjuntos de problemas no mesmo bairro</span>; P3 reconheceu o <span class="highlight">potencial analítico</span> da ferramenta.</div>
-                    <div class="result-desc"><i class="fas fa-info-circle"></i> Crítica (P1): pontos sem <span class="highlight">recorrência</span>; P2 sugeriu filtros temporais para sustentar hipóteses espaciais.</div>
+                <div class="dim-item finding">
+                    <div class="dim-label"><i class="fas fa-th"></i> D2: Padrões Espaciais</div>
+                    <p class="dim-text">P2 identificou <span class="highlight">concentrações</span> em área específica; P3 considerou o ícone de alagamento <span class="highlight">eficaz</span> para áreas de risco.</p>
                 </div>
-                <div class="result-card">
-                    <div class="result-title"><i class="fas fa-map-marker-alt"></i> D6: Tipos Espaciais</div>
-                    <div class="result-desc">P2 destacou a <span class="highlight">legenda lateral</span> e o clique no marcador como apoio à distinção entre categorias.</div>
-                    <div class="result-desc"><i class="fas fa-info-circle"></i> Crítica (P2/P3): cores semelhantes e ícones de <span class="highlight">iluminação e pavimentação</span> pouco distintos à distância.</div>
+                <div class="dim-item suggestion">
+                    <div class="dim-label"><i class="fas fa-th"></i> D2: Padrões Espaciais</div>
+                    <p class="dim-text">P1: incluir <span class="highlight">filtros ou agrupamentos</span> para comparar intensidade entre regiões.</p>
+                </div>
+                <div class="dim-item finding">
+                    <div class="dim-label"><i class="fas fa-link"></i> D4: Associações Espaciais</div>
+                    <p class="dim-text">P2 percebeu <span class="highlight">conjuntos de problemas no mesmo bairro</span>; P3 reconheceu o <span class="highlight">potencial analítico</span> da ferramenta.</p>
+                </div>
+                <div class="dim-item suggestion">
+                    <div class="dim-label"><i class="fas fa-link"></i> D4: Associações Espaciais</div>
+                    <p class="dim-text">P1/P2: indicar <span class="highlight">recorrência</span> nos pontos e adicionar <span class="highlight">filtros temporais</span> para sustentar hipóteses espaciais.</p>
+                </div>
+                <div class="dim-item finding">
+                    <div class="dim-label"><i class="fas fa-map-marker-alt"></i> D6: Tipos Espaciais</div>
+                    <p class="dim-text">P2 destacou a <span class="highlight">legenda lateral</span> e o clique no marcador como apoio à distinção entre categorias.</p>
+                </div>
+                <div class="dim-item suggestion">
+                    <div class="dim-label"><i class="fas fa-map-marker-alt"></i> D6: Tipos Espaciais</div>
+                    <p class="dim-text">P2/P3: diferenciar <span class="highlight">cores semelhantes</span> e tornar ícones de <span class="highlight">iluminação e pavimentação</span> mais distintos à distância.</p>
                 </div>
             </div>
         </div>

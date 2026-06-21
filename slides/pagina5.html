@@ -6,15 +6,18 @@
     <style>
       html,body{height:100%;margin:0;padding:0}
       .slide-container {
+        height: 720px;
+        max-height: 720px;
         width: 1280px;
-        min-height: 720px;
-        background-color: #F4F4F4;
+background-color: #F4F4F4;
         font-family: 'Inter', sans-serif;
         color: #34495E;
         display: flex;
         flex-direction: column;
         border: 1px solid #2C3E50;
         box-sizing: border-box;
+      
+        overflow: hidden;
       }
       .header {
         height: 84px;
@@ -86,7 +89,7 @@
             <div class="dimension-item">
                 <i class="fas fa-layer-group"></i>
                 <div class="dimension-text">
-                    <h4>D5: Sobreposição e Dissolução</h4>
+                    <h4>D5: Sobreposição de Camadas</h4>
                     <p>Integração de múltiplas <span class="highlight">camadas de informação</span> para análise crítica.</p>
                 </div>
             </div>

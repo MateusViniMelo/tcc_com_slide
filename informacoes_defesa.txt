@@ -1,0 +1,33 @@
+Curso: Sistemas de Informação — Bacharelado
+Instituição: Universidade Federal do Pará (UFPA) — Instituto de Ciências Exatas e Naturais / Faculdade de Computação
+
+Matrícula(s): 201911140034
+
+Aluno(s): Mateus Vinicius Santiago Melo
+
+Local/Plataforma: Google Meet (remoto) — [preencher com o link da chamada]
+
+Data: 25/11/2026
+
+Hora de início: 17:00
+
+Título do TCC: Mapa Cidadão: Uma Aplicação de Crowdsourcing com Ênfase em Espaciabilidade
+
+Palavras-chave: Espaciabilidade; Crowdsourcing; Mapeamento urbano; Interação Humano-Computador; Georreferenciamento; Método de Inspeção da Espaciabilidade (MIE)
+
+Resumo:
+Este artigo apresenta o Mapa Cidadão, um sistema colaborativo de mapeamento urbano desenvolvido a partir do conceito de espaciabilidade, entendido como a capacidade de interfaces cartográficas apoiarem o raciocínio espacial. Além da construção do sistema, foi conduzida uma avaliação utilizando um método de avaliação da espaciabilidade com especialistas da área de Interação Humano-Computador (IHC) e design, o MIE. Durante a avaliação buscou-se tanto avaliar a aplicação quanto o próprio método e sua produção de resultados específicos. Identificou-se a espaciabilidade como um critério relevante de avaliação para sistemas de mapas colaborativos, mas que ainda mantém uma forte interdependência entre outros critérios de qualidade em IHC, como usabilidade e experiência do usuário.
+
+Número de páginas do trabalho: 13
+
+Banca examinadora:
+
+Vinicius Augusto Carvalho de Abreu — Doutor em Bioinformática (UFMG, 2014), Professor Adjunto, Universidade Federal do Pará (UFPA). Membro interno (SIPAC: não se aplica).
+Josivan Rodrigues dos Reis — Doutor em Engenharia Elétrica (UFPA, 2025), Professor Adjunto, Universidade Federal do Pará (UFPA). Membro interno (SIPAC: não se aplica).
+Orientador(a): Marcelle Pereira Mota — Doutora em Informática (IHC, PUC-Rio, 2014), Professora, Universidade Federal do Pará (UFPA)
+
+Coorientador(a): André Avelino da Silva Neto — Mestre em Ciência da Computação (UFPA, 2019), Universidade Federal do Pará (UFPA);
+
+Avaliador 1: Vinicius Augusto Carvalho de Abreu — Doutor em Bioinformática, Professor Adjunto, UFPA
+
+Avaliador 2: Josivan Rodrigues dos Reis — Doutor em Engenharia Elétrica, Professor Adjunto, UFPA
