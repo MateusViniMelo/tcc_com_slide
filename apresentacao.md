@@ -5,9 +5,9 @@
 **Orientadora:** Marcelle Pereira Mota | **Coorientador:** André Avelino da Silva Neto  
 **Instituição:** UFPA — Faculdade de Computação — Bacharelado em Sistemas de Informação
 
-**Duração total:** 20 minutos | **26 slides** | **~45 s por slide** (média)
+**Duração total:** 20 minutos | **23 slides** | **~52 s por slide** (média)
 
-> Cada seção corresponde a um slide (`slides/pagina1.html` a `pagina26.html`). Cada slide traz duas versões: **Texto (20 min)** — versão calibrada para a apresentação oral — e **Texto expandido** — versão mais detalhada para estudo, ensaio e aprofundamento na defesa.
+> Cada seção corresponde a um slide (`slides/pagina1.html` a `pagina23.html`). Cada slide traz duas versões: **Texto (20 min)** — versão calibrada para a apresentação oral — e **Texto expandido** — versão mais detalhada para estudo, ensaio e aprofundamento na defesa.
 
 ---
 
@@ -119,43 +119,19 @@ Apesar do potencial do crowdsourcing urbano, a maior parte das aplicações aind
 
 ---
 
-## Slide 10 — Solução Proposta: Mapa Cidadão ⏱ ~45 s
+## Slide 10 — Mapa Cidadão ⏱ ~50 s
 
 **Texto (20 min)**
 
-A solução é o Mapa Cidadão, com espaciabilidade como diretriz central. Integra crowdsourcing, georreferenciamento e IHC. Os objetivos: favorecer orientação e interpretação territorial; tratar o mapa como artefato cognitivo, não apenas repositório de registros; e aplicar o MIE para verificar empiricamente se o design apoia o raciocínio espacial. O sistema foi desenvolvido e avaliado em estudo exploratório e qualitativo.
+A solução é o Mapa Cidadão: sistema colaborativo de registro e visualização de ocorrências urbanas, guiado pela espaciabilidade e integrando crowdsourcing, georreferenciamento e IHC. O mapa é tratado como artefato cognitivo para apoiar o raciocínio espacial do cidadão. As principais funções incluem navegação interativa com legenda para interpretação de tipos — D6 —, registro colaborativo com validação social por "likes", e construção coletiva do conhecimento urbano com engajamento cívico.
 
 **Texto expandido**
 
-A solução proposta é o Mapa Cidadão, concebido com a espaciabilidade como diretriz central de projeto. O trabalho integra três eixos: crowdsourcing para coleta colaborativa de ocorrências urbanas, georreferenciamento para ancoragem territorial dos dados e IHC para garantir qualidade na interação. Os objetivos são claros: construir um ambiente que favoreça orientação e interpretação territorial; tratar o mapa como artefato cognitivo capaz de gerar insights, e não apenas como repositório de registros pontuais; e aplicar o MIE para verificar, de forma empírica, se o design realmente apoia o raciocínio espacial. Diferenciando-se de plataformas que tratam o mapa só como suporte visual ao registro, o Mapa Cidadão busca apoiar operações de orientação, identificação de padrões e associações espaciais. O sistema foi desenvolvido e avaliado como parte de um estudo exploratório e qualitativo, configurando-se como pesquisa em andamento.
+A solução proposta é o Mapa Cidadão, concebido com a espaciabilidade como diretriz central de projeto. Trata-se de um sistema colaborativo de registro e visualização de ocorrências urbanas, integrando três eixos: crowdsourcing para coleta colaborativa, georreferenciamento para ancoragem territorial dos dados e IHC para garantir qualidade na interação. Diferenciando-se de plataformas que tratam o mapa apenas como suporte visual ao registro, o Mapa Cidadão busca apoiá-lo como artefato cognitivo — favorecendo orientação, identificação de padrões e interpretação de relações territoriais. Entre as principais funções estão a navegação interativa com legenda integrada, diretamente ligada à dimensão D6; o registro colaborativo de ocorrências com validação social por "likes"; e a construção coletiva do conhecimento urbano, fortalecendo tecnologias cívicas e engajamento cidadão. O sistema foi desenvolvido e avaliado em estudo exploratório e qualitativo, com aplicação do MIE para verificar empiricamente se o design apoia o raciocínio espacial.
 
 ---
 
-## Slide 11 — Mapa Cidadão: O Sistema ⏱ ~45 s
-
-**Texto (20 min)**
-
-O Mapa Cidadão é um sistema colaborativo de registro e visualização de ocorrências urbanas. A interface gira em torno de um mapa interativo com zoom e deslocamento. Marcadores diferenciados por ícones e cores representam categorias — alagamento, iluminação, lixo, pavimentação — apoiados por legenda integrada, ligada à D6. Ao clicar, o usuário vê tipo, endereço e estado do registro.
-
-**Texto expandido**
-
-O Mapa Cidadão é um sistema colaborativo de registro e visualização de ocorrências urbanas, baseado em crowdsourcing e georreferenciamento, com espaciabilidade como diretriz de projeto. Desde a concepção, buscou-se estruturar a interface não apenas como repositório de registros, mas como ambiente capaz de favorecer orientação espacial, identificação de padrões e interpretação de relações territoriais. A interface é organizada em torno de um mapa interativo central, com navegação por zoom e deslocamento. As ocorrências são representadas por marcadores geográficos diferenciados por ícones e cores, associados a categorias como alagamento, iluminação pública, lixo e pavimentação. Uma legenda integrada auxilia na interpretação dos símbolos — elemento diretamente relacionado à dimensão D6. Ao clicar em um marcador, o usuário acessa informações detalhadas: tipo do problema, endereço aproximado e estado do registro, articulando localização geográfica e conteúdo informacional.
-
----
-
-## Slide 12 — Mapa Cidadão: Crowdsourcing na Prática ⏱ ~35 s
-
-**Texto (20 min)**
-
-O usuário autenticado registra ocorrências, valida registros com "likes" e encerra ocorrências resolvidas. O perfil reúne o histórico de contribuições. Socialmente, o sistema busca construir conhecimento urbano coletivo e fortalecer tecnologias cívicas — sempre com foco na interpretação espacial, indo além da simples localização de pontos.
-
-**Texto expandido**
-
-Além da visualização, o sistema incorpora funcionalidades colaborativas que dão vida ao crowdsourcing. O usuário autenticado pode registrar novas ocorrências, interagir com registros existentes por meio de um mecanismo de validação social — os "likes" — e encerrar ocorrências já resolvidas. O acesso às funcionalidades de registro depende de login; há um menu de perfil que reúne informações do usuário e o histórico de "Minhas ocorrências", permitindo acompanhar contribuições individuais. Do ponto de vista social e cívico, o Mapa Cidadão busca a construção coletiva do conhecimento urbano, fortalecendo tecnologias cívicas, transparência e engajamento cidadão. O diferencial está no foco na interpretação espacial: o sistema foi pensado para ir além da simples localização de pontos, tratando o mapa como meio de compreensão territorial.
-
----
-
-## Slide 13 — Interface do Mapa Cidadão: Detalhamento ⏱ ~30 s
+## Slide 11 — Interface do Mapa Cidadão: Detalhamento ⏱ ~30 s
 
 **Texto (20 min)**
 
@@ -167,7 +143,7 @@ Neste slide detalho os sete elementos principais da interface, numerados na figu
 
 ---
 
-## Slide 14 — Metodologia: Personas e Tarefas ⏱ ~45 s
+## Slide 12 — Metodologia: Personas e Tarefas ⏱ ~45 s
 
 **Texto (20 min)**
 
@@ -179,7 +155,7 @@ A avaliação foi planejada com duas personas e quatro tarefas, alinhadas às di
 
 ---
 
-## Slide 15 — Coleta de Dados: Participantes ⏱ ~35 s
+## Slide 13 — Coleta de Dados: Participantes ⏱ ~35 s
 
 **Texto (20 min)**
 
@@ -191,43 +167,31 @@ Foram convidados três especialistas em IHC, identificados como P1, P2 e P3, vin
 
 ---
 
-## Slide 16 — Coleta de Dados: Ambiente e Cenários ⏱ ~30 s
+## Slide 14 — Coleta de Dados ⏱ ~45 s
 
 **Texto (20 min)**
 
-A avaliação foi remota e independente: cada especialista recebeu o protocolo, executou as tarefas simulando João e Ana, e produziu relatório individual. Os cenários aproximaram situações reais de uso, permitindo observar como o design apoia ou limita cada dimensão de espaciabilidade.
+A coleta foi remota e independente: cada especialista simulou João e Ana, conduziu a inspeção com verbalização de pensamentos e participou de entrevista semiestruturada, produzindo relatório com rupturas e recomendações. Os dados — roteiros, gravações e transcrições — foram analisados por análise temática dedutiva, com triangulação entre espaciabilidade, usabilidade, UX e avaliação do MIE.
 
 **Texto expandido**
 
-A avaliação foi conduzida de forma remota. Cada especialista recebeu o protocolo com personas, tarefas e dimensões de espaciabilidade, executou as atividades de forma independente — incorporando os perfis de João e Ana nas decisões ao longo das tarefas — e produziu um relatório de inspeção individual. Os cenários simulavam situações próximas ao uso real: João buscando padrões de iluminação no bairro, Ana tentando identificar concentrações de alagamentos, João investigando relações entre pavimentação e alagamentos, e Ana distinguindo categorias pelos marcadores. Essa estrutura permitiu observar como o design do Mapa Cidadão apoia — ou limita — cada dimensão de espaciabilidade, registrando barreiras ao raciocínio espacial, pontos positivos e recomendações objetivas de melhoria.
+A avaliação foi conduzida de forma remota e independente. Cada especialista recebeu o protocolo com personas, tarefas e dimensões de espaciabilidade, executou a inspeção simulando João e Ana — com verbalização de pensamentos (*Thinking Aloud*) — e produziu relatório individual consolidando rupturas e recomendações de design. Em seguida, participei de entrevistas semiestruturadas individuais, gravadas mediante consentimento, abordando perfil e experiência com mapas, avaliação da aplicação e reflexão sobre o MIE. Os instrumentos incluíram roteiros de inspeção, gravações de tela e áudio, e transcrições das entrevistas. Os dados foram examinados por análise temática dedutiva, com categorias predefinidas — espaciabilidade, usabilidade, experiência do usuário e avaliação do MIE. Trechos relevantes foram codificados e comparados entre avaliadores, permitindo triangulação de achados e verificação de convergências e divergências.
 
 ---
 
-## Slide 17 — Coleta de Dados: Procedimentos ⏱ ~35 s
+## Slide 15 — Entrevista Semiestruturada ⏱ ~40 s
 
 **Texto (20 min)**
 
-Após os relatórios, conduzi entrevistas semiestruturadas individuais sobre três eixos: perfil e experiência com mapas; avaliação da aplicação e sugestões de melhoria; e avaliação do MIE. Essa etapa complementou os relatórios e aprofundou a análise do sistema e do instrumento metodológico.
+Após a inspeção, conduzi entrevistas semiestruturadas por videoconferência — cerca de 50 a 60 minutos cada. Dois objetivos: avaliar se o Mapa Cidadão apoia o raciocínio espacial e a interpretação de dados geográficos; e validar o MIE — se tarefas, personas e cenários são adequados. O roteiro percorreu abertura, discussão sobre design e espaciabilidade — visualizador ou ferramenta analítica —, aspectos positivos e negativos de uso, e reflexão sobre o instrumento de avaliação.
 
 **Texto expandido**
 
-Após a entrega dos relatórios individuais, conduzi entrevistas semiestruturadas com cada participante, realizadas de forma remota e individual, gravadas mediante consentimento prévio. O roteiro abordou três eixos principais. O primeiro contextualizou o perfil dos participantes e sua experiência prévia com mapas interativos e geoinformação. O segundo concentrou-se na avaliação da aplicação: primeira impressão, percepção do mapa como visualizador ou ferramenta analítica, elementos de design que potencializavam ou limitavam a espaciabilidade, e sugestões de melhoria. O terceiro voltou-se à avaliação do próprio MIE: adequação das tarefas, relação com situações reais e possíveis aprimoramentos do método. Essa etapa complementou os relatórios escritos e permitiu aprofundar tanto a análise do sistema quanto a reflexão sobre a validade e aplicabilidade do instrumento metodológico.
+Complementando os relatórios de inspeção, apliquei um roteiro de entrevista semiestruturada em videoconferência remota, com duração aproximada de 50 a 60 minutos por especialista, gravada mediante consentimento. O instrumento tinha dois objetivos explícitos: (1) avaliar o design e as funcionalidades do Mapa Cidadão quanto à capacidade de apoiar raciocínio espacial e interpretação de dados geográficos; e (2) validar o Método de Inspeção da Espaciabilidade — adequação das tarefas com personas João e Ana, relevância dos cenários e possíveis aprimoramentos metodológicos. A estrutura seguiu cinco blocos: abertura e contextualização da experiência com mapas; exploração do uso; discussão sobre design e espaciabilidade — incluindo se o mapa atua como visualizador ou ferramenta analítica e quais elementos potencializam ou limitam a espaciabilidade; avaliação do método; e encerramento. Perguntas sobre aspectos positivos, negativos e melhorias gerais alimentaram as categorias de usabilidade e UX; as perguntas sobre o MIE fundamentaram achados sobre clareza das tarefas e formato de relatório. Roteiro completo em `leituras/entrevistas/avaliação/entrevista-semiestruturada.md`.
 
 ---
 
-## Slide 18 — Coleta de Dados: Instrumentos e Análise ⏱ ~35 s
-
-**Texto (20 min)**
-
-Relatórios e entrevistas foram analisados por análise temática dedutiva, com categorias predefinidas: espaciabilidade, usabilidade, UX e avaliação do MIE. Trechos foram codificados e comparados entre avaliadores, verificando convergências, divergências e adequação do método.
-
-**Texto expandido**
-
-Os dados dos relatórios e das entrevistas semiestruturadas foram examinados por análise temática, técnica empregada na investigação qualitativa para identificar, organizar e interpretar padrões de significado em conjuntos de dados textuais. Adotou-se abordagem dedutiva: as categorias analíticas foram previamente definidas com base nos objetivos da pesquisa — espaciabilidade, usabilidade, experiência do usuário e avaliação do MIE. Trechos relevantes dos relatórios e excertos das falas dos participantes foram codificados e alocados nas respectivas categorias. Essa estratégia possibilitou analisar percepções sob diferentes perspectivas de qualidade em IHC, comparar resultados entre avaliadores, verificar convergências e divergências e refletir sobre a adequação, consistência e possíveis aprimoramentos do MIE enquanto instrumento de avaliação.
-
----
-
-## Slide 19 — Resultados e Discussão: Visão Geral ⏱ ~50 s
+## Slide 16 — Resultados e Discussão: Visão Geral ⏱ ~50 s
 
 **Texto (20 min)**
 
@@ -239,7 +203,7 @@ Passo agora aos resultados e discussão. A análise temática identificou 23 evi
 
 ---
 
-## Slide 20 — Resultados: Espaciabilidade (D1–D6) ⏱ ~50 s
+## Slide 17 — Resultados: Espaciabilidade (D1–D6) ⏱ ~50 s
 
 **Texto (20 min)**
 
@@ -251,7 +215,7 @@ Na espaciabilidade, os resultados indicam que o sistema apoia operações básic
 
 ---
 
-## Slide 21 — Resultados: Usabilidade ⏱ ~40 s
+## Slide 18 — Resultados: Usabilidade ⏱ ~40 s
 
 **Texto (20 min)**
 
@@ -263,7 +227,7 @@ As evidências de usabilidade concentraram-se na clareza do fluxo de interação
 
 ---
 
-## Slide 22 — Resultados: Experiência do Usuário ⏱ ~40 s
+## Slide 19 — Resultados: Experiência do Usuário ⏱ ~40 s
 
 **Texto (20 min)**
 
@@ -275,7 +239,7 @@ No âmbito da experiência do usuário, os participantes reconheceram o potencia
 
 ---
 
-## Slide 23 — Resultados: Avaliação do MIE ⏱ ~45 s
+## Slide 20 — Resultados: Avaliação do MIE ⏱ ~45 s
 
 **Texto (20 min)**
 
@@ -287,7 +251,7 @@ Os especialistas consideraram o MIE aplicável, mas sugeriram ajustes na formula
 
 ---
 
-## Slide 24 — Considerações Finais: Síntese ⏱ ~45 s
+## Slide 21 — Considerações Finais: Síntese ⏱ ~45 s
 
 **Texto (20 min)**
 
@@ -299,7 +263,7 @@ Em síntese, este trabalho investigou a espaciabilidade como orientação para o
 
 ---
 
-## Slide 25 — Considerações Finais: Limitações ⏱ ~40 s
+## Slide 22 — Considerações Finais: Limitações ⏱ ~40 s
 
 **Texto (20 min)**
 
@@ -311,7 +275,7 @@ Reconheço as limitações desta pesquisa. A amostra foi reduzida — três espe
 
 ---
 
-## Slide 26 — Considerações Finais: Contribuições ⏱ ~45 s
+## Slide 23 — Considerações Finais: Contribuições ⏱ ~45 s
 
 **Texto (20 min)**
 
@@ -329,14 +293,14 @@ As principais contribuições deste trabalho são quatro. Primeiro, a consolida�
 |-------|--------|-------|
 | Abertura | 1 | ~30 s |
 | Fundamentação (IHC, espaciabilidade, MIE) | 2–7 | ~4 min |
-| Contexto e problema | 8–10 | ~2 min |
-| Sistema Mapa Cidadão | 11–13 | ~2 min |
-| Metodologia | 14–18 | ~3 min |
-| Resultados | 19–23 | ~4 min |
-| Considerações finais | 24–26 | ~2 min |
+| Contexto e problema | 8–9 | ~1,5 min |
+| Sistema Mapa Cidadão | 10–11 | ~1,5 min |
+| Metodologia | 12–15 | ~3 min |
+| Resultados | 16–20 | ~4 min |
+| Considerações finais | 21–23 | ~2 min |
 | **Reserva** | — | **~2 min** |
 
-A reserva absorve transições, pausas naturais e slides que você enfatizar um pouco mais — especialmente o 19, com o gráfico.
+A reserva absorve transições, pausas naturais e slides que você enfatizar um pouco mais — especialmente o 16, com o gráfico.
 
 ## Como usar as duas versões
 
@@ -346,7 +310,8 @@ A reserva absorve transições, pausas naturais e slides que você enfatizar um 
 ## Dicas rápidas
 
 - **Slide 6–7:** o MIE tem **três etapas** (objetivos → tarefas → inspeção), não cinco; entrevistas e análise temática são extensões deste TCC.
-- **Slide 19:** explique em uma frase cada categoria antes de comentar os números; cite que usabilidade alta não implica espaciabilidade alta.
-- **Slides 11–13:** não repita o mesmo conteúdo; o slide 13 complementa, não reexplica.
-- **Metodologia (14–18):** bloco mais denso — mantenha ritmo firme para não estourar o tempo.
+- **Slide 16:** explique em uma frase cada categoria antes de comentar os números; cite que usabilidade alta não implica espaciabilidade alta.
+- **Slides 10–11:** não repita o mesmo conteúdo; o slide 11 detalha a interface, não reexplica o sistema.
+- **Slides 14–15:** inspeção (slide 14) e entrevista pós-inspeção (slide 15) são etapas complementares — não confundir.
+- **Metodologia (12–15):** bloco mais denso — mantenha ritmo firme para não estourar o tempo.
 - **Perguntas sobre n = 3:** estudo exploratório que estende o artigo original (1 avaliador no Google Maps); ampliação com usuários leigos é trabalho futuro previsto pelos autores.
