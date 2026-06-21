@@ -6,8 +6,9 @@
     <style>
       html,body{height:100%;margin:0;padding:0}
       .slide-container {
+        height: 720px;
+        max-height: 720px;
         width: 1280px;
-        min-height: 720px;
         background-color: #F4F4F4;
         font-family: 'Inter', sans-serif;
         color: #34495E;
@@ -15,6 +16,7 @@
         flex-direction: column;
         border: 1px solid #2C3E50;
         box-sizing: border-box;
+        overflow: hidden;
       }
       .header {
         height: 84px;
@@ -30,21 +32,26 @@
         margin: 0;
       }
       .main-content {
+        display: flex;
+        flex: 1;
+      }
+      .left-panel {
+        flex: 1;
+        padding: 40px 60px;
+        border-right: 1px solid #2C3E50;
+      }
+      .right-panel {
+        flex: 1;
         padding: 40px 60px;
         display: flex;
         flex-direction: column;
-        flex: 1;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        background-color: rgba(52, 152, 219, 0.05);
       }
       h3 {
         font-family: 'Space Grotesk', sans-serif;
         font-size: 32px;
         color: #2980B9;
-        margin: 0 0 25px 0;
+        margin: 0 0 20px 0;
       }
       ul {
         list-style: none;
@@ -54,7 +61,7 @@
       li {
         font-size: 28px;
         margin-bottom: 20px;
-        line-height: 1.3;
+        line-height: 1.4;
         display: flex;
         align-items: flex-start;
       }
@@ -73,26 +80,24 @@
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Coleta de Dados: Ambiente e Cenários</h2>
+            <h2>Coleta de Dados</h2>
         </div>
         <div class="main-content">
-            <div class="grid">
-                <div>
-                    <h3>Ambiente de Teste</h3>
-                    <ul>
-                        <li><i class="fas fa-laptop-house"></i> <span>Avaliação conduzida de forma <span class="highlight">remota</span>.</span></li>
-                        <li><i class="fas fa-video"></i> <span>Uso de plataformas de videoconferência.</span></li>
-                        <li><i class="fas fa-microphone-alt"></i> <span>Gravação de áudio e compartilhamento de tela.</span></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Cenários de Uso</h3>
-                    <ul>
-                        <li><i class="fas fa-user-friends"></i> <span>Baseados nas personas <span class="highlight">João e Ana</span>.</span></li>
-                        <li><i class="fas fa-tasks"></i> <span>Tarefas específicas para as dimensões de espaciabilidade.</span></li>
-                        <li><i class="fas fa-map-marked-alt"></i> <span>Simulação de uso real do Mapa Cidadão.</span></li>
-                    </ul>
-                </div>
+            <div class="left-panel">
+                <h3>Procedimento</h3>
+                <ul>
+                    <li><i class="fas fa-laptop-house"></i> <span>Avaliação <span class="highlight">remota e independente</span>, simulando as personas João e Ana.</span></li>
+                    <li><i class="fas fa-search"></i> <span>Inspeção guiada por tarefas com verbalização de pensamentos <span class="highlight">(Thinking Aloud)</span>.</span></li>
+                    <li><i class="fas fa-comment-dots"></i> <span>Entrevista semiestruturada e consolidação de <span class="highlight">rupturas e recomendações</span> em relatório.</span></li>
+                </ul>
+            </div>
+            <div class="right-panel">
+                <h3>Instrumentos e Análise</h3>
+                <ul>
+                    <li><i class="fas fa-clipboard-check"></i> <span>Roteiros de inspeção, gravações de tela/áudio e transcrições.</span></li>
+                    <li><i class="fas fa-layer-group"></i> <span><span class="highlight">Análise Temática</span> dedutiva com categorias predefinidas.</span></li>
+                    <li><i class="fas fa-project-diagram"></i> <span>Triangulação de achados: espaciabilidade, usabilidade, UX e MIE.</span></li>
+                </ul>
             </div>
         </div>
     </div>

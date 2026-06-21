@@ -7,7 +7,9 @@
       html,body{height:100%;margin:0;padding:0}
       .slide-container {
         width: 1280px;
-        min-height: 720px;
+        height: 720px;
+        max-height: 720px;
+        overflow: hidden;
         background-color: #F4F4F4;
         font-family: 'Inter', sans-serif;
         color: #34495E;
@@ -22,6 +24,7 @@
         padding-left: 60px;
         border-bottom: 1px solid #2C3E50;
         box-sizing: border-box;
+        flex-shrink: 0;
       }
       h2 {
         font-family: 'Space Grotesk', sans-serif;
@@ -31,69 +34,117 @@
       }
       .main-content {
         display: flex;
+        flex-direction: column;
         flex: 1;
+        min-height: 0;
+        padding: 16px 24px;
+        overflow: hidden;
       }
-      .left-panel {
-        flex: 1;
-        padding: 40px 60px;
+      .headers-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 12px;
+        flex-shrink: 0;
+      }
+      .column-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 26px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .findings-title {
+        color: #2980B9;
+        padding-right: 12px;
         border-right: 1px solid #2C3E50;
       }
-      .right-panel {
+      .suggestions-title {
+        color: #D35400;
+        padding-left: 12px;
+      }
+      .column-title i { font-size: 22px; }
+      .results-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 12px;
         flex: 1;
-        padding: 40px 60px;
-        background-color: rgba(44, 62, 80, 0.05);
+        min-height: 0;
       }
-      h3 {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 32px;
-        color: #27AE60;
-        margin: 0 0 25px 0;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      li {
-        font-size: 28px;
-        margin-bottom: 25px;
-        line-height: 1.3;
+      .dim-item {
+        background-color: white;
+        padding: 14px 16px;
         display: flex;
-        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 0;
+        overflow: hidden;
+        box-sizing: border-box;
       }
-      li i {
-        color: #27AE60;
-        margin-right: 15px;
-        margin-top: 10px;
-        font-size: 24px;
-      }
-      .highlight {
+      .dim-item.finding { border-left: 5px solid #3498DB; }
+      .dim-item.suggestion { border-left: 5px solid #E67E22; }
+      .dim-item--spacer { visibility: hidden; }
+      .dim-label {
         font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 6px;
         color: #2C3E50;
       }
+      .dim-text {
+        font-size: 18px;
+        line-height: 1.3;
+        margin: 0;
+      }
+      .highlight { font-weight: 700; }
+      .finding .highlight { color: #2980B9; }
+      .suggestion .highlight { color: #D35400; }
     </style>
 </head>
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Coleta de Dados: Instrumentos e Análise</h2>
+            <h2>Resultados: Espaciabilidade (D1–D6)</h2>
         </div>
         <div class="main-content">
-            <div class="left-panel">
-                <h3>Instrumentos</h3>
-                <ul>
-                    <li><i class="fas fa-clipboard-check"></i> <span>Roteiros de inspeção e questionários.</span></li>
-                    <li><i class="fas fa-video"></i> <span>Gravações de tela e áudio <span class="highlight">(corpus)</span>.</span></li>
-                    <li><i class="fas fa-file-alt"></i> <span>Transcrição das entrevistas.</span></li>
-                </ul>
+            <div class="headers-row">
+                <h3 class="column-title findings-title"><i class="fas fa-check-circle"></i> Aspectos Favoráveis</h3>
+                <h3 class="column-title suggestions-title"><i class="fas fa-lightbulb"></i> Limitações e Recomendações</h3>
             </div>
-            <div class="right-panel">
-                <h3>Processamento Analítico</h3>
-                <ul>
-                    <li><i class="fas fa-layer-group"></i> <span>Abordagem de <span class="highlight">Análise Temática</span>.</span></li>
-                    <li><i class="fas fa-code"></i> <span>Codificação e geração de temas.</span></li>
-                    <li><i class="fas fa-project-diagram"></i> <span>Triangulação de achados: MIE, Usabilidade e UX.</span></li>
-                </ul>
+            <div class="results-grid">
+                <div class="dim-item finding">
+                    <div class="dim-label"><i class="fas fa-compass"></i> D1: Orientação e Direção</div>
+                    <p class="dim-text">P3 avaliou as ocorrências como <span class="highlight">de fácil entendimento</span>; cenário da persona João concluído com desempenho OK.</p>
+                </div>
+                <div class="dim-item suggestion">
+                    <div class="dim-label"><i class="fas fa-compass"></i> D1: Orientação e Direção</div>
+                    <p class="dim-text">P2: integrar a <span class="highlight">localização do usuário</span> para reforçar proximidade territorial.</p>
+                </div>
+                <div class="dim-item finding">
+                    <div class="dim-label"><i class="fas fa-th"></i> D2: Padrões Espaciais</div>
+                    <p class="dim-text">P2 identificou <span class="highlight">concentrações</span> em área específica; P3 considerou o ícone de alagamento <span class="highlight">eficaz</span> para áreas de risco.</p>
+                </div>
+                <div class="dim-item suggestion">
+                    <div class="dim-label"><i class="fas fa-th"></i> D2: Padrões Espaciais</div>
+                    <p class="dim-text">P1: incluir <span class="highlight">filtros ou agrupamentos</span> para comparar intensidade entre regiões.</p>
+                </div>
+                <div class="dim-item finding">
+                    <div class="dim-label"><i class="fas fa-link"></i> D4: Associações Espaciais</div>
+                    <p class="dim-text">P2 percebeu <span class="highlight">conjuntos de problemas no mesmo bairro</span>; P3 reconheceu o <span class="highlight">potencial analítico</span> da ferramenta.</p>
+                </div>
+                <div class="dim-item suggestion">
+                    <div class="dim-label"><i class="fas fa-link"></i> D4: Associações Espaciais</div>
+                    <p class="dim-text">P1/P2: indicar <span class="highlight">recorrência</span> nos pontos e adicionar <span class="highlight">filtros temporais</span> para sustentar hipóteses espaciais.</p>
+                </div>
+                <div class="dim-item finding">
+                    <div class="dim-label"><i class="fas fa-map-marker-alt"></i> D6: Tipos Espaciais</div>
+                    <p class="dim-text">P2 destacou a <span class="highlight">legenda lateral</span> e o clique no marcador como apoio à distinção entre categorias.</p>
+                </div>
+                <div class="dim-item suggestion">
+                    <div class="dim-label"><i class="fas fa-map-marker-alt"></i> D6: Tipos Espaciais</div>
+                    <p class="dim-text">P2/P3: diferenciar <span class="highlight">cores semelhantes</span> e tornar ícones de <span class="highlight">iluminação e pavimentação</span> mais distintos à distância.</p>
+                </div>
             </div>
         </div>
     </div>
