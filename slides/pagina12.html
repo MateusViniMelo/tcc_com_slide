@@ -35,12 +35,12 @@
       }
       .left-panel {
         flex: 1;
-        padding: 40px 60px;
+        padding: 40px 50px;
         border-right: 1px solid #2C3E50;
       }
       .right-panel {
-        flex: 1;
-        padding: 40px 60px;
+        flex: 1.2;
+        padding: 40px 50px;
         display: flex;
         flex-direction: column;
         background-color: rgba(52, 152, 219, 0.05);
@@ -49,7 +49,32 @@
         font-family: 'Space Grotesk', sans-serif;
         font-size: 32px;
         color: #2980B9;
-        margin: 0 0 20px 0;
+        margin: 0 0 25px 0;
+      }
+      .persona-box {
+        margin-bottom: 30px;
+        padding: 15px;
+        background: white;
+        border: 1px solid #CCC;
+      }
+      .persona-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .persona-header i {
+        font-size: 30px;
+        margin-right: 15px;
+        color: #3498DB;
+      }
+      .persona-name {
+        font-weight: 700;
+        font-size: 28px;
+        color: #2C3E50;
+      }
+      .persona-desc {
+        font-size: 24px;
+        line-height: 1.2;
       }
       ul {
         list-style: none;
@@ -57,44 +82,55 @@
         margin: 0;
       }
       li {
-        font-size: 28px;
-        margin-bottom: 20px;
-        line-height: 1.4;
+        font-size: 26px;
+        margin-bottom: 15px;
+        line-height: 1.2;
         display: flex;
         align-items: flex-start;
       }
       li i {
-        color: #2980B9;
+        color: #E74C3C;
         margin-right: 15px;
-        margin-top: 10px;
-        font-size: 24px;
+        margin-top: 8px;
+        font-size: 20px;
       }
-      .highlight {
+      .dim-badge {
         font-weight: 700;
-        color: #2C3E50;
+        color: #E74C3C;
+        margin-right: 8px;
       }
     </style>
 </head>
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Mapa Cidadão: Crowdsourcing na Prática</h2>
+            <h2>Metodologia: Personas e Tarefas</h2>
         </div>
         <div class="main-content">
             <div class="left-panel">
-                <h3>Funcionalidades Colaborativas</h3>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> <span>Registro de ocorrências urbanas (alagamento, lixo, iluminação).</span></li>
-                    <li><i class="fas fa-thumbs-up"></i> <span>Mecanismo de <span class="highlight">validação social</span> através de "likes".</span></li>
-                    <li><i class="fas fa-check-double"></i> <span>Possibilidade de encerrar registros já resolvidos.</span></li>
-                </ul>
+                <h3>Personas</h3>
+                <div class="persona-box">
+                    <div class="persona-header">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="persona-name">João (40 anos)</span>
+                    </div>
+                    <p class="persona-desc">Morador de bairro periférico. Foca em registrar iluminação e buracos e acompanhar resoluções.</p>
+                </div>
+                <div class="persona-box">
+                    <div class="persona-header">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="persona-name">Ana (27 anos)</span>
+                    </div>
+                    <p class="persona-desc">Estudante universitária. Consulta ocorrências existentes e analisa o impacto na mobilidade.</p>
+                </div>
             </div>
             <div class="right-panel">
-                <h3>Valor Social e Cívico</h3>
+                <h3>Tarefas de Validação</h3>
                 <ul>
-                    <li><i class="fas fa-city"></i> <span>Construção coletiva do <span class="highlight">conhecimento urbano</span>.</span></li>
-                    <li><i class="fas fa-hands-helping"></i> <span>Fortalecimento das <span class="highlight">tecnologias cívicas</span> e engajamento.</span></li>
-                    <li><i class="fas fa-brain"></i> <span>Foco na interpretação espacial além da simples localização.</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D1:</span> Localizar todas as ocorrências de iluminação no bairro (João).</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D2:</span> Identificar áreas com maior número de alagamentos (Ana).</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D4:</span> Relacionar falta de pavimentação com alagamentos (João).</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D6:</span> Compreender a representação de cada marcador (Ana).</span></li>
                 </ul>
             </div>
         </div>

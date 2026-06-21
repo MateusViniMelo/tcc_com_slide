@@ -36,25 +36,19 @@
         flex: 1;
         min-height: 0;
       }
-      .text-panel {
-        flex: 1;
-        padding: 40px 60px;
+      .left-panel {
+        flex: 1.1;
+        padding: 36px 50px;
         border-right: 1px solid #2C3E50;
-      }
-      .visual-panel {
-        flex: 1;
-        padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        background-color: rgba(231, 76, 60, 0.05);
       }
       h3 {
         font-family: 'Space Grotesk', sans-serif;
         font-size: 32px;
-        color: #E74C3C;
-        margin: 0 0 20px 0;
+        color: #1ABC9C;
+        margin: 0 0 28px 0;
       }
       ul {
         list-style: none;
@@ -62,97 +56,91 @@
         margin: 0;
       }
       li {
-        font-size: 28px;
-        margin-bottom: 20px;
-        line-height: 1.4;
+        font-size: 25px;
+        margin-bottom: 22px;
+        line-height: 1.35;
         display: flex;
         align-items: flex-start;
       }
       li i {
-        color: #3498DB;
-        margin-right: 15px;
-        margin-top: 10px;
-        font-size: 24px;
+        color: #1ABC9C;
+        margin-right: 16px;
+        margin-top: 6px;
+        font-size: 22px;
+        flex-shrink: 0;
+      }
+      .right-panel {
+        flex: 0.9;
+        background-color: #2C3E50;
+        color: #F4F4F4;
+        padding: 40px 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .takeaway-icon {
+        font-size: 44px;
+        color: #1ABC9C;
+        margin-bottom: 24px;
+      }
+      .takeaway-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 30px;
+        margin-bottom: 20px;
+        color: #1ABC9C;
+      }
+      .takeaway-text {
+        font-size: 26px;
+        line-height: 1.45;
+        margin: 0;
+      }
+      .contrib-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+      .tag {
+        background-color: rgba(26, 188, 156, 0.2);
+        border: 1px solid #1ABC9C;
+        color: #A3E4D7;
+        font-size: 18px;
+        padding: 6px 14px;
+        font-weight: 700;
       }
       .highlight {
         font-weight: 700;
         color: #2C3E50;
       }
-      .triad-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-        text-align: center;
-      }
-      .triad-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .triad-item i {
-        font-size: 64px;
-        color: #2C3E50;
-        margin-bottom: 15px;
-      }
-      .triad-item span {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 22px;
-        font-weight: 700;
-      }
-      .interaction-arrow {
-        font-size: 32px;
-        color: #E74C3C;
-      }
-      .quote-box {
-        margin-top: 40px;
-        padding: 20px;
-        border-left: 5px solid #E74C3C;
-        background-color: white;
-        font-style: italic;
-        font-size: 24px;
-        width: 80%;
-        line-height: 1.4;
+      .right-panel .highlight {
+        color: #A3E4D7;
       }
     </style>
 </head>
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Considerações Finais: Síntese</h2>
+            <h2>Considerações Finais: Contribuições</h2>
         </div>
         <div class="main-content">
-            <div class="text-panel">
-                <h3>Contribuições e Perspectivas</h3>
+            <div class="left-panel">
+                <h3>Principais Contribuições</h3>
                 <ul>
-                    <li><i class="fas fa-compass"></i> <span>Investigou a <span class="highlight">espaciabilidade</span> como orientação para sistemas colaborativos, concebendo o Mapa Cidadão como <span class="highlight">artefato cognitivo</span>.</span></li>
-                    <li><i class="fas fa-check-double"></i> <span>Achados positivos: apoia <span class="highlight">orientação e localização</span> (D1) e permite <span class="highlight">identificação inicial de padrões</span> espaciais via marcadores.</span></li>
-                    <li><i class="fas fa-tools"></i> <span>Direções futuras: incluir <span class="highlight">filtros, agregação e visualização analítica</span> (D2, D4) e aprimorar <span class="highlight">simbologia</span> para legibilidade (D6).</span></li>
+                    <li><i class="fas fa-map-marked-alt"></i> <span>Consolidação da <span class="highlight">espaciabilidade</span> como critério aplicável ao design de sistemas colaborativos urbanos.</span></li>
+                    <li><i class="fas fa-clipboard-check"></i> <span>Aplicação empírica do MIE com <span class="highlight">recomendações estruturadas</span>: tarefas analíticas, relatórios mistos e rótulos de categorização.</span></li>
+                    <li><i class="fas fa-laptop-code"></i> <span>Desenvolvimento do Mapa Cidadão, sistema concebido para apoiar a <span class="highlight">interpretação espacial</span> das ocorrências.</span></li>
+                    <li><i class="fas fa-link"></i> <span>Evidências sobre a interdependência entre <span class="highlight">espaciabilidade, usabilidade e UX</span> em tecnologias cívicas.</span></li>
                 </ul>
             </div>
-            <div class="visual-panel">
-                <div class="triad-container">
-                    <div class="triad-item">
-                        <i class="fas fa-compass"></i>
-                        <span>Proposta</span>
-                    </div>
-                    <div class="interaction-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                    <div class="triad-item">
-                        <i class="fas fa-check-double"></i>
-                        <span>Achados</span>
-                    </div>
-                    <div class="interaction-arrow">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                    <div class="triad-item">
-                        <i class="fas fa-tools"></i>
-                        <span>Futuro</span>
-                    </div>
-                </div>
-                <div class="quote-box">
-                    "Dados georreferenciados por si só não promovem compreensão territorial — é preciso avançar em ferramentas analíticas em plataformas de mapeamento colaborativo urbano."
+            <div class="right-panel">
+                <i class="fas fa-city takeaway-icon"></i>
+                <div class="takeaway-title">Mensagem Central</div>
+                <p class="takeaway-text">Em plataformas baseadas em mapas, a <span class="highlight">qualidade da representação espacial</span> é fundamental para transformar dados colaborativos em compreensão territorial e suporte à tomada de decisão.</p>
+                <div class="contrib-tags">
+                    <span class="tag">Espaciabilidade</span>
+                    <span class="tag">MIE</span>
+                    <span class="tag">Mapa Cidadão</span>
+                    <span class="tag">IHC</span>
                 </div>
             </div>
         </div>

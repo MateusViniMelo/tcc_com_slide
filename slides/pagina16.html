@@ -30,20 +30,23 @@
         margin: 0;
       }
       .main-content {
-        padding: 40px 60px;
         display: flex;
-        flex-direction: column;
         flex: 1;
       }
-      .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
+      .left-panel {
+        flex: 1;
+        padding: 40px 60px;
+        border-right: 1px solid #2C3E50;
+      }
+      .right-panel {
+        flex: 1;
+        padding: 40px 60px;
+        background-color: rgba(44, 62, 80, 0.05);
       }
       h3 {
         font-family: 'Space Grotesk', sans-serif;
         font-size: 32px;
-        color: #2980B9;
+        color: #27AE60;
         margin: 0 0 25px 0;
       }
       ul {
@@ -53,13 +56,13 @@
       }
       li {
         font-size: 28px;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         line-height: 1.3;
         display: flex;
         align-items: flex-start;
       }
       li i {
-        color: #2980B9;
+        color: #27AE60;
         margin-right: 15px;
         margin-top: 10px;
         font-size: 24px;
@@ -73,26 +76,24 @@
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Coleta de Dados: Ambiente e Cenários</h2>
+            <h2>Coleta de Dados: Instrumentos e Análise</h2>
         </div>
         <div class="main-content">
-            <div class="grid">
-                <div>
-                    <h3>Ambiente de Teste</h3>
-                    <ul>
-                        <li><i class="fas fa-laptop-house"></i> <span>Avaliação conduzida de forma <span class="highlight">remota</span>.</span></li>
-                        <li><i class="fas fa-video"></i> <span>Uso de plataformas de videoconferência.</span></li>
-                        <li><i class="fas fa-microphone-alt"></i> <span>Gravação de áudio e compartilhamento de tela.</span></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Cenários de Uso</h3>
-                    <ul>
-                        <li><i class="fas fa-user-friends"></i> <span>Baseados nas personas <span class="highlight">João e Ana</span>.</span></li>
-                        <li><i class="fas fa-tasks"></i> <span>Tarefas específicas para as dimensões de espaciabilidade.</span></li>
-                        <li><i class="fas fa-map-marked-alt"></i> <span>Simulação de uso real do Mapa Cidadão.</span></li>
-                    </ul>
-                </div>
+            <div class="left-panel">
+                <h3>Instrumentos</h3>
+                <ul>
+                    <li><i class="fas fa-clipboard-check"></i> <span>Roteiros de inspeção e questionários.</span></li>
+                    <li><i class="fas fa-video"></i> <span>Gravações de tela e áudio <span class="highlight">(corpus)</span>.</span></li>
+                    <li><i class="fas fa-file-alt"></i> <span>Transcrição das entrevistas.</span></li>
+                </ul>
+            </div>
+            <div class="right-panel">
+                <h3>Processamento Analítico</h3>
+                <ul>
+                    <li><i class="fas fa-layer-group"></i> <span>Abordagem de <span class="highlight">Análise Temática</span>.</span></li>
+                    <li><i class="fas fa-code"></i> <span>Codificação e geração de temas.</span></li>
+                    <li><i class="fas fa-project-diagram"></i> <span>Triangulação de achados: MIE, Usabilidade e UX.</span></li>
+                </ul>
             </div>
         </div>
     </div>

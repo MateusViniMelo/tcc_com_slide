@@ -30,20 +30,15 @@
         margin: 0;
       }
       .main-content {
-        display: flex;
-        flex: 1;
-      }
-      .left-panel {
-        flex: 1;
-        padding: 40px 50px;
-        border-right: 1px solid #2C3E50;
-      }
-      .right-panel {
-        flex: 1.2;
-        padding: 40px 50px;
+        padding: 40px 60px;
         display: flex;
         flex-direction: column;
-        background-color: rgba(52, 152, 219, 0.05);
+        flex: 1;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
       }
       h3 {
         font-family: 'Space Grotesk', sans-serif;
@@ -51,87 +46,53 @@
         color: #2980B9;
         margin: 0 0 25px 0;
       }
-      .persona-box {
-        margin-bottom: 30px;
-        padding: 15px;
-        background: white;
-        border: 1px solid #CCC;
-      }
-      .persona-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-      }
-      .persona-header i {
-        font-size: 30px;
-        margin-right: 15px;
-        color: #3498DB;
-      }
-      .persona-name {
-        font-weight: 700;
-        font-size: 28px;
-        color: #2C3E50;
-      }
-      .persona-desc {
-        font-size: 24px;
-        line-height: 1.2;
-      }
       ul {
         list-style: none;
         padding: 0;
         margin: 0;
       }
       li {
-        font-size: 26px;
-        margin-bottom: 15px;
-        line-height: 1.2;
+        font-size: 28px;
+        margin-bottom: 20px;
+        line-height: 1.3;
         display: flex;
         align-items: flex-start;
       }
       li i {
-        color: #E74C3C;
+        color: #2980B9;
         margin-right: 15px;
-        margin-top: 8px;
-        font-size: 20px;
+        margin-top: 10px;
+        font-size: 24px;
       }
-      .dim-badge {
+      .highlight {
         font-weight: 700;
-        color: #E74C3C;
-        margin-right: 8px;
+        color: #2C3E50;
       }
     </style>
 </head>
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Metodologia: Personas e Tarefas</h2>
+            <h2>Coleta de Dados: Ambiente e Cenários</h2>
         </div>
         <div class="main-content">
-            <div class="left-panel">
-                <h3>Personas</h3>
-                <div class="persona-box">
-                    <div class="persona-header">
-                        <i class="fas fa-user-circle"></i>
-                        <span class="persona-name">João (40 anos)</span>
-                    </div>
-                    <p class="persona-desc">Morador de bairro periférico. Foca em registrar iluminação e buracos e acompanhar resoluções.</p>
+            <div class="grid">
+                <div>
+                    <h3>Ambiente de Teste</h3>
+                    <ul>
+                        <li><i class="fas fa-laptop-house"></i> <span>Avaliação conduzida de forma <span class="highlight">remota</span>.</span></li>
+                        <li><i class="fas fa-video"></i> <span>Uso de plataformas de videoconferência.</span></li>
+                        <li><i class="fas fa-microphone-alt"></i> <span>Gravação de áudio e compartilhamento de tela.</span></li>
+                    </ul>
                 </div>
-                <div class="persona-box">
-                    <div class="persona-header">
-                        <i class="fas fa-user-circle"></i>
-                        <span class="persona-name">Ana (27 anos)</span>
-                    </div>
-                    <p class="persona-desc">Estudante universitária. Consulta ocorrências existentes e analisa o impacto na mobilidade.</p>
+                <div>
+                    <h3>Cenários de Uso</h3>
+                    <ul>
+                        <li><i class="fas fa-user-friends"></i> <span>Baseados nas personas <span class="highlight">João e Ana</span>.</span></li>
+                        <li><i class="fas fa-tasks"></i> <span>Tarefas específicas para as dimensões de espaciabilidade.</span></li>
+                        <li><i class="fas fa-map-marked-alt"></i> <span>Simulação de uso real do Mapa Cidadão.</span></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="right-panel">
-                <h3>Tarefas de Validação</h3>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D1:</span> Localizar todas as ocorrências de iluminação no bairro (João).</span></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D2:</span> Identificar áreas com maior número de alagamentos (Ana).</span></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D4:</span> Relacionar falta de pavimentação com alagamentos (João).</span></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D6:</span> Compreender a representação de cada marcador (Ana).</span></li>
-                </ul>
             </div>
         </div>
     </div>
