@@ -5,9 +5,9 @@
 **Orientadora:** Marcelle Pereira Mota | **Coorientador:** André Avelino da Silva Neto  
 **Instituição:** UFPA — Faculdade de Computação — Bacharelado em Sistemas de Informação
 
-**Duração total:** 20 minutos | **20 slides** | **~60 s por slide** (média)
+**Duração total:** 20 minutos | **19 slides** | **~63 s por slide** (média)
 
-> Cada seção corresponde a um slide (`slides/pagina1.html` a `pagina20.html`). Cada slide traz duas versões: **Texto (20 min)** — versão calibrada para a apresentação oral — e **Texto expandido** — versão mais detalhada para estudo, ensaio e aprofundamento na defesa.
+> Cada seção corresponde a um arquivo em `slides/` (`pagina1.html` a `pagina13.html` e `pagina15.html` a `pagina20.html` — o slide 14 foi removido). Cada slide traz duas versões: **Texto (20 min)** — versão calibrada para a apresentação oral — e **Texto expandido** — versão mais detalhada para estudo, ensaio e aprofundamento na defesa.
 
 ---
 
@@ -167,27 +167,15 @@ Complementando os relatórios de inspeção, apliquei entrevista semiestruturada
 
 ---
 
-## Slide 14 — Resultados e Discussão: Visão Geral ⏱ ~50 s
-
-**Texto (20 min)**
-
-Passo aos resultados. A análise identificou 23 evidências ricas e consistentes — 11 de espaciabilidade, 7 de usabilidade, 3 de UX e 2 sobre o MIE — a partir de relatórios e entrevistas. Espaciabilidade liderou os achados, confirmando o potencial do Mapa Cidadão como artefato cognitivo espacial. Usabilidade e UX também se destacaram, evidenciando uma proposta holística de qualidade em IHC. O sistema cumpre bem seu papel de visualizador colaborativo, com base promissora para análise espacial avançada.
-
-**Texto expandido**
-
-Passo agora aos resultados e discussão. A análise temática identificou 23 evidências qualitativas ricas e consistentes, distribuídas entre as quatro categorias analíticas, conforme o gráfico deste slide: 11 de espaciabilidade, 7 de usabilidade, 3 de experiência do usuário e 2 sobre o MIE — a partir de relatórios de inspeção e entrevistas semiestruturadas. Como esperado, a espaciabilidade concentrou o maior número de registros, confirmando o potencial do Mapa Cidadão como artefato cognitivo espacial. Porém, também emergiram evidências relevantes de usabilidade e UX, evidenciando uma proposta holística de qualidade em IHC — alinhada ao artigo de Neto e Mota, que mostra que usabilidade alta não implica espaciabilidade alta quando a tarefa exige comparar ou cruzar diferentes tipos de dados espaciais no mapa. Em síntese, o sistema cumpre bem seu papel de visualizador colaborativo de ocorrências georreferenciadas, com base promissora para análise espacial mais avançada — desde que incorporadas as melhorias apontadas pelos especialistas.
-
----
-
 ## Slide 15 — Resultados: Espaciabilidade (D1–D6) ⏱ ~55 s
 
 **Texto (20 min)**
 
-Em espaciabilidade, o slide contrasta aspectos favoráveis e limitações por dimensão. Em D1, P3 avaliou as ocorrências como de fácil entendimento, mas P2 sugeriu integrar a localização do usuário. Em D2, P2 identificou concentrações e P3 considerou o ícone de alagamento eficaz; P1 pediu filtros ou agrupamentos. Em D4, P2 percebeu conjuntos de problemas no mesmo bairro e P3 reconheceu potencial analítico; P1 e P2 sugeriram recorrência e filtros temporais. Em D6, a legenda lateral e o clique no marcador apoiaram a distinção, mas P2 e P3 apontaram cores semelhantes e ícones pouco distintos à distância.
+Passo aos resultados. Em espaciabilidade, o slide contrasta aspectos favoráveis e limitações por dimensão. Em D1, P3 avaliou as ocorrências como de fácil entendimento e o cenário da persona João foi concluído com desempenho satisfatório. Em D2, P2 identificou concentrações e P3 considerou o ícone de alagamento eficaz; P1 pediu filtros ou agrupamentos. Em D4, P2 percebeu conjuntos de problemas no mesmo bairro e P3 reconheceu potencial analítico; P1 e P2 sugeriram recorrência e filtros temporais. Em D6, a legenda lateral e o clique no marcador apoiaram a distinção, mas P2 e P3 apontaram cores semelhantes e ícones pouco distintos à distância.
 
 **Texto expandido**
 
-Na espaciabilidade, os resultados organizam-se em aspectos favoráveis e limitações por dimensão. **D1 — Orientação e direção:** P3 avaliou as ocorrências como de fácil entendimento e o cenário da persona João foi concluído com desempenho satisfatório; P2 sugeriu integrar a localização do usuário para reforçar proximidade territorial. **D2 — Padrões espaciais:** P2 identificou concentrações em área específica e P3 considerou o ícone de alagamento eficaz para áreas de risco; P1 recomendou incluir filtros ou agrupamentos para comparar intensidade entre regiões. **D4 — Associações espaciais:** P2 percebeu conjuntos de problemas no mesmo bairro e P3 reconheceu o potencial analítico da ferramenta; P1 e P2 sugeriram indicar recorrência nos pontos e adicionar filtros temporais para sustentar hipóteses espaciais. **D6 — Tipos espaciais:** P2 destacou a legenda lateral e o clique no marcador como apoio à distinção entre categorias; P2 e P3 apontaram cores semelhantes e ícones de iluminação e pavimentação pouco distintos à distância. D3 e D5 não foram priorizadas nesta avaliação.
+Na espaciabilidade, os resultados organizam-se em aspectos favoráveis e limitações por dimensão. **D1 — Orientação e direção:** P3 avaliou as ocorrências como de fácil entendimento e o cenário da persona João foi concluído com desempenho satisfatório — sem limitações registradas nesta dimensão. **D2 — Padrões espaciais:** P2 identificou concentrações em área específica e P3 considerou o ícone de alagamento eficaz para áreas de risco; P1 recomendou incluir filtros ou agrupamentos para comparar intensidade entre regiões. **D4 — Associações espaciais:** P2 percebeu conjuntos de problemas no mesmo bairro e P3 reconheceu o potencial analítico da ferramenta; P1 e P2 sugeriram indicar recorrência nos pontos e adicionar filtros temporais para sustentar hipóteses espaciais. **D6 — Tipos espaciais:** P2 destacou a legenda lateral e o clique no marcador como apoio à distinção entre categorias; P2 e P3 apontaram cores semelhantes e ícones de iluminação e pavimentação pouco distintos à distância. D3 e D5 não foram priorizadas nesta avaliação.
 
 ---
 
@@ -195,11 +183,11 @@ Na espaciabilidade, os resultados organizam-se em aspectos favoráveis e limita�
 
 **Texto (20 min)**
 
-Em usabilidade, o slide contrasta aspectos favoráveis e limitações. O fluxo de login e cadastro é completo e funcional, mas dois participantes não perceberam de imediato a exigência de login. O formulário de registro tem endereço pré-preenchido e confirmação de salvamento, porém não indica o ID da ocorrência criada. O menu reúne "Minhas ocorrências", mas sua localização é pouco evidente. Os mecanismos de like e encerrar estão presentes, mas o significado dos botões é pouco claro ao abrir o detalhe do marcador.
+Em usabilidade, o slide contrasta aspectos favoráveis e limitações. O fluxo de login e cadastro é completo e funcional, mas dois participantes não perceberam de imediato a exigência de login. O formulário de registro tem endereço pré-preenchido e confirmação de salvamento, porém não indica o ID da ocorrência criada. O menu reúne "Minhas ocorrências", mas sua localização é pouco evidente. Os mecanismos de like e encerrar estão presentes e apoiam a validação colaborativa.
 
 **Texto expandido**
 
-As evidências de usabilidade organizam-se em aspectos favoráveis e limitações. **Login e cadastro:** o fluxo de criação de conta é completo e funcional; após autenticação, o registro de ocorrências segue sem impedimentos. Dois participantes não perceberam de imediato a exigência de login — a mensagem surgiu ao tentar informar o problema. **Registro de ocorrências:** o formulário oferece endereço pré-preenchido, categoria e descrição, com confirmação de salvamento na tela; porém, após salvar, o sistema não indica o ID ou nome da ocorrência criada (P1). **Histórico pessoal:** o menu de perfil reúne "Minhas ocorrências", permitindo acompanhar contribuições individuais; contudo, sua localização é pouco evidente na arquitetura da informação. **Ações nos marcadores:** mecanismos de like e encerrar estão presentes, apoiando validação colaborativa; porém, o significado dos botões é pouco claro ao abrir o detalhe do marcador (P1). Melhorias na simbologia — D6 — beneficiariam usabilidade e espaciabilidade simultaneamente.
+As evidências de usabilidade organizam-se em aspectos favoráveis e limitações. **Login e cadastro:** o fluxo de criação de conta é completo e funcional; após autenticação, o registro de ocorrências segue sem impedimentos. Dois participantes não perceberam de imediato a exigência de login — a mensagem surgiu ao tentar informar o problema. **Registro de ocorrências:** o formulário oferece endereço pré-preenchido, categoria e descrição, com confirmação de salvamento na tela; porém, após salvar, o sistema não indica o ID ou nome da ocorrência criada (P1). **Histórico pessoal:** o menu de perfil reúne "Minhas ocorrências", permitindo acompanhar contribuições individuais; contudo, sua localização é pouco evidente na arquitetura da informação. **Ações nos marcadores:** mecanismos de like e encerrar estão presentes, apoiando validação colaborativa e gestão dos registros. Melhorias na simbologia — D6 — beneficiariam usabilidade e espaciabilidade simultaneamente.
 
 ---
 
@@ -219,11 +207,11 @@ No âmbito da experiência do usuário, os resultados organizam-se em aspectos f
 
 **Texto (20 min)**
 
-O MIE foi considerado aplicável e eficaz, capaz de gerar evidências consistentes — com recomendação de reforçar a centralidade do critério espacial sem desconsiderar usabilidade e UX. Personas e cenários aproximaram a avaliação do uso real; P1 e P3 sugeriram tarefas mais claras e analíticas. P1 adotou formato narrativo — maior riqueza de dados —; P2 e P3 organizaram por dimensões; recomenda-se relatório misto. O método captou múltiplas dimensões de qualidade; sugere-se criar rótulos para diferenciar espaciabilidade dos demais critérios.
+O MIE foi considerado aplicável e eficaz, capaz de gerar evidências consistentes — com recomendação de reforçar a centralidade do critério espacial sem desconsiderar usabilidade e UX. Personas e cenários aproximaram a avaliação do uso real; P1 e P3 sugeriram tarefas mais claras e analíticas. O método captou múltiplas dimensões de qualidade, sem que evidências de usabilidade e UX invalidem o instrumento.
 
 **Texto expandido**
 
-Os especialistas consideraram o MIE aplicável e eficaz, capaz de gerar evidências relevantes e consistentes sobre espaciabilidade — com recomendação de reforçar a centralidade do critério espacial sem desconsiderar usabilidade e UX. **Formulação de tarefas:** personas e cenários aproximaram a avaliação de uso real, orientando decisões ao longo das tarefas D1–D6; P1 e P3 sugeriram descrições mais claras e maior número de tarefas analíticas. **Formatos de relatório:** P1 adotou abordagem narrativa, com maior riqueza de dados; P2 e P3 organizaram por dimensões D1–D6. Recomenda-se formato misto — narração da persona com categorização por dimensões — alinhado às fichas de inspeção propostas por Neto e Mota. **Categorização de evidências:** o método captou múltiplas dimensões de qualidade; evidências de usabilidade e UX não invalidam o MIE, mas sugerem criar rótulos — compreensão, interpretação, decisão — para diferenciar problemas de espaciabilidade dos demais critérios.
+Os especialistas consideraram o MIE aplicável e eficaz, capaz de gerar evidências relevantes e consistentes sobre espaciabilidade — com recomendação de reforçar a centralidade do critério espacial sem desconsiderar usabilidade e UX. **Formulação de tarefas:** personas e cenários aproximaram a avaliação de uso real, orientando decisões ao longo das tarefas D1–D6; P1 e P3 sugeriram descrições mais claras e maior número de tarefas analíticas. **Categorização de evidências:** o método captou múltiplas dimensões de qualidade; evidências de usabilidade e UX não invalidam o MIE. Para aprofundamento em defesa, vale mencionar que P1 adotou relatório narrativo e P2/P3 organizaram por dimensões — ponto levantado nas entrevistas, embora não conste no slide.
 
 ---
 
@@ -249,7 +237,7 @@ Este slide sintetiza as considerações finais do trabalho em três blocos, alin
 
 **Texto (20 min)**
 
-Quanto às **limitações**: amostra reduzida de três especialistas pertencentes ao mesmo laboratório, restringindo a generalização; sistema em estágio inicial de desenvolvimento, sem funcionalidades analíticas avançadas; e avaliação concentrada na perspectiva de especialistas, sem usuários finais ou gestores públicos. Quanto às **contribuições**: consolidação da espaciabilidade como critério aplicável ao design de sistemas colaborativos urbanos; aplicação empírica e refinamento do MIE, com recomendações estruturadas de aprimoramento; desenvolvimento do Mapa Cidadão voltado à interpretação espacial das ocorrências; e evidências qualitativas sobre a relação entre espaciabilidade, usabilidade e experiência do usuário. O estudo reforça que, em tecnologias cívicas baseadas em mapas, a qualidade da representação espacial é fundamental para transformar dados colaborativos em compreensão territorial. Agradeço à orientadora Marcelle, ao coorientador André, aos membros da banca e a todos que contribuíram. Estou à disposição para perguntas.
+Quanto às **limitações**: amostra reduzida de três especialistas pertencentes ao mesmo laboratório, restringindo a generalização; sistema em estágio inicial de desenvolvimento, sem funcionalidades analíticas avançadas; e avaliação concentrada na perspectiva de especialistas, sem usuários finais ou gestores públicos. Quanto às **contribuições**: consolidação da espaciabilidade como critério aplicável ao design de sistemas colaborativos urbanos; aplicação empírica e refinamento do MIE, com recomendações estruturadas de aprimoramento; desenvolvimento do Mapa Cidadão voltado à interpretação espacial das ocorrências; e evidências qualitativas sobre a relação entre espaciabilidade, usabilidade e experiência do usuário. Agradeço à orientadora Marcelle, ao coorientador André, aos membros da banca e a todos que contribuíram. Estou à disposição para perguntas.
 
 **Texto expandido**
 
@@ -270,11 +258,11 @@ Agradeço à orientadora Marcelle Pereira Mota, ao coorientador André Avelino d
 | Contexto e problema | 7–8 | ~1,5 min |
 | Sistema Mapa Cidadão | 9–10 | ~1,5 min |
 | Metodologia | 11–13 | ~3 min |
-| Resultados | 14–18 | ~4 min |
+| Resultados | 15–18 | ~3,5 min |
 | Considerações finais | 19–20 | ~2 min |
-| **Reserva** | — | **~2 min** |
+| **Reserva** | — | **~2,5 min** |
 
-A reserva absorve transições, pausas naturais e slides que você enfatizar um pouco mais — especialmente o 14, com o gráfico.
+A reserva absorve transições, pausas naturais e slides que você enfatizar um pouco mais — especialmente os de resultados (15–18).
 
 ## Como usar as duas versões
 
@@ -287,9 +275,9 @@ A reserva absorve transições, pausas naturais e slides que você enfatizar um 
 - **Slide 10:** percorra os sete elementos numerados; cite o alinhamento com D1, D2, D4 e D6 — não repita o conteúdo do slide 9.
 - **Slide 12:** bloco mais enxuto no slide — detalhes de perfil dos participantes ficam no texto expandido para perguntas da banca.
 - **Slide 13:** a estrutura da entrevista tem **quatro blocos** (abertura, design/espaciabilidade, uso, avaliação do método).
-- **Slides 15–18:** cada slide contrasta **aspectos favoráveis** e **limitações/recomendações** — percorra os pares por tema ou dimensão.
-- **Slide 14:** explique em uma frase cada categoria antes de comentar os números do gráfico.
+- **Slide 15:** abra o bloco de resultados com uma frase de transição; em D1 há apenas aspecto favorável — não force limitação inexistente no slide.
+- **Slides 15–18:** cada slide contrasta **aspectos favoráveis** e **limitações/recomendações** — percorra os pares por tema ou dimensão; alguns temas têm só um lado (ex.: D1 no 15, ações nos marcadores no 16).
 - **Slide 19:** percorra as três colunas — **Proposta**, **Resultados** e **Implicações** — lendo os três itens de cada bloco; mantenha ritmo firme para não estourar o tempo.
-- **Slide 20:** apresente primeiro as **três limitações** (coluna esquerda) e depois as **quatro contribuições** (coluna direita); encerre com a frase sobre qualidade da representação espacial e os agradecimentos.
+- **Slide 20:** apresente primeiro as **três limitações** (coluna esquerda) e depois as **quatro contribuições** (coluna direita); encerre verbalmente com os agradecimentos.
 - **Metodologia (11–13):** bloco denso — mantenha ritmo firme para não estourar o tempo.
 - **Perguntas sobre n = 3:** estudo exploratório que estende o artigo original (1 avaliador no Google Maps); ampliação com usuários leigos é trabalho futuro previsto pelos autores.
