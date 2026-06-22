@@ -6,9 +6,10 @@
     <style>
       html,body{height:100%;margin:0;padding:0}
       .slide-container {
+        width: 1280px;
         height: 720px;
         max-height: 720px;
-        width: 1280px;
+        overflow: hidden;
         background-color: #F4F4F4;
         font-family: 'Inter', sans-serif;
         color: #34495E;
@@ -16,7 +17,6 @@
         flex-direction: column;
         border: 1px solid #2C3E50;
         box-sizing: border-box;
-        overflow: hidden;
       }
       .header {
         height: 84px;
@@ -32,26 +32,77 @@
         margin: 0;
       }
       .main-content {
+        padding: 32px 60px;
         display: flex;
         flex: 1;
+        min-height: 0;
+        gap: 40px;
+        overflow: hidden;
       }
-      .left-panel {
-        flex: 1;
-        padding: 40px 60px;
-        border-right: 1px solid #2C3E50;
-      }
-      .right-panel {
-        flex: 1;
-        padding: 40px 60px;
+      .chart-panel {
+        flex: 1.2;
         display: flex;
         flex-direction: column;
-        background-color: rgba(52, 152, 219, 0.05);
+        justify-content: center;
+      }
+      .chart-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 26px;
+        margin-right: 100px;
+        color: #2C3E50;
+        margin-bottom: 100px;
+        text-align: center;
+      }
+      .bar-chart {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 40px;
+        height: 280px;
+        padding: 0 20px 24px;
+        margin-bottom: 100px;
+        border-bottom: 2px solid #2C3E50;
+      }
+      .bar-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        max-width: 140px;
+      }
+      .bar-value {
+        font-weight: 700;
+        font-size: 28px;
+        color: #2C3E50;
+        margin-bottom: 8px;
+      }
+      .bar {
+        width: 80px;
+        border-radius: 4px 4px 0 0;
+        transition: height 0.3s;
+      }
+      .bar-label {
+        font-size: 20px;
+        margin-top: 15px;
+        text-align: center;
+        line-height: 1.2;
+        color: #2C3E50;
+      }
+      .bar-esp { background-color: #3498DB; }
+      .bar-usa { background-color: #27AE60; }
+      .bar-ux  { background-color: #E67E22; }
+      .bar-mie { background-color: #9B59B6; }
+      .summary-panel {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
       h3 {
         font-family: 'Space Grotesk', sans-serif;
         font-size: 32px;
-        color: #2980B9;
-        margin: 0 0 20px 0;
+        color: #3498DB;
+        margin: 0 0 25px 0;
       }
       ul {
         list-style: none;
@@ -59,17 +110,17 @@
         margin: 0;
       }
       li {
-        font-size: 28px;
-        margin-bottom: 20px;
-        line-height: 1.4;
+        font-size: 24px;
+        margin-bottom: 18px;
+        line-height: 1.3;
         display: flex;
         align-items: flex-start;
       }
       li i {
-        color: #2980B9;
+        color: #3498DB;
         margin-right: 15px;
-        margin-top: 10px;
-        font-size: 24px;
+        margin-top: 8px;
+        font-size: 22px;
       }
       .highlight {
         font-weight: 700;
@@ -80,23 +131,41 @@
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Coleta de Dados</h2>
+            <h2>Resultados e Discussão: Visão Geral</h2>
         </div>
         <div class="main-content">
-            <div class="left-panel">
-                <h3>Procedimento</h3>
-                <ul>
-                    <li><i class="fas fa-laptop-house"></i> <span>Avaliação <span class="highlight">remota e independente</span>, simulando as personas João e Ana.</span></li>
-                    <li><i class="fas fa-search"></i> <span>Inspeção guiada por tarefas com verbalização de pensamentos <span class="highlight">(Thinking Aloud)</span>.</span></li>
-                    <li><i class="fas fa-comment-dots"></i> <span>Entrevista semiestruturada e consolidação de <span class="highlight">rupturas e recomendações</span> em relatório.</span></li>
-                </ul>
+            <div class="chart-panel">
+                <div class="chart-title">Evidências por Categoria Analítica</div>
+                <div class="bar-chart">
+                    <div class="bar-group">
+                        <div class="bar-value">11</div>
+                        <div class="bar bar-esp" style="height: 240px;"></div>
+                        <div class="bar-label">Espaciabilidade</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar-value">7</div>
+                        <div class="bar bar-usa" style="height: 153px;"></div>
+                        <div class="bar-label">Usabilidade</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar-value">3</div>
+                        <div class="bar bar-ux" style="height: 66px;"></div>
+                        <div class="bar-label">UX</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar-value">2</div>
+                        <div class="bar bar-mie" style="height: 44px;"></div>
+                        <div class="bar-label">MIE</div>
+                    </div>
+                </div>
             </div>
-            <div class="right-panel">
-                <h3>Instrumentos e Análise</h3>
+            <div class="summary-panel">
+                <h3>Síntese dos Achados</h3>
                 <ul>
-                    <li><i class="fas fa-clipboard-check"></i> <span>Roteiros de inspeção, gravações de tela/áudio e transcrições.</span></li>
-                    <li><i class="fas fa-layer-group"></i> <span><span class="highlight">Análise Temática</span> dedutiva com categorias predefinidas.</span></li>
-                    <li><i class="fas fa-project-diagram"></i> <span>Triangulação de achados: espaciabilidade, usabilidade, UX e MIE.</span></li>
+                    <li><i class="fas fa-chart-bar"></i> <span><span class="highlight">23 evidências</span> ricas e consistentes, identificadas por análise temática (relatórios + entrevistas).</span></li>
+                    <li><i class="fas fa-map"></i> <span>Espaciabilidade liderou os achados, <span class="highlight">confirmando o potencial</span> do Mapa Cidadão como artefato cognitivo espacial.</span></li>
+                    <li><i class="fas fa-exchange-alt"></i> <span>Usabilidade e UX também se destacaram, evidenciando uma <span class="highlight">proposta holística</span> de qualidade em IHC.</span></li>
+                    <li><i class="fas fa-eye"></i> <span>O sistema cumpre bem seu papel de <span class="highlight">visualizador colaborativo</span>, com base promissora para análise espacial avançada.</span></li>
                 </ul>
             </div>
         </div>
