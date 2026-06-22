@@ -7,7 +7,7 @@
 
 **Duração total:** 20 minutos | **19 slides** | **~63 s por slide** (média)
 
-> Cada seção corresponde a um arquivo em `slides/` (`pagina1.html` a `pagina13.html` e `pagina15.html` a `pagina20.html` — o slide 14 foi removido). Cada slide traz duas versões: **Texto (20 min)** — versão calibrada para a apresentação oral — e **Texto expandido** — versão mais detalhada para estudo, ensaio e aprofundamento na defesa.
+> Cada seção corresponde a um slide (`slides/pagina1.html` a `pagina19.html`). Cada slide traz duas versões: **Texto (20 min)** — versão calibrada para a apresentação oral — e **Texto expandido** — versão mais detalhada para estudo, ensaio e aprofundamento na defesa.
 
 ---
 
@@ -167,7 +167,7 @@ Complementando os relatórios de inspeção, apliquei entrevista semiestruturada
 
 ---
 
-## Slide 15 — Resultados: Espaciabilidade (D1–D6) ⏱ ~55 s
+## Slide 14 — Resultados: Espaciabilidade (D1–D6) ⏱ ~55 s
 
 **Texto (20 min)**
 
@@ -179,7 +179,7 @@ Na espaciabilidade, os resultados organizam-se em aspectos favoráveis e limita�
 
 ---
 
-## Slide 16 — Resultados: Usabilidade ⏱ ~50 s
+## Slide 15 — Resultados: Usabilidade ⏱ ~50 s
 
 **Texto (20 min)**
 
@@ -191,7 +191,7 @@ As evidências de usabilidade organizam-se em aspectos favoráveis e limitaçõe
 
 ---
 
-## Slide 17 — Resultados: Experiência do Usuário ⏱ ~50 s
+## Slide 16 — Resultados: Experiência do Usuário ⏱ ~50 s
 
 **Texto (20 min)**
 
@@ -203,7 +203,7 @@ No âmbito da experiência do usuário, os resultados organizam-se em aspectos f
 
 ---
 
-## Slide 18 — Resultados: Avaliação do MIE ⏱ ~50 s
+## Slide 17 — Resultados: Avaliação do MIE ⏱ ~50 s
 
 **Texto (20 min)**
 
@@ -215,7 +215,7 @@ Os especialistas consideraram o MIE aplicável e eficaz, capaz de gerar evidênc
 
 ---
 
-## Slide 19 — Considerações Finais: Síntese ⏱ ~55 s
+## Slide 18 — Considerações Finais: Síntese ⏱ ~55 s
 
 **Texto (20 min)**
 
@@ -233,7 +233,7 @@ Este slide sintetiza as considerações finais do trabalho em três blocos, alin
 
 ---
 
-## Slide 20 — Considerações Finais: Limitações e Contribuições ⏱ ~55 s
+## Slide 19 — Considerações Finais: Limitações e Contribuições ⏱ ~55 s
 
 **Texto (20 min)**
 
@@ -258,11 +258,11 @@ Agradeço à orientadora Marcelle Pereira Mota, ao coorientador André Avelino d
 | Contexto e problema | 7–8 | ~1,5 min |
 | Sistema Mapa Cidadão | 9–10 | ~1,5 min |
 | Metodologia | 11–13 | ~3 min |
-| Resultados | 15–18 | ~3,5 min |
-| Considerações finais | 19–20 | ~2 min |
+| Resultados | 14–17 | ~3,5 min |
+| Considerações finais | 18–19 | ~2 min |
 | **Reserva** | — | **~2,5 min** |
 
-A reserva absorve transições, pausas naturais e slides que você enfatizar um pouco mais — especialmente os de resultados (15–18).
+A reserva absorve transições, pausas naturais e slides que você enfatizar um pouco mais — especialmente os de resultados (14–17).
 
 ## Como usar as duas versões
 
@@ -275,9 +275,9 @@ A reserva absorve transições, pausas naturais e slides que você enfatizar um 
 - **Slide 10:** percorra os sete elementos numerados; cite o alinhamento com D1, D2, D4 e D6 — não repita o conteúdo do slide 9.
 - **Slide 12:** bloco mais enxuto no slide — detalhes de perfil dos participantes ficam no texto expandido para perguntas da banca.
 - **Slide 13:** a estrutura da entrevista tem **quatro blocos** (abertura, design/espaciabilidade, uso, avaliação do método).
-- **Slide 15:** abra o bloco de resultados com uma frase de transição; em D1 há apenas aspecto favorável — não force limitação inexistente no slide.
-- **Slides 15–18:** cada slide contrasta **aspectos favoráveis** e **limitações/recomendações** — percorra os pares por tema ou dimensão; alguns temas têm só um lado (ex.: D1 no 15, ações nos marcadores no 16).
-- **Slide 19:** percorra as três colunas — **Proposta**, **Resultados** e **Implicações** — lendo os três itens de cada bloco; mantenha ritmo firme para não estourar o tempo.
-- **Slide 20:** apresente primeiro as **três limitações** (coluna esquerda) e depois as **quatro contribuições** (coluna direita); encerre verbalmente com os agradecimentos.
+- **Slide 14:** abra o bloco de resultados com uma frase de transição; em D1 há apenas aspecto favorável — não force limitação inexistente no slide.
+- **Slides 14–17:** cada slide contrasta **aspectos favoráveis** e **limitações/recomendações** — percorra os pares por tema ou dimensão; alguns temas têm só um lado (ex.: D1 no 14, ações nos marcadores no 15).
+- **Slide 18:** percorra as três colunas — **Proposta**, **Resultados** e **Implicações** — lendo os três itens de cada bloco; mantenha ritmo firme para não estourar o tempo.
+- **Slide 19:** apresente primeiro as **três limitações** (coluna esquerda) e depois as **quatro contribuições** (coluna direita); encerre verbalmente com os agradecimentos.
 - **Metodologia (11–13):** bloco denso — mantenha ritmo firme para não estourar o tempo.
 - **Perguntas sobre n = 3:** estudo exploratório que estende o artigo original (1 avaliador no Google Maps); ampliação com usuários leigos é trabalho futuro previsto pelos autores.
