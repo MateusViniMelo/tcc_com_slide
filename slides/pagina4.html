@@ -34,21 +34,68 @@ background-color: #F4F4F4;
       }
       .main-content {
         display: flex;
+        flex-direction: row;
         flex: 1;
+        min-height: 0;
+        overflow: hidden;
       }
       .text-panel {
         flex: 1;
-        padding: 40px 60px;
+        min-width: 0;
+        padding: 32px 40px;
         border-right: 1px solid #2C3E50;
-      }
-      .visual-panel {
-        flex: 1;
-        padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        box-sizing: border-box;
+      }
+      .visual-panel {
+        flex: 1;
+        min-width: 0;
+        padding: 28px 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         background-color: rgba(231, 76, 60, 0.05);
+        box-sizing: border-box;
+      }
+      .table-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 28px;
+        color: #E74C3C;
+        margin: 0 0 18px 0;
+        line-height: 1.2;
+      }
+      .table-caption {
+        font-size: 15px;
+        color: #7f8c8d;
+        margin: 14px 0 0 0;
+        text-align: right;
+      }
+      .criteria-table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        font-size: 20px;
+        line-height: 1.4;
+      }
+      .criteria-table th,
+      .criteria-table td {
+        border: 1px solid #d5d8dc;
+        padding: 16px 14px;
+        vertical-align: top;
+        text-align: left;
+      }
+      .criteria-table th {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 19px;
+        color: #2C3E50;
+        background-color: #ecf0f1;
+      }
+      .criteria-table td:first-child {
+        font-weight: 700;
+        color: #2C3E50;
+        width: 28%;
       }
       h3 {
         font-family: 'Space Grotesk', sans-serif;
@@ -78,41 +125,6 @@ background-color: #F4F4F4;
         font-weight: 700;
         color: #2C3E50;
       }
-      .triad-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-        text-align: center;
-      }
-      .triad-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .triad-item i {
-        font-size: 80px;
-        color: #2C3E50;
-        margin-bottom: 15px;
-      }
-      .triad-item span {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 24px;
-        font-weight: 700;
-      }
-      .interaction-arrow {
-        font-size: 40px;
-        color: #E74C3C;
-      }
-      .quote-box {
-        margin-top: 40px;
-        padding: 20px;
-        border-left: 5px solid #E74C3C;
-        background-color: white;
-        font-style: italic;
-        font-size: 24px;
-        width: 80%;
-      }
     </style>
 </head>
 <body>
@@ -126,26 +138,43 @@ background-color: #F4F4F4;
                 <ul>
                     <li><i class="fas fa-search"></i> <span>Estudo do <span class="highlight">design, avaliação e implementação</span> de sistemas interativos.</span></li>
                     <li><i class="fas fa-bullseye"></i> <span>Objetivo: Tornar a tecnologia mais <span class="highlight">usável, acessível e prazerosa</span> para as pessoas.</span></li>
-                    <li><i class="fas fa-users"></i> <span>Foca na experiência do usuário e na <span class="highlight">eficácia da comunicação</span> entre homem e máquina.</span></li>
+                   
                 </ul>
             </div>
             <div class="visual-panel">
-                <div class="triad-container">
-                    <div class="triad-item">
-                        <i class="fas fa-user"></i>
-                        <span>Humano</span>
-                    </div>
-                    <div class="interaction-arrow">
-                        <i class="fas fa-exchange-alt"></i>
-                    </div>
-                    <div class="triad-item">
-                        <i class="fas fa-desktop"></i>
-                        <span>Computador</span>
-                    </div>
-                </div>
-                <div class="quote-box">
-                    "IHC é a disciplina que se preocupa com o design, avaliação e implementação de sistemas computacionais interativos para uso humano."
-                </div>
+              <h3 class="table-title">Critérios clássicos de IHC</h3>
+                <table class="criteria-table">
+                    <thead>
+                        <tr>
+                            <th>Critério</th>
+                            <th>Foco</th>
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Usabilidade</td>
+                            <td>Eficácia, eficiência, satisfação</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Acessibilidade</td>
+                            <td>Inclusão de diferentes perfis</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>UX</td>
+                            <td>Emoções, valores, significados</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Comunicabilidade</td>
+                            <td>Intenção do designer via signos</td>
+                           
+                        </tr>
+                    </tbody>
+                </table>
+               
             </div>
         </div>
     </div>
