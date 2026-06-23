@@ -36,19 +36,19 @@ background-color: #F4F4F4;
         display: flex;
         flex: 1;
       }
-      .left-panel {
-        flex: 1.2;
+      .text-panel {
+        flex: 1;
         padding: 40px 60px;
         border-right: 1px solid #2C3E50;
       }
-      .right-panel {
-        flex: 0.8;
+      .visual-panel {
+        flex: 1;
         padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: rgba(52, 152, 219, 0.05);
+        background-color: rgba(231, 76, 60, 0.05);
       }
       h3 {
         font-family: 'Space Grotesk', sans-serif;
@@ -63,7 +63,7 @@ background-color: #F4F4F4;
       }
       li {
         font-size: 28px;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         line-height: 1.4;
         display: flex;
         align-items: flex-start;
@@ -78,47 +78,74 @@ background-color: #F4F4F4;
         font-weight: 700;
         color: #2C3E50;
       }
-      .concept-box {
+      .triad-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
         text-align: center;
-        padding: 30px;
-        border: 2px solid #2C3E50;
-        background-color: white;
       }
-      .concept-box i {
+      .triad-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .triad-item i {
         font-size: 80px;
-        color: #E74C3C;
-        margin-bottom: 20px;
+        color: #2C3E50;
+        margin-bottom: 15px;
       }
-      .concept-box p {
+      .triad-item span {
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 32px;
+        font-size: 24px;
         font-weight: 700;
-        margin: 0;
+      }
+      .interaction-arrow {
+        font-size: 40px;
+        color: #E74C3C;
+      }
+      .quote-box {
+        margin-top: 40px;
+        padding: 20px;
+        border-left: 5px solid #E74C3C;
+        background-color: white;
+        font-style: italic;
+        font-size: 24px;
+        width: 80%;
       }
     </style>
 </head>
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>O Conceito de Espaciabilidade</h2>
+            <h2>Interação Humano-Computador (IHC)</h2>
         </div>
         <div class="main-content">
-            <div class="left-panel">
-                <h3>Um Novo Critério em IHC</h3>
+            <div class="text-panel">
+                <h3>Definição e Objetivos</h3>
                 <ul>
-                    <li><i class="fas fa-plus-circle"></i> <span>Proposto para preencher a <span class="highlight">lacuna</span> dos critérios clássicos (Usabilidade, UX).</span></li>
-                    <li><i class="fas fa-brain"></i> <span>Capacidade do design de <span class="highlight">estimular o pensamento espacial</span> do usuário.</span></li>
-                    <li><i class="fas fa-map"></i> <span>Foco na interpretação e análise de <span class="highlight">dados georreferenciados</span>.</span></li>
+                    <li><i class="fas fa-search"></i> <span>Estudo do <span class="highlight">design, avaliação e implementação</span> de sistemas interativos.</span></li>
+                    <li><i class="fas fa-bullseye"></i> <span>Objetivo: Tornar a tecnologia mais <span class="highlight">usável, acessível e prazerosa</span> para as pessoas.</span></li>
+                    <li><i class="fas fa-users"></i> <span>Foca na experiência do usuário e na <span class="highlight">eficácia da comunicação</span> entre homem e máquina.</span></li>
                 </ul>
             </div>
-            <div class="right-panel">
-                <div class="concept-box">
-                    <i class="fas fa-compass"></i>
-                    <p>Espaciabilidade</p>
+            <div class="visual-panel">
+                <div class="triad-container">
+                    <div class="triad-item">
+                        <i class="fas fa-user"></i>
+                        <span>Humano</span>
+                    </div>
+                    <div class="interaction-arrow">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="triad-item">
+                        <i class="fas fa-desktop"></i>
+                        <span>Computador</span>
+                    </div>
                 </div>
-                <p style="margin-top: 30px; font-size: 24px; text-align: center; font-style: italic;">
-                    "Capacidade da interface de apoiar processos de compreensão de dados espaciais."
-                </p>
+                <div class="quote-box">
+                    "IHC é a disciplina que se preocupa com o design, avaliação e implementação de sistemas computacionais interativos para uso humano."
+                </div>
             </div>
         </div>
     </div>

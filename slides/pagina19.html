@@ -46,178 +46,178 @@
         margin: 0;
       }
       .main-content {
-        display: flex;
         flex: 1;
         min-height: 0;
+        padding: 24px 40px 28px;
         overflow: hidden;
+        box-sizing: border-box;
       }
-      .column {
-        flex: 1;
+      .synthesis-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        height: 100%;
+      }
+      .syn-card {
         display: flex;
         flex-direction: column;
         min-height: 0;
         overflow: hidden;
+        box-sizing: border-box;
       }
-      .column:first-child {
-        border-right: 1px solid #2c3e50;
-      }
-      .column-header {
+      .syn-card-top {
         display: flex;
         align-items: center;
         gap: 12px;
-        padding: 18px 36px;
+        padding: 14px 18px;
         border-bottom: 1px solid #2c3e50;
+        flex-shrink: 0;
+      }
+      .syn-card-top i {
+        font-size: 26px;
+      }
+      .syn-card-top span {
         font-family: "Space Grotesk", sans-serif;
         font-size: 26px;
-        flex-shrink: 0;
+        font-weight: 700;
+        color: #2c3e50;
       }
-      .column-header i {
-        font-size: 24px;
-      }
-      .limitations-header {
-        background-color: rgba(192, 57, 43, 0.08);
-        color: #c0392b;
-      }
-      .contributions-header {
-        background-color: rgba(26, 188, 156, 0.08);
-        color: #1abc9c;
-      }
-      .item-list {
+      .syn-card-body {
+        list-style: none;
+        margin: 0;
+        padding: 16px;
+        flex: 1;
+        min-height: 0;
         display: flex;
         flex-direction: column;
-        gap: 14px;
-        flex: 1;
-        min-height: 0;
-        padding: 24px 36px;
-        overflow: hidden;
-      }
-      .list-item {
-        background-color: white;
-        border: 1px solid #2c3e50;
-        padding: 18px 20px;
-        display: flex;
-        align-items: flex-start;
-        gap: 14px;
-        font-size: 20px;
-        line-height: 1.35;
-        flex: 1;
-        min-height: 0;
+        gap: 12px;
         box-sizing: border-box;
       }
-      .list-item i {
-        margin-top: 4px;
-        font-size: 20px;
+      .syn-card-body li {
+        flex: 1 1 0;
+        min-height: 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px;
+        background-color: #f8f9fa;
+        border-left: 4px solid #3498db;
+        font-size: 22px;
+        line-height: 1.35;
+        box-sizing: border-box;
+      }
+      .syn-card-body li i {
+        font-size: 16px;
+        margin-top: 7px;
         flex-shrink: 0;
+        color: #3498db;
       }
-      .limitations-header + .item-list .list-item i {
-        color: #e74c3c;
+      .syn-proposta .syn-card-top {
+        background-color: rgba(52, 152, 219, 0.12);
       }
-      .contributions-header + .item-list .list-item i {
-        color: #1abc9c;
+      .syn-proposta .syn-card-top i {
+        color: #3498db;
       }
-      .message-box {
-        margin: 0 36px 28px;
-        background-color: #2c3e50;
-        color: #f4f4f4;
-        padding: 18px 22px;
-        flex-shrink: 0;
+      .syn-proposta .syn-card-body li {
+        border-left-color: #3498db;
       }
-      .message-box .msg-title {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 20px;
-        color: #1abc9c;
-        margin-bottom: 8px;
+      .syn-proposta .syn-card-body li i {
+        color: #3498db;
       }
-      .message-box p {
-        font-size: 18px;
-        line-height: 1.4;
-        margin: 0;
+      .syn-resultados .syn-card-top {
+        background-color: rgba(39, 174, 96, 0.12);
+      }
+      .syn-resultados .syn-card-top i {
+        color: #27ae60;
+      }
+      .syn-resultados .syn-card-body li {
+        border-left-color: #27ae60;
+      }
+      .syn-resultados .syn-card-body li i {
+        color: #27ae60;
+      }
+      .syn-implicacoes .syn-card-top {
+        background-color: rgba(230, 126, 34, 0.12);
+      }
+      .syn-implicacoes .syn-card-top i {
+        color: #e67e22;
+      }
+      .syn-implicacoes .syn-card-body li {
+        border-left-color: #e67e22;
+      }
+      .syn-implicacoes .syn-card-body li i {
+        color: #e67e22;
+      }
+      .syn-card-body li span {
+        color: #34495e;
       }
       .highlight {
         font-weight: 700;
         color: #2c3e50;
-      }
-      .message-box .highlight {
-        color: #a3e4d7;
       }
     </style>
   </head>
   <body>
     <div class="slide-container">
       <div class="header">
-        <h2>Considerações Finais: Limitações e Contribuições</h2>
+        <h2>Considerações Finais: Síntese</h2>
       </div>
       <div class="main-content">
-        <div class="column">
-          <div class="column-header limitations-header">
-            <i class="fas fa-exclamation-circle"></i> Limitações
-          </div>
-          <div class="item-list">
-            <div class="list-item">
-              <i class="fas fa-users"></i>
-              <span
-                >Amostra reduzida: <span class="highlight">três especialistas</span>
-                pertencentes ao mesmo laboratório, restringindo a generalização
-                dos resultados.</span
-              >
+        <div class="synthesis-cards">
+          <article class="syn-card syn-resultados">
+            <div class="syn-card-top">
+              <i class="fas fa-chart-area"></i>
+              <span>Resultados</span>
             </div>
-            <div class="list-item">
-              <i class="fas fa-code-branch"></i>
-              <span
-                >Sistema em <span class="highlight">estágio inicial</span> de
-                desenvolvimento, sem funcionalidades analíticas avançadas.</span
-              >
+            <ul class="syn-card-body">
+              <li>
+                <i class="fas fa-circle"></i>
+                <span
+                  >Apoia
+                  <span class="highlight">orientação e localização</span> e a
+                  identificação inicial de padrões espaciais.</span
+                >
+              </li>
+              <li>
+                <i class="fas fa-circle"></i>
+                <span
+                  >Ausência de filtragem, agregação e visualização analítica
+                  limita associações espaciais mais complexas.</span
+                >
+              </li>
+              <li>
+                <i class="fas fa-circle"></i>
+                <span
+                  >Escolhas de
+                  <span class="highlight">simbologia</span> impactam diretamente
+                  a legibilidade espacial.</span
+                >
+              </li>
+            </ul>
+          </article>
+          <article class="syn-card syn-implicacoes">
+            <div class="syn-card-top">
+              <i class="fas fa-link"></i>
+              <span>Implicações</span>
             </div>
-            <div class="list-item">
-              <i class="fas fa-user-check"></i>
-              <span
-                >Avaliação concentrada na perspectiva de
-                <span class="highlight">especialistas</span>, sem usuários finais
-                ou gestores públicos.</span
-              >
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="column-header contributions-header">
-            <i class="fas fa-star"></i> Contribuições
-          </div>
-          <div class="item-list">
-            <div class="list-item">
-              <i class="fas fa-compass"></i>
-              <span
-                >Consolidação da <span class="highlight">espaciabilidade</span>
-                como critério aplicável ao design de sistemas colaborativos
-                urbanos.</span
-              >
-            </div>
-            <div class="list-item">
-              <i class="fas fa-clipboard-check"></i>
-              <span
-                >Aplicação empírica e refinamento do
-                <span class="highlight">MIE</span>, com recomendações
-                estruturadas de aprimoramento.</span
-              >
-            </div>
-            <div class="list-item">
-              <i class="fas fa-laptop-code"></i>
-              <span
-                >Desenvolvimento do <span class="highlight">Mapa Cidadão</span>,
-                sistema concebido para apoiar a interpretação espacial das
-                ocorrências.</span
-              >
-            </div>
-            <div class="list-item">
-              <i class="fas fa-project-diagram"></i>
-              <span
-                >Evidências qualitativas sobre a relação entre
-                <span class="highlight"
-                  >espaciabilidade, usabilidade e experiência do usuário</span
-                >.</span
-              >
-            </div>
-          </div>
-         
+            <ul class="syn-card-body">
+              <li>
+                <i class="fas fa-circle"></i>
+                <span
+                  >Emergência de evidências de
+                  <span class="highlight">usabilidade e UX</span>, mesmo com
+                  foco na espaciabilidade.</span
+                >
+              </li>
+              <li>
+                <i class="fas fa-circle"></i>
+                <span
+                  >Reforça a interdependência entre critérios de qualidade em
+                  IHC.</span
+                >
+              </li>
+            </ul>
+          </article>
         </div>
       </div>
     </div>

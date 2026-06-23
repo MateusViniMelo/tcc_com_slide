@@ -1,153 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <style>
-      html,body{height:100%;margin:0;padding:0}
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
       .slide-container {
         height: 720px;
         max-height: 720px;
         width: 1280px;
-background-color: #F4F4F4;
-        font-family: 'Inter', sans-serif;
-        color: #34495E;
+        background-color: #f4f4f4;
+        font-family: "Inter", sans-serif;
+        color: #34495e;
         display: flex;
         flex-direction: column;
-        border: 1px solid #2C3E50;
+        border: 1px solid #2c3e50;
         box-sizing: border-box;
-      
         overflow: hidden;
       }
       .header {
         height: 84px;
         padding-top: 25px;
         padding-left: 60px;
-        border-bottom: 1px solid #2C3E50;
+        border-bottom: 1px solid #2c3e50;
         box-sizing: border-box;
+        flex-shrink: 0;
       }
       h2 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 38px;
-        color: #2C3E50;
+        color: #2c3e50;
         margin: 0;
       }
       .main-content {
         display: flex;
+        flex-direction: column;
         flex: 1;
+        min-height: 0;
+        overflow: hidden;
       }
-      .text-panel {
+      .section {
         flex: 1;
-        padding: 40px 60px;
-        border-right: 1px solid #2C3E50;
-      }
-      .visual-panel {
-        flex: 1;
-        padding: 40px;
+        padding: 24px 50px 28px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        min-height: 0;
+        overflow: hidden;
+      }
+      .section + .section {
+        border-top: 1px solid #2c3e50;
+      }
+      .section-motivacao {
+        background-color: #f4f4f4;
+      }
+      .section-objetivo {
         background-color: rgba(231, 76, 60, 0.05);
       }
       h3 {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 32px;
-        color: #E74C3C;
-        margin: 0 0 20px 0;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 28px;
+        color: #e74c3c;
+        margin: 0 0 18px 0;
+        flex-shrink: 0;
       }
       ul {
         list-style: none;
         padding: 0;
         margin: 0;
+        display: flex;
+        gap: 28px;
+        flex: 1;
+        min-height: 0;
       }
       li {
-        font-size: 28px;
-        margin-bottom: 20px;
-        line-height: 1.4;
+        flex: 1;
+        font-size: 22px;
+        line-height: 1.3;
         display: flex;
+        flex-direction: column;
         align-items: flex-start;
+        padding: 16px 18px;
+        background-color: white;
+        border: 1px solid #d5d8dc;
+        box-sizing: border-box;
+        border-radius: 0.25rem;
       }
       li i {
-        color: #3498DB;
-        margin-right: 15px;
-        margin-top: 10px;
-        font-size: 24px;
+        color: #3498db;
+        margin-bottom: 10px;
+        font-size: 28px;
+        flex-shrink: 0;
+      }
+      .section-objetivo li i {
+        color: #e74c3c;
       }
       .highlight {
         font-weight: 700;
-        color: #2C3E50;
-      }
-      .triad-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-        text-align: center;
-      }
-      .triad-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .triad-item i {
-        font-size: 80px;
-        color: #2C3E50;
-        margin-bottom: 15px;
-      }
-      .triad-item span {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 24px;
-        font-weight: 700;
-      }
-      .interaction-arrow {
-        font-size: 40px;
-        color: #E74C3C;
-      }
-      .quote-box {
-        margin-top: 40px;
-        padding: 20px;
-        border-left: 5px solid #E74C3C;
-        background-color: white;
-        font-style: italic;
-        font-size: 24px;
-        width: 80%;
+        color: #2c3e50;
       }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="slide-container">
-        <div class="header">
-            <h2>Interação Humano-Computador (IHC)</h2>
+      <div class="header">
+        <h2>Introdução</h2>
+      </div>
+      <div class="main-content">
+        <div class="section section-motivacao">
+          <h3>Motivação</h3>
+          <ul>
+            <li>
+              <i class="fas fa-eye"></i>
+              <span
+                ><span class="highlight">Visibilizar problemas urbanos</span>
+                por meio de registro colaborativo.</span
+              >
+            </li>
+            <li>
+              <i class="fas fa-users"></i>
+              <span
+                ><span class="highlight"
+                  >Fortalecer participação e transparência</span
+                >
+                entre cidadãos e gestão pública.</span
+              >
+            </li>
+            <li>
+              <i class="fas fa-map"></i>
+              <span
+                ><span class="highlight">Explorar como o mapa</span> pode apoiar
+                a compreensão do território, e não apenas o registro de
+                dados.</span
+              >
+            </li>
+          </ul>
         </div>
-        <div class="main-content">
-            <div class="text-panel">
-                <h3>Definição e Objetivos</h3>
-                <ul>
-                    <li><i class="fas fa-search"></i> <span>Estudo do <span class="highlight">design, avaliação e implementação</span> de sistemas interativos.</span></li>
-                    <li><i class="fas fa-bullseye"></i> <span>Objetivo: Tornar a tecnologia mais <span class="highlight">usável, acessível e prazerosa</span> para as pessoas.</span></li>
-                    <li><i class="fas fa-users"></i> <span>Foca na experiência do usuário e na <span class="highlight">eficácia da comunicação</span> entre homem e máquina.</span></li>
-                </ul>
-            </div>
-            <div class="visual-panel">
-                <div class="triad-container">
-                    <div class="triad-item">
-                        <i class="fas fa-user"></i>
-                        <span>Humano</span>
-                    </div>
-                    <div class="interaction-arrow">
-                        <i class="fas fa-exchange-alt"></i>
-                    </div>
-                    <div class="triad-item">
-                        <i class="fas fa-desktop"></i>
-                        <span>Computador</span>
-                    </div>
-                </div>
-                <div class="quote-box">
-                    "IHC é a disciplina que se preocupa com o design, avaliação e implementação de sistemas computacionais interativos para uso humano."
-                </div>
-            </div>
+        <div class="section section-objetivo">
+          <h3>Objetivo</h3>
+          <ul>
+            <li>
+              <i class="fas fa-bullseye"></i>
+              <span
+                >Desenvolver o
+                <span class="highlight">Mapa Cidadão</span> guiado pela
+                <span class="highlight">espaciabilidade.</span>
+              </span>
+            </li>
+            <li>
+              <i class="fas fa-search"></i>
+              <span
+                >Aplicar o <span class="highlight">MIE</span> em estudo
+                preliminar com três especialistas em IHC.</span
+              >
+            </li>
+            <li>
+              <i class="fas fa-lightbulb"></i>
+              <span
+                >Operacionalizar o conceito em sistema real e produzir
+                evidências iniciais.</span
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
