@@ -33,72 +33,92 @@ background-color: #F4F4F4;
         margin: 0;
       }
       .main-content {
-        padding: 40px 60px;
+        display: flex;
         flex: 1;
+      }
+      .left-panel {
+        flex: 1.2;
+        padding: 40px 60px;
+        border-right: 1px solid #2C3E50;
+      }
+      .right-panel {
+        flex: 0.8;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(52, 152, 219, 0.05);
       }
       h3 {
         font-family: 'Space Grotesk', sans-serif;
         font-size: 32px;
         color: #E74C3C;
-        margin: 0 0 30px 0;
+        margin: 0 0 20px 0;
       }
-      .dimension-item {
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        font-size: 28px;
+        margin-bottom: 25px;
+        line-height: 1.4;
         display: flex;
         align-items: flex-start;
-        margin-bottom: 30px;
-        background-color: white;
-        padding: 20px;
-        border: 1px solid #2C3E50;
       }
-      .dimension-item i {
-        font-size: 40px;
+      li i {
         color: #3498DB;
-        margin-right: 25px;
-        margin-top: 5px;
-      }
-      .dimension-text h4 {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 28px;
-        color: #2C3E50;
-        margin: 0 0 10px 0;
-      }
-      .dimension-text p {
-        font-size: 28px;
-        line-height: 1.3;
-        margin: 0;
+        margin-right: 15px;
+        margin-top: 10px;
+        font-size: 24px;
       }
       .highlight {
         font-weight: 700;
+        color: #2C3E50;
+      }
+      .concept-box {
+        text-align: center;
+        padding: 30px;
+        border: 2px solid #2C3E50;
+        background-color: white;
+      }
+      .concept-box i {
+        font-size: 80px;
         color: #E74C3C;
+        margin-bottom: 20px;
+      }
+      .concept-box p {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0;
       }
     </style>
 </head>
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Dimensões da Espaciabilidade (D1 a D3)</h2>
+            <h2>O Conceito de Espaciabilidade</h2>
         </div>
         <div class="main-content">
-            <div class="dimension-item">
-                <i class="fas fa-arrows-alt"></i>
-                <div class="dimension-text">
-                    <h4>D1: Orientação e Direção</h4>
-                    <p>Capacidade de compreender <span class="highlight">localização</span> e sentido no espaço geográfico.</p>
-                </div>
+            <div class="left-panel">
+                <h3>Um Novo Critério em IHC</h3>
+                <ul>
+                    <li><i class="fas fa-plus-circle"></i> <span>Proposto para preencher a <span class="highlight">lacuna</span> dos critérios clássicos (Usabilidade, UX).</span></li>
+                    <li><i class="fas fa-brain"></i> <span>Capacidade do design de <span class="highlight">estimular o pensamento espacial</span> do usuário.</span></li>
+                    <li><i class="fas fa-map"></i> <span>Foco na interpretação e análise de <span class="highlight">dados georreferenciados</span>.</span></li>
+                </ul>
             </div>
-            <div class="dimension-item">
-                <i class="fas fa-th"></i>
-                <div class="dimension-text">
-                    <h4>D2: Padrões Espaciais</h4>
-                    <p>Identificação de concentrações, <span class="highlight">clusters</span> e tendências territoriais.</p>
+            <div class="right-panel">
+                <div class="concept-box">
+                    <i class="fas fa-compass"></i>
+                    <p>Espaciabilidade</p>
                 </div>
-            </div>
-            <div class="dimension-item">
-                <i class="fas fa-check-circle"></i>
-                <div class="dimension-text">
-                    <h4>D3: Tomada de Decisão Espacial</h4>
-                    <p>Escolha da melhor localização com base em múltiplos <span class="highlight">fatores espaciais</span>.</p>
-                </div>
+                <p style="margin-top: 30px; font-size: 24px; text-align: center; font-style: italic;">
+                    "Capacidade da interface de apoiar processos de compreensão de dados espaciais."
+                </p>
             </div>
         </div>
     </div>
