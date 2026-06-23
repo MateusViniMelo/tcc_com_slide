@@ -54,13 +54,11 @@
       }
       .synthesis-cards {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 18px;
         height: 100%;
       }
       .syn-card {
-      
-       
         display: flex;
         flex-direction: column;
         min-height: 0;
@@ -96,20 +94,21 @@
         box-sizing: border-box;
       }
       .syn-card-body li {
-        flex: 1;
+        flex: 1 1 0;
+        min-height: 0;
         display: flex;
         align-items: flex-start;
         gap: 12px;
-        padding: 14px 14px;
+        padding: 14px;
         background-color: #f8f9fa;
         border-left: 4px solid #3498db;
-        font-size: 19px;
+        font-size: 22px;
         line-height: 1.35;
         box-sizing: border-box;
       }
       .syn-card-body li i {
-        font-size: 14px;
-        margin-top: 6px;
+        font-size: 16px;
+        margin-top: 7px;
         flex-shrink: 0;
         color: #3498db;
       }
@@ -165,34 +164,6 @@
       </div>
       <div class="main-content">
         <div class="synthesis-cards">
-          <article class="syn-card syn-proposta">
-            <div class="syn-card-top">
-              <i class="fas fa-map-marked-alt"></i>
-              <span>Proposta</span>
-            </div>
-            <ul class="syn-card-body">
-              <li>
-                <i class="fas fa-circle"></i>
-                <span
-                  >Investigou a <span class="highlight">espaciabilidade</span>
-                  como orientação para sistemas colaborativos de mapeamento
-                  urbano.</span
-                >
-              </li>
-              <li>
-                <i class="fas fa-circle"></i>
-                <span
-                  >Mapa Cidadão concebido como
-                  <span class="highlight">artefato cognitivo</span> voltado à
-                  interpretação espacial das ocorrências.</span
-                >
-              </li>
-              <li>
-                <i class="fas fa-circle"></i>
-                <span>Busca ir além do simples registro georreferenciado.</span>
-              </li>
-            </ul>
-          </article>
           <article class="syn-card syn-resultados">
             <div class="syn-card-top">
               <i class="fas fa-chart-area"></i>
@@ -202,8 +173,9 @@
               <li>
                 <i class="fas fa-circle"></i>
                 <span
-                  >Apoia <span class="highlight">orientação e localização</span>
-                  e a identificação inicial de padrões espaciais.</span
+                  >Apoia
+                  <span class="highlight">orientação e localização</span> e a
+                  identificação inicial de padrões espaciais.</span
                 >
               </li>
               <li>
@@ -216,8 +188,9 @@
               <li>
                 <i class="fas fa-circle"></i>
                 <span
-                  >Escolhas de <span class="highlight">simbologia</span> impactam
-                  diretamente a legibilidade espacial.</span
+                  >Escolhas de
+                  <span class="highlight">simbologia</span> impactam diretamente
+                  a legibilidade espacial.</span
                 >
               </li>
             </ul>
@@ -232,8 +205,8 @@
                 <i class="fas fa-circle"></i>
                 <span
                   >Emergência de evidências de
-                  <span class="highlight">usabilidade e UX</span>, mesmo com foco
-                  na espaciabilidade.</span
+                  <span class="highlight">usabilidade e UX</span>, mesmo com
+                  foco na espaciabilidade.</span
                 >
               </li>
               <li>
@@ -241,13 +214,6 @@
                 <span
                   >Reforça a interdependência entre critérios de qualidade em
                   IHC.</span
-                >
-              </li>
-              <li>
-                <i class="fas fa-circle"></i>
-                <span
-                  ><span class="highlight">MIE</span> aplicável, mas precisa ser
-                  mais direcionado, explicitando o foco analítico.</span
                 >
               </li>
             </ul>
