@@ -1,88 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <style>
-      html,body{height:100%;margin:0;padding:0}
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
       .slide-container {
-        height: 720px; max-height: 720px; width: 1280px;
-        background-color: #F4F4F4; font-family: 'Inter', sans-serif; color: #34495E;
-        display: flex; flex-direction: column; border: 1px solid #2C3E50;
-        box-sizing: border-box; overflow: hidden;
+        height: 720px;
+        max-height: 720px;
+        width: 1280px;
+        background-color: #f4f4f4;
+        font-family: "Inter", sans-serif;
+        color: #34495e;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #2c3e50;
+        box-sizing: border-box;
+        overflow: hidden;
       }
       .header {
-        height: 84px; padding-top: 25px; padding-left: 60px;
-        border-bottom: 1px solid #2C3E50; box-sizing: border-box; flex-shrink: 0;
+        height: 84px;
+        padding-top: 25px;
+        padding-left: 60px;
+        border-bottom: 1px solid #2c3e50;
+        box-sizing: border-box;
+        flex-shrink: 0;
       }
-      h2 { font-family: 'Space Grotesk', sans-serif; font-size: 38px; color: #2C3E50; margin: 0; }
-      .main-content { display: flex; flex: 1; min-height: 0; }
+      h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 38px;
+        color: #2c3e50;
+        margin: 0;
+      }
+      .main-content {
+        display: flex;
+        flex: 1;
+        min-height: 0;
+      }
       .left-panel {
-        flex: 1; padding: 40px 52px 40px 60px;
-        border-right: 1px solid #2C3E50; box-sizing: border-box;
-        display: flex; flex-direction: column; justify-content: center;
+        flex: 1;
+        padding: 40px 52px 40px 60px;
+        border-right: 1px solid #2c3e50;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         background-color: rgba(39, 174, 96, 0.04);
       }
       .right-panel {
-        flex: 1; padding: 40px 60px 40px 52px; box-sizing: border-box;
-        display: flex; flex-direction: column; justify-content: center; gap: 32px;
+        flex: 1;
+        padding: 40px 60px 40px 52px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
       }
       h3 {
-        font-family: 'Space Grotesk', sans-serif; font-size: 28px; margin: 0 0 20px 0;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 28px;
+        margin: 0 0 20px 0;
       }
-      h3.fav { color: #27AE60; }
-      h3.limit { color: #C0392B; }
-      h3.rec { color: #D35400; }
-      ul { list-style: none; padding: 0; margin: 0; }
+      h3.fav {
+        color: #27ae60;
+      }
+      h3.limit {
+        color: #c0392b;
+      }
+      h3.rec {
+        color: #d35400;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
       li {
-        font-size: 22px; margin-bottom: 18px; line-height: 1.35;
-        display: flex; align-items: flex-start;
+        font-size: 22px;
+        margin-bottom: 18px;
+        line-height: 1.35;
+        display: flex;
+        align-items: flex-start;
       }
-      li:last-child { margin-bottom: 0; }
-      .left-panel li i { color: #27AE60; margin-right: 14px; margin-top: 6px; font-size: 18px; flex-shrink: 0; }
-      .section-limit li i { color: #C0392B; }
-      .section-rec li i { color: #E67E22; }
-      li i { margin-right: 14px; margin-top: 6px; font-size: 17px; flex-shrink: 0; }
-      .highlight { font-weight: 700; color: #2C3E50; }
-      .dim-name { font-weight: 600; color: #2980B9; }
+      li:last-child {
+        margin-bottom: 0;
+      }
+      .left-panel li i {
+        color: #27ae60;
+        margin-right: 14px;
+        margin-top: 6px;
+        font-size: 18px;
+        flex-shrink: 0;
+      }
+      .section-limit li i {
+        color: #c0392b;
+      }
+      .section-rec li i {
+        color: #e67e22;
+      }
+      li i {
+        margin-right: 14px;
+        margin-top: 6px;
+        font-size: 17px;
+        flex-shrink: 0;
+      }
+      .highlight {
+        font-weight: 700;
+        color: #2c3e50;
+      }
+      .dim-name {
+        font-weight: 600;
+        color: #2980b9;
+      }
       .lead {
-        font-size: 22px; line-height: 1.4; margin: 0 0 24px 0; color: #34495E;
+        font-size: 22px;
+        line-height: 1.4;
+        margin: 0 0 24px 0;
+        color: #34495e;
       }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="slide-container">
-        <div class="header">
-            <h2>Análise de Espaciabilidade</h2>
+      <div class="header">
+        <h2>Análise de Espaciabilidade</h2>
+      </div>
+      <div class="main-content">
+        <div class="left-panel">
+          <p class="lead">
+            P1, P2 e P3 confirmam
+            <span class="highlight">registro georreferenciado</span> e
+            <span class="highlight">visualização pontual</span> de ocorrências
+            urbanas.
+          </p>
+          <h3 class="fav">Aspectos favoráveis</h3>
+          <ul>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span
+                ><span class="highlight">D1</span>
+                <span class="dim-name">(Orientação e direção)</span> —
+                localização de ocorrências no mapa funcional; usuário entende
+                onde estão os pontos (P2, P3).</span
+              >
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span
+                ><span class="highlight">D3</span>
+                <span class="dim-name">(Localização ideal)</span> —
+                georreferenciação apoia intervenção no local; click-to-identify
+                funcional (P2, P3).</span
+              >
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span
+                ><span class="highlight">D2</span>
+                <span class="dim-name">(Padrões espaciais)</span> —
+                concentrações de problemas perceptíveis na inspeção visual do
+                mapa (P2).</span
+              >
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span
+                ><span class="highlight">D4</span>
+                <span class="dim-name">(Associações espaciais)</span> —
+                associações entre tipos de ocorrência no território; potencial
+                analítico (P2, P3).</span
+              >
+            </li>
+          </ul>
         </div>
-        <div class="main-content">
-            <div class="left-panel">
-                <p class="lead">P1, P2 e P3 confirmam <span class="highlight">registro georreferenciado</span> e <span class="highlight">visualização pontual</span> de ocorrências urbanas.</p>
-                <h3 class="fav">Aspectos favoráveis</h3>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> <span><span class="highlight">D1</span> <span class="dim-name">(Orientação e direção)</span> — localização de ocorrências no mapa funcional; usuário entende onde estão os pontos (P2, P3).</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span><span class="highlight">D3</span> <span class="dim-name">(Localização ideal)</span> — georreferenciação apoia intervenção no local; click-to-identify funcional (P2, P3).</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span><span class="highlight">D2</span> <span class="dim-name">(Padrões espaciais)</span> — concentrações de problemas perceptíveis na inspeção visual do mapa (P2).</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span><span class="highlight">D4</span> <span class="dim-name">(Associações espaciais)</span> — associações entre tipos de ocorrência no território; potencial analítico (P2, P3).</span></li>
-                </ul>
-            </div>
-            <div class="right-panel">
-                <div class="section-limit">
-                    <h3 class="limit">Limitações</h3>
-                    <ul>
-                        <li><i class="fas fa-exclamation-circle"></i> <span><span class="highlight">Filtros e agregação</span> — principal lacuna em <span class="highlight">D2</span> <span class="dim-name">(Padrões espaciais)</span> e <span class="highlight">D4</span> <span class="dim-name">(Associações espaciais)</span> (P1, P2, P3).</span></li>
-                        <li><i class="fas fa-exclamation-circle"></i> <span><span class="highlight">D6</span> <span class="dim-name">(Interpretação de tipos)</span> — simbologia e clareza dos marcadores precisam revisão (P1, P2, P3).</span></li>
-                    </ul>
-                </div>
-                <div class="section-rec">
-                    <h3 class="rec">Recomendações</h3>
-                    <ul>
-                        <li><i class="fas fa-lightbulb"></i> <span>Implementar <span class="highlight">filtros</span> por tipo, bairro/região, tempo e contagem de pontos.</span></li>
-                        <li><i class="fas fa-lightbulb"></i> <span>Revisar <span class="highlight">ícones e cores</span>; incluir <span class="highlight">onboarding</span> no primeiro acesso.</span></li>
-                    </ul>
-                </div>
-            </div>
+        <div class="right-panel">
+          <div class="section-rec">
+            <h3 class="rec">Recomendações</h3>
+            <ul>
+              <li>
+                <i class="fas fa-lightbulb"></i>
+                <span
+                  >Implementar <span class="highlight">filtros</span> por tipo,
+                  bairro/região, tempo e contagem de pontos.</span
+                >
+              </li>
+              <li>
+                <i class="fas fa-lightbulb"></i>
+                <span
+                  >Revisar <span class="highlight">ícones e cores</span>;
+                  incluir <span class="highlight">onboarding</span> no primeiro
+                  acesso.</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="section-limit">
+            <h3 class="limit">Limitações</h3>
+            <ul>
+              <li>
+                <i class="fas fa-exclamation-circle"></i>
+                <span
+                  ><span class="highlight"
+                    >Ausência de filtros temporais e de ocorrências</span
+                  >
+                  — principal lacuna em <span class="highlight">D2</span>
+                  <span class="dim-name">(Padrões espaciais)</span> e
+                  <span class="highlight">D4</span>
+                  <span class="dim-name">(Associações espaciais)</span> (P1, P2,
+                  P3).</span
+                >
+              </li>
+              <li>
+                <i class="fas fa-exclamation-circle"></i>
+                <span
+                  ><span class="highlight">D6</span>
+                  <span class="dim-name">(Interpretação de tipos)</span> —
+                  simbologia e clareza dos marcadores precisam revisão (P1, P2,
+                  P3).</span
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
