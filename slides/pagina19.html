@@ -50,7 +50,7 @@
       }
       .left-panel {
         flex: 1;
-        padding: 40px 52px 40px 60px;
+        padding: 28px 52px 28px 60px;
         border-right: 1px solid #2c3e50;
         box-sizing: border-box;
         display: flex;
@@ -60,7 +60,7 @@
       }
       .right-panel {
         flex: 1;
-        padding: 40px 60px 40px 52px;
+        padding: 28px 60px 28px 52px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -69,8 +69,8 @@
       }
       h3 {
         font-family: "Space Grotesk", sans-serif;
-        font-size: 28px;
-        margin: 0 0 20px 0;
+        font-size: 26px;
+        margin: 0 0 14px 0;
       }
       h3.fav {
         color: #27ae60;
@@ -87,8 +87,8 @@
         margin: 0;
       }
       li {
-        font-size: 22px;
-        margin-bottom: 18px;
+        font-size: 18px;
+        margin-bottom: 16px;
         line-height: 1.35;
         display: flex;
         align-items: flex-start;
@@ -119,14 +119,28 @@
         font-weight: 700;
         color: #2c3e50;
       }
-      .dim-name {
-        font-weight: 600;
-        color: #2980b9;
+      .item-content {
+        flex: 1;
+        min-width: 0;
+      }
+      .item-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 19px;
+        font-weight: 700;
+        color: #2c3e50;
+        line-height: 1.25;
+        margin: 0 0 4px 0;
+      }
+      .item-body {
+        font-size: 17px;
+        line-height: 1.35;
+        margin: 0;
+        color: #34495e;
       }
       .lead {
-        font-size: 22px;
+        font-size: 20px;
         line-height: 1.4;
-        margin: 0 0 24px 0;
+        margin: 0 0 20px 0;
         color: #34495e;
       }
     </style>
@@ -138,49 +152,51 @@
       </div>
       <div class="main-content">
         <div class="left-panel">
-          <p class="lead">
-            P1, P2 e P3 confirmam
-            <span class="highlight">registro georreferenciado</span> e
-            <span class="highlight">visualização pontual</span> de ocorrências
-            urbanas.
-          </p>
+         
           <h3 class="fav">Aspectos favoráveis</h3>
           <ul>
             <li>
               <i class="fas fa-check-circle"></i>
-              <span
-                ><span class="highlight">D1</span>
-                <span class="dim-name">(Orientação e direção)</span> —
-                localização de ocorrências no mapa funcional; usuário entende
-                onde estão os pontos (P2, P3).</span
-              >
+              <div class="item-content">
+                <p class="item-title">Localização de ocorrências no mapa</p>
+                <p class="item-body">
+                  Georreferenciação atende consulta de localização; usuário
+                  identifica onde estão as ocorrências — maior consenso entre as
+                  dimensões (P2, P3).
+                </p>
+              </div>
             </li>
             <li>
               <i class="fas fa-check-circle"></i>
-              <span
-                ><span class="highlight">D3</span>
-                <span class="dim-name">(Localização ideal)</span> —
-                georreferenciação apoia intervenção no local; click-to-identify
-                funcional (P2, P3).</span
-              >
+              <div class="item-content">
+                <p class="item-title">Concentrações visuais perceptíveis</p>
+                <p class="item-body">
+                  Inspeção visual permite perceber concentração de problemas em
+                  área específica da cidade (P2).
+                </p>
+              </div>
             </li>
             <li>
               <i class="fas fa-check-circle"></i>
-              <span
-                ><span class="highlight">D2</span>
-                <span class="dim-name">(Padrões espaciais)</span> —
-                concentrações de problemas perceptíveis na inspeção visual do
-                mapa (P2).</span
-              >
+              <div class="item-content">
+                <p class="item-title">Georreferenciação para intervenção</p>
+                <p class="item-body">
+                  Precisão dos marcadores apoia identificar onde intervir;
+                  click-to-identify funcional (P2, P3).
+                </p>
+              </div>
             </li>
             <li>
               <i class="fas fa-check-circle"></i>
-              <span
-                ><span class="highlight">D4</span>
-                <span class="dim-name">(Associações espaciais)</span> —
-                associações entre tipos de ocorrência no território; potencial
-                analítico (P2, P3).</span
-              >
+              <div class="item-content">
+                <p class="item-title">
+                  Associações espaciais e potencial analítico
+                </p>
+                <p class="item-body">
+                  Proximidade entre tipos de ocorrência viabiliza associações
+                  básicas e potencial de relacionar variáveis (P2, P3).
+                </p>
+              </div>
             </li>
           </ul>
         </div>
@@ -191,25 +207,54 @@
             <ul>
               <li>
                 <i class="fas fa-exclamation-circle"></i>
-                <span
-                  ><span class="highlight"
-                    >Ausência de filtros temporais e de ocorrências</span
-                  >
-                  — principal lacuna em <span class="highlight">D2</span>
-                  <span class="dim-name">(Padrões espaciais)</span> e
-                  <span class="highlight">D4</span>
-                  <span class="dim-name">(Associações espaciais)</span> (P1, P2,
-                  P3).</span
-                >
+                <div class="item-content">
+                  <p class="item-title">
+                    Ausência de filtros e agrupamento por tipo
+                  </p>
+                  <p class="item-body">
+                    Impossível filtrar um único tipo de padrão; tarefas
+                    analíticas não correspondem às funcionalidades atuais sem
+                    agregação (P1, P3). Convergência com
+                    <span class="highlight">filtros temporais</span> sugeridos
+                    por P1, P2 e P3.
+                  </p>
+                </div>
               </li>
               <li>
                 <i class="fas fa-exclamation-circle"></i>
-                <span
-                  ><span class="highlight">D6</span>
-                  <span class="dim-name">(Interpretação de tipos)</span> —
-                  simbologia e clareza dos marcadores precisam revisão (P1, P2,
-                  P3).</span
-                >
+                <div class="item-content">
+                  <p class="item-title">
+                    Associações sem suporte de recorrência
+                  </p>
+                  <p class="item-body">
+                    P1 não sustenta associação pavimentação ↔ alagamento: pontos
+                    exibem apenas horário de cadastro, sem metadados de
+                    <span class="highlight">recorrência</span>.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-exclamation-circle"></i>
+                <div class="item-content">
+                  <p class="item-title">
+                    Sobreposição de camadas pouco compreendida
+                  </p>
+                  <p class="item-body">
+                    Conceito de sobreposição de camadas não foi entendido na
+                    interface; leitura depende de zoom e escala (P3, P2).
+                  </p>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-exclamation-circle"></i>
+                <div class="item-content">
+                  <p class="item-title">Simbologia e clareza dos marcadores</p>
+                  <p class="item-body">
+                    Ícones e cores similares comprometem a distinção entre
+                    categorias; consenso sobre revisão da simbologia (P1, P2,
+                    P3).
+                  </p>
+                </div>
               </li>
             </ul>
           </div>
