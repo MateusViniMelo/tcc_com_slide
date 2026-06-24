@@ -55,17 +55,22 @@
       .panel:last-child {
         border-right: none;
       }
-      .panel-middle {
-        background-color: rgba(46, 204, 113, 0.06);
-      }
-      .panel-right {
+      .panel-blue {
         background-color: rgba(52, 152, 219, 0.05);
+      }
+      .panel-green {
+        background-color: rgba(46, 204, 113, 0.06);
       }
       h3 {
         font-family: 'Space Grotesk', sans-serif;
         font-size: 28px;
-        color: #2980B9;
         margin: 0 0 18px 0;
+      }
+      .panel-blue h3 {
+        color: #2980B9;
+      }
+      .panel-green h3 {
+        color: #27AE60;
       }
       ul {
         list-style: none;
@@ -79,17 +84,19 @@
         display: flex;
         align-items: flex-start;
       }
-      li i {
+      .panel-blue li i {
         color: #2980B9;
+      }
+      .panel-green li i {
+        color: #27AE60;
+      }
+      li i {
         margin-right: 12px;
         margin-top: 6px;
         font-size: 20px;
         width: 24px;
         text-align: center;
         flex-shrink: 0;
-      }
-      .panel-middle li i {
-        color: #27AE60;
       }
       .highlight {
         font-weight: 700;
@@ -121,7 +128,7 @@
             </p>
         </div>
         <div class="main-content">
-            <div class="panel">
+            <div class="panel panel-blue">
                 <span class="stack-badge">Backend — API</span>
                 <h3>Servidor</h3>
                 <ul>
@@ -130,24 +137,24 @@
                     <li><i class="fas fa-exchange-alt"></i> <span>Comunicação via <span class="highlight">endpoints JSON</span> consumidos pelo cliente web.</span></li>
                 </ul>
             </div>
-            <div class="panel panel-middle">
-                <span class="stack-badge green">Banco de Dados</span>
+            <div class="panel panel-green">
+              <span class="stack-badge green">Frontend — Cliente</span>
+              <h3>Interface Web</h3>
+              <ul>
+                  <li><i class="fab fa-vuejs"></i> <span><span class="highlight">Nuxt 3</span> (Vue.js) para a aplicação web reativa e componentizada.</span></li>
+                  <li><i class="fas fa-map"></i> <span><span class="highlight">OpenStreetMap</span> como base cartográfica colaborativa do mapa interativo.</span></li>
+                 
+              </ul>
+          </div>
+            <div class="panel panel-blue">
+                <span class="stack-badge">Banco de Dados</span>
                 <h3>Persistência</h3>
                 <ul>
                     <li><i class="fas fa-database"></i> <span><span class="highlight">PostgreSQL 13</span> como banco de dados relacional do sistema.</span></li>
                     <li><i class="fas fa-globe-americas"></i> <span><span class="highlight">PostGIS 3.5</span> para armazenamento e consulta de dados geoespaciais das ocorrências.</span></li>
                 </ul>
             </div>
-            <div class="panel panel-right">
-                <span class="stack-badge">Frontend — Cliente</span>
-                <h3>Interface Web</h3>
-                <ul>
-                    <li><i class="fab fa-vuejs"></i> <span><span class="highlight">Nuxt 3</span> (Vue.js) para a aplicação web reativa e componentizada.</span></li>
-                    <li><i class="fas fa-map"></i> <span><span class="highlight">OpenStreetMap</span> como base cartográfica colaborativa do mapa interativo.</span></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span>Georreferenciamento de ocorrências com <span class="highlight">marcadores, zoom e navegação</span> espacial.</span></li>
-                    <li><i class="fas fa-users"></i> <span>Fluxos de <span class="highlight">login, registro e colaboração</span> integrados à API.</span></li>
-                </ul>
-            </div>
+            
         </div>
     </div>
 </body>
