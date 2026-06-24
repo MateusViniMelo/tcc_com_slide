@@ -1,20 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      html,body{height:100%;margin:0;padding:0}
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
       .slide-container {
         height: 720px;
         max-height: 720px;
         width: 1280px;
-        background-color: #F4F4F4;
-        font-family: 'Inter', sans-serif;
-        color: #34495E;
+        background-color: #f4f4f4;
+        font-family: "Inter", sans-serif;
+        color: #34495e;
         display: flex;
         flex-direction: column;
-        border: 1px solid #2C3E50;
+        border: 1px solid #2c3e50;
         box-sizing: border-box;
         overflow: hidden;
       }
@@ -22,84 +29,70 @@
         height: 84px;
         padding-top: 25px;
         padding-left: 60px;
-        border-bottom: 1px solid #2C3E50;
+        border-bottom: 1px solid #2c3e50;
         box-sizing: border-box;
       }
       h2 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 38px;
-        color: #2C3E50;
+        color: #2c3e50;
+        margin: 0;
+      }
+      .intro-bar {
+        padding: 16px 60px;
+        border-bottom: 1px solid #2c3e50;
+       
+        box-sizing: border-box;
+      }
+      .intro-text {
+        font-size: 22px;
+        line-height: 1.35;
         margin: 0;
       }
       .main-content {
-        display: flex;
         flex: 1;
-      }
-      .left-panel {
-        flex: 1;
-        padding: 40px 60px;
-        border-right: 1px solid #2C3E50;
-      }
-      .right-panel {
-        flex: 1;
-        padding: 40px 60px;
         display: flex;
-        flex-direction: column;
-        background-color: rgba(52, 152, 219, 0.05);
+        align-items: center;
+        justify-content: center;
+        padding: 24px 40px 32px;
+        box-sizing: border-box;
+        background-color: #e1edf9;
       }
-      h3 {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 32px;
-        color: #2980B9;
-        margin: 0 0 20px 0;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      li {
-        font-size: 28px;
-        margin-bottom: 20px;
-        line-height: 1.4;
+      .figure-wrapper {
+        width: 100%;
+        height: 100%;
         display: flex;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
       }
-      li i {
-        color: #2980B9;
-        margin-right: 15px;
-        margin-top: 10px;
-        font-size: 24px;
-      }
-      .highlight {
-        font-weight: 700;
-        color: #2C3E50;
+      .figure-wrapper img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+     
+        background-color: #ffffff;
       }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="slide-container">
-        <div class="header">
-            <h2>Mapa Cidadão</h2>
+      <div class="header">
+        <h2>Metodologia</h2>
+      </div>
+      <div class="intro-bar">
+        <p class="intro-text">
+          Abordagem qualitativa e exploratória, estruturada em quatro etapas
+          sequenciais — do desenvolvimento do sistema à análise dos resultados.
+        </p>
+      </div>
+      <div class="main-content">
+        <div class="figure-wrapper">
+          <img
+            src="../figuras/figura_etapas_3.jpg"
+            alt="Etapas da metodologia: Desenvolvimento do Sistema, Definição de Personas e Tarefas, Coleta de Dados e Análise dos Resultados"
+          />
         </div>
-        <div class="main-content">
-            <div class="left-panel">
-                <h3>O Sistema</h3>
-                <ul>
-                    <li><i class="fas fa-map-marked-alt"></i> <span>Sistema colaborativo de <span class="highlight">registro e visualização</span> de ocorrências urbanas.</span></li>
-                    <li><i class="fas fa-lightbulb"></i> <span>Projeto guiado pela <span class="highlight">Espaciabilidade</span>, integrando Crowdsourcing, Georreferenciamento e IHC.</span></li>
-                    <li><i class="fas fa-brain"></i> <span>Mapa como <span class="highlight">artefato cognitivo</span> para apoiar o raciocínio espacial do cidadão.</span></li>
-                </ul>
-            </div>
-            <div class="right-panel">
-                <h3>Principais Funções</h3>
-                <ul>
-                    <li><i class="fas fa-layer-group"></i> <span>Navegação interativa com legenda para <span class="highlight">interpretação de tipos</span> (D6).</span></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span>Registro colaborativo de ocorrências com <span class="highlight">validação social</span> (likes).</span></li>
-                    <li><i class="fas fa-hands-helping"></i> <span>Construção coletiva do <span class="highlight">conhecimento urbano</span> e engajamento cívico.</span></li>
-                </ul>
-            </div>
-        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
