@@ -47,6 +47,7 @@
         display: flex;
         flex: 1;
         min-height: 0;
+        font-size: 20px;
       }
       .left-panel {
         flex: 1;
@@ -67,10 +68,10 @@
         justify-content: center;
         gap: 32px;
       }
-      h3 {
+      .main-content h3 {
         font-family: "Space Grotesk", sans-serif;
-        font-size: 26px;
-        margin: 0 0 14px 0;
+        font-size: 30px;
+        margin: 0 0 16px 0;
       }
       h3.fav {
         color: #27ae60;
@@ -86,9 +87,8 @@
         padding: 0;
         margin: 0;
       }
-      li {
-        font-size: 18px;
-        margin-bottom: 16px;
+      .main-content li {
+        margin-bottom: 18px;
         line-height: 1.35;
         display: flex;
         align-items: flex-start;
@@ -96,24 +96,36 @@
       li:last-child {
         margin-bottom: 0;
       }
-      .left-panel li i {
+      .main-content .left-panel li i {
         color: #27ae60;
         margin-right: 14px;
-        margin-top: 6px;
-        font-size: 18px;
+        margin-top: 7px;
+        font-size: 20px;
         flex-shrink: 0;
       }
-      .section-limit li i {
+      .main-content .section-limit li i {
         color: #c0392b;
+        margin-right: 14px;
+        margin-top: 7px;
+        font-size: 20px;
+        flex-shrink: 0;
       }
-      .section-rec li i {
+      .main-content .section-rec li i {
         color: #e67e22;
       }
-      li i {
-        margin-right: 14px;
-        margin-top: 6px;
-        font-size: 17px;
-        flex-shrink: 0;
+      .main-content .item-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #2c3e50;
+        line-height: 1.25;
+        margin: 0 0 6px 0;
+      }
+      .main-content .item-body {
+        font-size: 20px;
+        line-height: 1.35;
+        margin: 0;
+        color: #34495e;
       }
       .highlight {
         font-weight: 700;
@@ -122,26 +134,6 @@
       .item-content {
         flex: 1;
         min-width: 0;
-      }
-      .item-title {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 19px;
-        font-weight: 700;
-        color: #2c3e50;
-        line-height: 1.25;
-        margin: 0 0 4px 0;
-      }
-      .item-body {
-        font-size: 17px;
-        line-height: 1.35;
-        margin: 0;
-        color: #34495e;
-      }
-      .lead {
-        font-size: 20px;
-        line-height: 1.4;
-        margin: 0 0 20px 0;
-        color: #34495e;
       }
     </style>
   </head>
@@ -181,8 +173,7 @@
               <div class="item-content">
                 <p class="item-title">Georreferenciação para intervenção</p>
                 <p class="item-body">
-                  Precisão dos marcadores apoia identificar onde intervir;
-                  click-to-identify funcional (P2, P3).
+                  Precisão dos marcadores apoia identificar onde intervir; (P2, P3).
                 </p>
               </div>
             </li>
@@ -190,7 +181,7 @@
               <i class="fas fa-check-circle"></i>
               <div class="item-content">
                 <p class="item-title">
-                  Associações espaciais e potencial analítico
+                  Associações espaciais básicas
                 </p>
                 <p class="item-body">
                   Proximidade entre tipos de ocorrência viabiliza associações
@@ -220,19 +211,7 @@
                   </p>
                 </div>
               </li>
-              <li>
-                <i class="fas fa-exclamation-circle"></i>
-                <div class="item-content">
-                  <p class="item-title">
-                    Associações sem suporte de recorrência
-                  </p>
-                  <p class="item-body">
-                    P1 não sustenta associação pavimentação ↔ alagamento: pontos
-                    exibem apenas horário de cadastro, sem metadados de
-                    <span class="highlight">recorrência</span>.
-                  </p>
-                </div>
-              </li>
+             
               <li>
                 <i class="fas fa-exclamation-circle"></i>
                 <div class="item-content">
