@@ -17,6 +17,7 @@
         padding: 0;
       }
       .slide-container {
+        position: relative;
         height: 720px;
         max-height: 720px;
         width: 1280px;
@@ -116,6 +117,17 @@
         font-weight: 700;
         color: #2c3e50;
       }
+    
+      .slide-pagination {
+        position: absolute;
+        bottom: 16px;
+        right: 24px;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        color: #95a5a6;
+        z-index: 10;
+        pointer-events: none;
+      }
     </style>
   </head>
   <body>
@@ -180,6 +192,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    
+      <div class="slide-pagination">2</div></div>
   </body>
 </html>

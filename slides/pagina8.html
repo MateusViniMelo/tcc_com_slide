@@ -6,6 +6,7 @@
     <style>
       html,body{height:100%;margin:0;padding:0}
       .slide-container {
+        position: relative;
         height: 720px;
         max-height: 720px;
         width: 1280px;
@@ -71,6 +72,17 @@ background-color: #F4F4F4;
         font-weight: 700;
         color: #E74C3C;
       }
+    
+      .slide-pagination {
+        position: absolute;
+        bottom: 16px;
+        right: 24px;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        color: #95a5a6;
+        z-index: 10;
+        pointer-events: none;
+      }
     </style>
 </head>
 <body>
@@ -101,6 +113,7 @@ background-color: #F4F4F4;
                 </div>
             </div>
         </div>
-    </div>
+    
+      <div class="slide-pagination">8</div></div>
 </body>
 </html>

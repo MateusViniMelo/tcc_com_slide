@@ -2,7 +2,7 @@
 <html lang="pt-BR">
   <head>
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <link
@@ -12,17 +12,15 @@
     <style>
       html,
       body {
-        width: 1280px;
-        height: 720px;
+        height: 100%;
         margin: 0;
         padding: 0;
-        overflow: hidden;
       }
       .slide-container {
-        width: 1280px;
+        position: relative;
         height: 720px;
         max-height: 720px;
-        overflow: hidden;
+        width: 1280px;
         background-color: #f4f4f4;
         font-family: "Inter", sans-serif;
         color: #34495e;
@@ -30,6 +28,7 @@
         flex-direction: column;
         border: 1px solid #2c3e50;
         box-sizing: border-box;
+        overflow: hidden;
       }
       .header {
         height: 84px;
@@ -49,96 +48,97 @@
         display: flex;
         flex: 1;
         min-height: 0;
-        overflow: hidden;
+        font-size: 20px;
       }
-      .column {
+      .left-panel {
         flex: 1;
+        padding: 28px 52px 28px 60px;
+        border-right: 1px solid #2c3e50;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        min-height: 0;
-        overflow: hidden;
+        justify-content: center;
+        background-color: rgba(192, 57, 43, 0.04);
       }
-      .column:first-child {
-        border-right: 1px solid #2c3e50;
-      }
-      .column-header {
+      .right-panel {
+        flex: 1;
+        padding: 28px 60px 28px 52px;
+        box-sizing: border-box;
         display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 18px 36px;
-        border-bottom: 1px solid #2c3e50;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(39, 174, 96, 0.04);
+      }
+      .main-content h3 {
         font-family: "Space Grotesk", sans-serif;
-        font-size: 26px;
-        flex-shrink: 0;
+        font-size: 30px;
+        margin: 0 0 16px 0;
       }
-      .column-header i {
-        font-size: 24px;
-      }
-      .limitations-header {
-        background-color: rgba(192, 57, 43, 0.08);
+      h3.limit {
         color: #c0392b;
       }
-      .contributions-header {
-        background-color: rgba(26, 188, 156, 0.08);
-        color: #1abc9c;
+      h3.fav {
+        color: #27ae60;
       }
-      .item-list {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        flex: 1;
-        min-height: 0;
-        padding: 24px 36px;
-        overflow: hidden;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
       }
-      .list-item {
-        background-color: white;
-        border: 1px solid #2c3e50;
-        padding: 18px 20px;
+      .main-content li {
+        margin-bottom: 18px;
+        line-height: 1.35;
         display: flex;
         align-items: flex-start;
-        gap: 14px;
+      }
+      li:last-child {
+        margin-bottom: 0;
+      }
+      .main-content .left-panel li i {
+        color: #c0392b;
+        margin-right: 14px;
+        margin-top: 7px;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .main-content .right-panel li i {
+        color: #27ae60;
+        margin-right: 14px;
+        margin-top: 7px;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .main-content .item-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #2c3e50;
+        line-height: 1.25;
+        margin: 0 0 6px 0;
+      }
+      .main-content .item-body {
         font-size: 20px;
         line-height: 1.35;
-        flex: 1;
-        min-height: 0;
-        box-sizing: border-box;
-      }
-      .list-item i {
-        margin-top: 4px;
-        font-size: 20px;
-        flex-shrink: 0;
-      }
-      .limitations-header + .item-list .list-item i {
-        color: #e74c3c;
-      }
-      .contributions-header + .item-list .list-item i {
-        color: #1abc9c;
-      }
-      .message-box {
-        margin: 0 36px 28px;
-        background-color: #2c3e50;
-        color: #f4f4f4;
-        padding: 18px 22px;
-        flex-shrink: 0;
-      }
-      .message-box .msg-title {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 20px;
-        color: #1abc9c;
-        margin-bottom: 8px;
-      }
-      .message-box p {
-        font-size: 18px;
-        line-height: 1.4;
         margin: 0;
+        color: #34495e;
       }
       .highlight {
         font-weight: 700;
         color: #2c3e50;
       }
-      .message-box .highlight {
-        color: #a3e4d7;
+      .item-content {
+        flex: 1;
+        min-width: 0;
+      }
+      .slide-pagination {
+        position: absolute;
+        bottom: 16px;
+        right: 24px;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        color: #95a5a6;
+        z-index: 10;
+        pointer-events: none;
       }
     </style>
   </head>
@@ -148,78 +148,95 @@
         <h2>Considerações Finais: Limitações e Contribuições</h2>
       </div>
       <div class="main-content">
-        <div class="column">
-          <div class="column-header limitations-header">
-            <i class="fas fa-exclamation-circle"></i> Limitações
-          </div>
-          <div class="item-list">
-            <div class="list-item">
-              <i class="fas fa-users"></i>
-              <span
-                >Amostra reduzida: <span class="highlight">três especialistas</span>
-                pertencentes ao mesmo laboratório, restringindo a generalização
-                dos resultados.</span
-              >
-            </div>
-            <div class="list-item">
-              <i class="fas fa-code-branch"></i>
-              <span
-                >Sistema em <span class="highlight">estágio inicial</span> de
-                desenvolvimento, sem funcionalidades analíticas avançadas.</span
-              >
-            </div>
-            <div class="list-item">
-              <i class="fas fa-user-check"></i>
-              <span
-                >Avaliação concentrada na perspectiva de
-                <span class="highlight">especialistas</span>, sem usuários finais
-                ou gestores públicos.</span
-              >
-            </div>
-          </div>
+        <div class="left-panel">
+          <h3 class="limit">Limitações</h3>
+          <ul>
+            <li>
+              <i class="fas fa-exclamation-circle"></i>
+              <div class="item-content">
+                <p class="item-title">Amostra reduzida</p>
+                <p class="item-body">
+                  Apenas <span class="highlight">três especialistas</span>
+                  pertencentes ao mesmo laboratório, restringindo a generalização
+                  dos resultados.
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-exclamation-circle"></i>
+              <div class="item-content">
+                <p class="item-title">Sistema em estágio inicial</p>
+                <p class="item-body">
+                  Desenvolvimento ainda preliminar, sem funcionalidades analíticas
+                  avançadas.
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-exclamation-circle"></i>
+              <div class="item-content">
+                <p class="item-title">Perspectiva de avaliação restrita</p>
+                <p class="item-body">
+                  Avaliação concentrada na visão de
+                  <span class="highlight">especialistas</span>, sem usuários finais
+                  ou gestores públicos.
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="column">
-          <div class="column-header contributions-header">
-            <i class="fas fa-star"></i> Contribuições
-          </div>
-          <div class="item-list">
-            <div class="list-item">
-              <i class="fas fa-compass"></i>
-              <span
-                >Consolidação da <span class="highlight">espaciabilidade</span>
-                como critério aplicável ao design de sistemas colaborativos
-                urbanos.</span
-              >
-            </div>
-            <div class="list-item">
-              <i class="fas fa-clipboard-check"></i>
-              <span
-                >Aplicação empírica e refinamento do
-                <span class="highlight">MIE</span>, com recomendações
-                estruturadas de aprimoramento.</span
-              >
-            </div>
-            <div class="list-item">
-              <i class="fas fa-laptop-code"></i>
-              <span
-                >Desenvolvimento do <span class="highlight">Mapa Cidadão</span>,
-                sistema concebido para apoiar a interpretação espacial das
-                ocorrências.</span
-              >
-            </div>
-            <div class="list-item">
-              <i class="fas fa-project-diagram"></i>
-              <span
-                >Evidências qualitativas sobre a relação entre
-                <span class="highlight"
-                  >espaciabilidade, usabilidade e experiência do usuário</span
-                >.</span
-              >
-            </div>
-          </div>
-         
+        <div class="right-panel">
+          <h3 class="fav">Contribuições</h3>
+          <ul>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div class="item-content">
+                <p class="item-title">Critério de espaciabilidade</p>
+                <p class="item-body">
+                  Consolidação da <span class="highlight">espaciabilidade</span>
+                  como critério aplicável ao design de sistemas colaborativos
+                  urbanos.
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div class="item-content">
+                <p class="item-title">Refinamento do MIE</p>
+                <p class="item-body">
+                  Aplicação empírica e refinamento do
+                  <span class="highlight">MIE</span>, com recomendações
+                  estruturadas de aprimoramento.
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div class="item-content">
+                <p class="item-title">Mapa Cidadão</p>
+                <p class="item-body">
+                  Desenvolvimento do <span class="highlight">Mapa Cidadão</span>,
+                  sistema concebido para apoiar a interpretação espacial das
+                  ocorrências.
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div class="item-content">
+                <p class="item-title">Evidências qualitativas</p>
+                <p class="item-body">
+                  Indícios sobre a relação entre
+                  <span class="highlight"
+                    >espaciabilidade, usabilidade e experiência do usuário</span
+                  >.
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
+      <div class="slide-pagination">26</div>
     </div>
   </body>
 </html>
