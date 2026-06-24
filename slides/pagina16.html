@@ -62,30 +62,29 @@
       }
       .info-grid {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
         width: 100%;
       }
       .info-item {
-        font-size: 18px;
+        font-size: 22px;
         line-height: 1.25;
         display: flex;
-        flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
+        gap: 12px;
       }
       .number-badge {
         background-color: #3498DB;
         color: white;
-        width: 28px;
-        height: 28px;
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: bold;
         flex-shrink: 0;
-        font-size: 16px;
+        font-size: 18px;
       }
       .highlight {
         font-weight: 700;
@@ -107,23 +106,11 @@
                 <div class="info-grid">
                     <div class="info-item">
                         <div class="number-badge">1</div>
-                        <p><span class="highlight">Acesso autenticado:</span> Área exclusiva para usuários logados acompanharem suas contribuições.</p>
-                    </div>
-                    <div class="info-item">
-                        <div class="number-badge">2</div>
-                        <p><span class="highlight">Minhas ocorrências:</span> Listagem tabular de todos os registros criados pelo cidadão.</p>
-                    </div>
-                    <div class="info-item">
-                        <div class="number-badge">3</div>
                         <p><span class="highlight">Dados exibidos:</span> Tipo, endereço, cidade, estado e data de criação de cada ocorrência.</p>
                     </div>
                     <div class="info-item">
-                        <div class="number-badge">4</div>
+                        <div class="number-badge">2</div>
                         <p><span class="highlight">Status:</span> Indicadores visuais de <span class="highlight">Em Andamento</span> e <span class="highlight">Resolvida</span>.</p>
-                    </div>
-                    <div class="info-item">
-                        <div class="number-badge">5</div>
-                        <p><span class="highlight">Paginação:</span> Navegação entre páginas para consulta de registros anteriores.</p>
                     </div>
                 </div>
             </div>
