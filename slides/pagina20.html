@@ -67,7 +67,7 @@
         gap: 10px;
       }
       .findings-title {
-        color: #2980b9;
+        color: #27ae60;
         padding-right: 12px;
         border-right: 1px solid #2c3e50;
       }
@@ -105,6 +105,9 @@
         box-sizing: border-box;
       }
       .dim-item.finding {
+        border-left: 5px solid #27ae60;
+      }
+      .dim-item.opportunity {
         border-left: 5px solid #3498db;
       }
       .dim-item.suggestion {
@@ -128,6 +131,9 @@
         font-weight: 700;
       }
       .finding .highlight {
+        color: #27ae60;
+      }
+      .opportunity .highlight {
         color: #2980b9;
       }
       .suggestion .highlight {
@@ -146,7 +152,7 @@
             <i class="fas fa-check-circle"></i> Aspectos Favoráveis
           </h3>
           <h3 class="column-title suggestions-title">
-            <i class="fas fa-lightbulb"></i> Limitações e Recomendações
+            <i class="fas fa-lightbulb"></i> Limitações e Recomendações de Melhoria
           </h3>
         </div>
         <div class="results-grid">
@@ -201,38 +207,52 @@
           </div>
 
           <div class="results-column">
-            <div class="dim-item suggestion">
+            <div class="dim-item opportunity">
               <div class="dim-label">
-                <i class="fas fa-th"></i> D2: Padrões Espaciais
+                <i class="fas fa-map-marker-alt"></i> Simbologia e clareza dos marcadores
               </div>
               <p class="dim-text">
-                P1: incluir
-                <span class="highlight">filtros ou agrupamentos</span> para
-                comparar intensidade entre regiões.
+                P1: poucas informações nos pontos; P3: pavimentação confunde com
+                <span class="highlight">binóculo</span>. P2: legenda ajuda, mas
+                <span class="highlight">cores similares</span> — risco para baixa
+                visão (D6).
+              </p>
+            </div>
+
+            <div class="dim-item opportunity">
+              <div class="dim-label">
+                <i class="fas fa-info-circle"></i> Detalhes dos marcadores e posição do usuário
+              </div>
+              <p class="dim-text">
+                P1: informações nos marcadores
+                <span class="highlight">não são claras</span>; poucas informações
+                nos pontos. P2: falta indicar
+                <span class="highlight">posição do usuário</span> em relação ao
+                problema (D1).
               </p>
             </div>
 
             <div class="dim-item suggestion">
               <div class="dim-label">
-                <i class="fas fa-link"></i> D4: Associações Espaciais
+                <i class="fas fa-filter"></i> Ausência de filtros e agrupamento por tipo
               </div>
               <p class="dim-text">
-                P1/P2: indicar <span class="highlight">recorrência</span> nos
-                pontos e adicionar
-                <span class="highlight">filtros temporais</span> para sustentar
-                hipóteses espaciais.
+                P1: Ana <span class="highlight">não encontrou filtro nem agrupamento</span>
+                para alagamento. P3: D2 com
+                <span class="highlight">falha/limitação</span> — impossível
+                filtrar um único tipo de padrão.
               </p>
             </div>
 
             <div class="dim-item suggestion">
               <div class="dim-label">
-                <i class="fas fa-map-marker-alt"></i> D6: Tipos Espaciais
+                <i class="fas fa-clock"></i> Filtros, agregação e dados temporais
               </div>
               <p class="dim-text">
-                P2/P3: diferenciar
-                <span class="highlight">cores semelhantes</span> e tornar ícones
-                de <span class="highlight">iluminação e pavimentação</span> mais
-                distintos à distância.
+                Convergência P1–P3:
+                <span class="highlight">filtros por tipo, bairro/região, contagem e tempo</span>.
+                P2: <span class="highlight">filtro temporal</span> (dia, semana)
+                ajudaria em D4.
               </p>
             </div>
           </div>
