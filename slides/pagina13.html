@@ -31,46 +31,27 @@
         color: #2C3E50;
         margin: 0;
       }
-      .intro-bar {
-        padding: 14px 60px;
-        border-bottom: 1px solid #2C3E50;
-        box-sizing: border-box;
-      }
-      .intro-text {
-        font-size: 22px;
-        line-height: 1.35;
-        margin: 0;
-      }
       .main-content {
         display: flex;
         flex: 1;
       }
-      .panel {
+      .left-panel {
         flex: 1;
-        padding: 28px 36px;
+        padding: 40px 60px;
         border-right: 1px solid #2C3E50;
+      }
+      .right-panel {
+        flex: 1;
+        padding: 40px 60px;
         display: flex;
         flex-direction: column;
-      }
-      .panel:last-child {
-        border-right: none;
-      }
-      .panel-blue {
         background-color: rgba(52, 152, 219, 0.05);
-      }
-      .panel-green {
-        background-color: rgba(46, 204, 113, 0.06);
       }
       h3 {
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 28px;
-        margin: 0 0 18px 0;
-      }
-      .panel-blue h3 {
+        font-size: 32px;
         color: #2980B9;
-      }
-      .panel-green h3 {
-        color: #27AE60;
+        margin: 0 0 20px 0;
       }
       ul {
         list-style: none;
@@ -78,83 +59,46 @@
         margin: 0;
       }
       li {
-        font-size: 22px;
-        margin-bottom: 16px;
+        font-size: 28px;
+        margin-bottom: 20px;
         line-height: 1.4;
         display: flex;
         align-items: flex-start;
       }
-      .panel-blue li i {
-        color: #2980B9;
-      }
-      .panel-green li i {
-        color: #27AE60;
-      }
       li i {
-        margin-right: 12px;
-        margin-top: 6px;
-        font-size: 20px;
-        width: 24px;
-        text-align: center;
-        flex-shrink: 0;
+        color: #2980B9;
+        margin-right: 15px;
+        margin-top: 10px;
+        font-size: 24px;
       }
       .highlight {
         font-weight: 700;
         color: #2C3E50;
-      }
-      .stack-badge {
-        display: inline-block;
-        background-color: #3498DB;
-        color: white;
-        font-size: 18px;
-        font-weight: 700;
-        padding: 4px 12px;
-        border-radius: 6px;
-        margin-bottom: 14px;
-      }
-      .stack-badge.green {
-        background-color: #27AE60;
       }
     </style>
 </head>
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Especificações Técnicas</h2>
-        </div>
-        <div class="intro-bar">
-            <p class="intro-text">
-                Arquitetura <span class="highlight">cliente-servidor</span> com API REST desacoplada do frontend, separando persistência de dados e interface cartográfica.
-            </p>
+            <h2>Mapa Cidadão</h2>
         </div>
         <div class="main-content">
-            <div class="panel panel-blue">
-                <span class="stack-badge">Backend — API</span>
-                <h3>Servidor</h3>
+            <div class="left-panel">
+                <h3>O Sistema</h3>
                 <ul>
-                    <li><i class="fab fa-php"></i> <span><span class="highlight">PHP 8.4</span> como linguagem de execução no servidor.</span></li>
-                    <li><i class="fas fa-server"></i> <span><span class="highlight">Laravel 12</span> estruturando a API REST — autenticação, ocorrências e validação social.</span></li>
-                    <li><i class="fas fa-exchange-alt"></i> <span>Comunicação via <span class="highlight">endpoints JSON</span> consumidos pelo cliente web.</span></li>
+                    <li><i class="fas fa-map-marked-alt"></i> <span>Sistema colaborativo de <span class="highlight">registro e visualização</span> de ocorrências urbanas.</span></li>
+                    <li><i class="fas fa-lightbulb"></i> <span>Projeto guiado pela <span class="highlight">Espaciabilidade</span>, integrando Crowdsourcing, Georreferenciamento e IHC.</span></li>
+                    <li><i class="fas fa-brain"></i> <span>Mapa como <span class="highlight">artefato cognitivo</span> para apoiar o raciocínio espacial do cidadão.</span></li>
                 </ul>
             </div>
-            <div class="panel panel-green">
-              <span class="stack-badge green">Frontend — Cliente</span>
-              <h3>Interface Web</h3>
-              <ul>
-                  <li><i class="fab fa-vuejs"></i> <span><span class="highlight">Nuxt 3</span> (Vue.js) para a aplicação web reativa e componentizada.</span></li>
-                  <li><i class="fas fa-map"></i> <span><span class="highlight">OpenStreetMap</span> como base cartográfica colaborativa do mapa interativo.</span></li>
-                 
-              </ul>
-          </div>
-            <div class="panel panel-blue">
-                <span class="stack-badge">Banco de Dados</span>
-                <h3>Persistência</h3>
+            <div class="right-panel">
+                <h3>Principais Funções</h3>
                 <ul>
-                    <li><i class="fas fa-database"></i> <span><span class="highlight">PostgreSQL 13</span> como banco de dados relacional do sistema.</span></li>
-                    <li><i class="fas fa-globe-americas"></i> <span><span class="highlight">PostGIS 3.5</span> para armazenamento e consulta de dados geoespaciais das ocorrências.</span></li>
+                    <li><i class="fas fa-layer-group"></i> <span>Navegação interativa com legenda para <span class="highlight">interpretação de tipos</span> (D6).</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span>Registro colaborativo de ocorrências com <span class="highlight">validação social</span> (likes).</span></li>
+                    <li><i class="fas fa-hands-helping"></i> <span>Construção coletiva do <span class="highlight">conhecimento urbano</span> e engajamento cívico.</span></li>
                 </ul>
             </div>
-            
         </div>
     </div>
 </body>

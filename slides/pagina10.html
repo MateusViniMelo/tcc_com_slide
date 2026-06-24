@@ -1,80 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+      html,body{height:100%;margin:0;padding:0}
       .slide-container {
         height: 720px;
         max-height: 720px;
         width: 1280px;
-        background-color: #f4f4f4;
-        font-family: "Inter", sans-serif;
-        color: #34495e;
+background-color: #F4F4F4;
+        font-family: 'Inter', sans-serif;
+        color: #34495E;
         display: flex;
         flex-direction: column;
-        border: 1px solid #2c3e50;
+        border: 1px solid #2C3E50;
         box-sizing: border-box;
-
+      
         overflow: hidden;
       }
       .header {
         height: 84px;
         padding-top: 25px;
         padding-left: 60px;
-        border-bottom: 1px solid #2c3e50;
+        border-bottom: 1px solid #2C3E50;
         box-sizing: border-box;
       }
       h2 {
-        font-family: "Space Grotesk", sans-serif;
+        font-family: 'Space Grotesk', sans-serif;
         font-size: 38px;
-        color: #2c3e50;
+        color: #2C3E50;
         margin: 0;
       }
       .main-content {
         display: flex;
         flex: 1;
+      }
+      .left-panel {
+        flex: 1;
+        padding: 40px 60px;
+        border-right: 1px solid #2C3E50;
+      }
+      .right-panel {
+        flex: 1;
+        padding: 40px 60px;
+        display: flex;
         flex-direction: column;
-      }
-      .top-panel {
-        flex: 1;
-        padding: 22px 60px;
-        border-bottom: 1px solid #2c3e50;
-      }
-      .middle-panel {
-        flex: 1;
-        padding: 22px 60px;
-        border-bottom: 1px solid #2c3e50;
-        background-color: rgba(231, 76, 60, 0.05);
-      }
-      .solution-panel {
-        flex: 1;
-        padding: 22px 60px;
-        background-color: rgba(52, 152, 219, 0.08);
+        background-color: rgba(46, 204, 113, 0.05);
       }
       h3 {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 28px;
-        color: #e74c3c;
-        margin: 0 0 12px 0;
-      }
-      .top-panel h3 {
-        color: #2c3e50;
-      }
-      .solution-panel h3 {
-        color: #2980b9;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 32px;
+        color: #27AE60;
+        margin: 0 0 20px 0;
       }
       ul {
         list-style: none;
@@ -82,92 +60,47 @@
         margin: 0;
       }
       li {
-        font-size: 24px;
-        margin-bottom: 12px;
+        font-size: 28px;
+        margin-bottom: 20px;
         line-height: 1.4;
         display: flex;
         align-items: flex-start;
       }
       li i {
-        color: #e74c3c;
+        color: #27AE60;
         margin-right: 15px;
-        margin-top: 8px;
-        font-size: 22px;
-      }
-      .top-panel li i {
-        color: #2c3e50;
-      }
-      .solution-panel li i {
-        color: #3498db;
+        margin-top: 10px;
+        font-size: 24px;
       }
       .highlight {
         font-weight: 700;
-        color: #2c3e50;
+        color: #2C3E50;
       }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="slide-container">
-      <div class="header">
-        <h2>O Problema: Lacuna no Raciocínio Espacial</h2>
-      </div>
-      <div class="main-content">
-        <div class="top-panel">
-          <h3>Contexto Atual</h3>
-          <ul>
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <span
-                >Foco no
-                <span style="color: rgb(44, 62, 80); font-weight: 700"
-                  >registro e visualização.</span
-                ></span
-              >
-            </li>
-            <li>
-              <i class="fas fa-search-location"></i>
-              <span
-                >Uso do mapa apenas como recurso de localização básica.</span
-              >
-            </li>
-          </ul>
+        <div class="header">
+            <h2>Crowdsourcing e Georreferenciamento</h2>
         </div>
-        <div class="middle-panel">
-          <h3>A Lacuna Identificada</h3>
-          <ul>
-            <li>
-              <i class="fas fa-brain"></i>
-              <span
-                >Lacuna entre a coleta colaborativa de dados e o apoio
-                efetivo ao
-                <span class="highlight">raciocínio espacial</span>.</span
-              >
-            </li>
-            <li>
-              <i class="fas fa-eye"></i>
-              <span
-                >Problemas urbanos e a
-                <span class="highlight">resposta das autoridades</span>
-                permanecem pouco transparentes para a população.</span
-              >
-            </li>
-          </ul>
+        <div class="main-content">
+            <div class="left-panel">
+                <h3>Inteligência Coletiva</h3>
+                <ul>
+                    <li><i class="fas fa-users"></i> <span>Atividades distribuídas realizadas por um <span class="highlight">grande número de indivíduos</span>.</span></li>
+                    <li><i class="fas fa-mobile-alt"></i> <span>Plataformas digitais como mediadoras da <span class="highlight">participação cidadã</span>.</span></li>
+                    <li><i class="fas fa-database"></i> <span>VGI: O usuário como produtor voluntário de dados espaciais.</span></li>
+                </ul>
+            </div>
+            <div class="right-panel">
+                <h3>Impacto Urbano</h3>
+                <ul>
+                    <li><i class="fas fa-chart-line"></i> <span><span class="highlight">Escalabilidade:</span> Cobertura de grandes áreas territoriais.</span></li>
+                    <li><i class="fas fa-sync"></i> <span><span class="highlight">Atualização:</span> Dados em tempo real sobre a infraestrutura da cidade.</span></li>
+                    <li><i class="fas fa-eye"></i> <span>Transparência pública e apoio à governança urbana.</span></li>
+                </ul>
+            </div>
         </div>
-        <div class="solution-panel">
-          <h3>A Solução: Mapa Cidadão</h3>
-          <ul>
-            <li>
-              <i class="fas fa-map"></i>
-              <span
-                >Mapa como
-                <span class="highlight">artefato cognitivo</span>, orientado
-                pela espaciabilidade para apoiar a interpretação espacial.</span
-              >
-            </li>
-            
-          </ul>
-        </div>
-      </div>
     </div>
-  </body>
+</body>
 </html>

@@ -1,31 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+      html,body{height:100%;margin:0;padding:0}
       .slide-container {
         height: 720px;
         max-height: 720px;
         width: 1280px;
-        background-color: #f4f4f4;
-        font-family: "Inter", sans-serif;
-        color: #34495e;
+        background-color: #F4F4F4;
+        font-family: 'Inter', sans-serif;
+        color: #34495E;
         display: flex;
         flex-direction: column;
-        border: 1px solid #2c3e50;
+        border: 1px solid #2C3E50;
         box-sizing: border-box;
         overflow: hidden;
       }
@@ -33,212 +22,181 @@
         height: 84px;
         padding-top: 25px;
         padding-left: 60px;
-        border-bottom: 1px solid #2c3e50;
+        border-bottom: 1px solid #2C3E50;
         box-sizing: border-box;
         flex-shrink: 0;
       }
       h2 {
-        font-family: "Space Grotesk", sans-serif;
+        font-family: 'Space Grotesk', sans-serif;
         font-size: 38px;
-        color: #2c3e50;
+        color: #2C3E50;
         margin: 0;
       }
       .main-content {
         display: flex;
         flex: 1;
         min-height: 0;
-        font-size: 20px;
       }
-      .left-panel {
-        flex: 1;
-        padding: 28px 52px 28px 60px;
-        border-right: 1px solid #2c3e50;
+      .chart-panel {
+        flex: 1.15;
+        padding: 24px 32px 28px 48px;
+        border-right: 1px solid #2C3E50;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+      .chart-caption {
+        font-size: 17px;
+        color: #7F8C8D;
+        text-align: center;
+        margin: 10px 0 0;
+        line-height: 1.35;
+        max-width: 640px;
+      }
+      .chart-svg {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+      }
+      .summary-panel {
+        flex: 0.85;
+        padding: 36px 48px 36px 40px;
+        background-color: rgba(41, 128, 185, 0.05);
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: rgba(39, 174, 96, 0.04);
       }
-      .right-panel {
-        flex: 1;
-        padding: 28px 60px 28px 52px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 32px;
-      }
-      .main-content h3 {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 30px;
-        margin: 0 0 16px 0;
-      }
-      h3.fav {
-        color: #27ae60;
-      }
-      h3.limit {
-        color: #c0392b;
-      }
-      h3.rec {
-        color: #d35400;
+      h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 28px;
+        color: #2980B9;
+        margin: 0 0 22px 0;
       }
       ul {
         list-style: none;
         padding: 0;
         margin: 0;
       }
-      .main-content li {
+      li {
+        font-size: 22px;
         margin-bottom: 18px;
         line-height: 1.35;
         display: flex;
         align-items: flex-start;
       }
-      li:last-child {
-        margin-bottom: 0;
-      }
-      .main-content .left-panel li i {
-        color: #27ae60;
+      li i {
+        color: #2980B9;
         margin-right: 14px;
-        margin-top: 7px;
-        font-size: 20px;
+        margin-top: 6px;
+        font-size: 18px;
         flex-shrink: 0;
-      }
-      .main-content .section-limit li i {
-        color: #c0392b;
-        margin-right: 14px;
-        margin-top: 7px;
-        font-size: 20px;
-        flex-shrink: 0;
-      }
-      .main-content .section-rec li i {
-        color: #e67e22;
-      }
-      .main-content .item-title {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 22px;
-        font-weight: 700;
-        color: #2c3e50;
-        line-height: 1.25;
-        margin: 0 0 6px 0;
-      }
-      .main-content .item-body {
-        font-size: 20px;
-        line-height: 1.35;
-        margin: 0;
-        color: #34495e;
       }
       .highlight {
         font-weight: 700;
-        color: #2c3e50;
+        color: #2C3E50;
       }
-      .item-content {
-        flex: 1;
-        min-width: 0;
+      .legend-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 16px;
+        margin-top: 8px;
+      }
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 18px;
+      }
+      .legend-swatch {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
       }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="slide-container">
-      <div class="header">
-        <h2>Análise de Espaciabilidade</h2>
-      </div>
-      <div class="main-content">
-        <div class="left-panel">
-         
-          <h3 class="fav">Aspectos favoráveis</h3>
-          <ul>
-            <li>
-              <i class="fas fa-check-circle"></i>
-              <div class="item-content">
-                <p class="item-title">Localização de ocorrências no mapa</p>
-                <p class="item-body">
-                  Georreferenciação atende consulta de localização; usuário
-                  identifica onde estão as ocorrências — maior consenso entre as
-                  dimensões (P2, P3).
-                </p>
-              </div>
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i>
-              <div class="item-content">
-                <p class="item-title">Concentrações visuais perceptíveis</p>
-                <p class="item-body">
-                  Inspeção visual permite perceber concentração de problemas em
-                  área específica da cidade (P2).
-                </p>
-              </div>
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i>
-              <div class="item-content">
-                <p class="item-title">Georreferenciação para intervenção</p>
-                <p class="item-body">
-                  Precisão dos marcadores apoia identificar onde intervir; (P2, P3).
-                </p>
-              </div>
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i>
-              <div class="item-content">
-                <p class="item-title">
-                  Associações espaciais básicas
-                </p>
-                <p class="item-body">
-                  Proximidade entre tipos de ocorrência viabiliza associações
-                  básicas e potencial de relacionar variáveis (P2, P3).
-                </p>
-              </div>
-            </li>
-          </ul>
+        <div class="header">
+            <h2>Resultados: Distribuição das Evidências</h2>
         </div>
-        <div class="right-panel">
-         
-          <div class="section-limit">
-            <h3 class="limit">Limitações e Recomendações de melhoria</h3>
-            <ul>
-              <li>
-                <i class="fas fa-exclamation-circle"></i>
-                <div class="item-content">
-                  <p class="item-title">
-                    Ausência de filtros e agrupamento por tipo
-                  </p>
-                  <p class="item-body">
-                    Impossível filtrar um único tipo de padrão; tarefas
-                    analíticas não correspondem às funcionalidades atuais sem
-                    agregação (P1, P3). Convergência com
-                    <span class="highlight">filtros temporais</span> sugeridos
-                    por P1, P2 e P3.
-                  </p>
+        <div class="main-content">
+            <div class="chart-panel">
+                <svg class="chart-svg" viewBox="0 0 700 430" role="img" aria-label="Gráfico de barras com a distribuição das evidências qualitativas por categoria analítica">
+                    <text x="28" y="210" transform="rotate(-90 28 210)" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" fill="#34495E">Quantidade de evidências</text>
+                    <text x="390" y="418" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" fill="#34495E">Categorias da análise</text>
+
+                    <!-- Eixos -->
+                    <line x1="90" y1="50" x2="90" y2="360" stroke="#2C3E50" stroke-width="1.5"/>
+                    <line x1="90" y1="360" x2="660" y2="360" stroke="#2C3E50" stroke-width="1.5"/>
+
+                    <!-- Grid e rótulos Y (0–13) -->
+                    <g font-family="Inter, sans-serif" font-size="14" fill="#7F8C8D">
+                        <line x1="90" y1="360" x2="660" y2="360" stroke="#d5d8dc" stroke-width="1"/>
+                        <text x="78" y="364" text-anchor="end">0</text>
+
+                        <line x1="90" y1="313" x2="660" y2="313" stroke="#ecf0f1" stroke-width="1"/>
+                        <text x="78" y="317" text-anchor="end">2</text>
+
+                        <line x1="90" y1="266" x2="660" y2="266" stroke="#ecf0f1" stroke-width="1"/>
+                        <text x="78" y="270" text-anchor="end">4</text>
+
+                        <line x1="90" y1="219" x2="660" y2="219" stroke="#ecf0f1" stroke-width="1"/>
+                        <text x="78" y="223" text-anchor="end">6</text>
+
+                        <line x1="90" y1="172" x2="660" y2="172" stroke="#ecf0f1" stroke-width="1"/>
+                        <text x="78" y="176" text-anchor="end">8</text>
+
+                        <line x1="90" y1="125" x2="660" y2="125" stroke="#ecf0f1" stroke-width="1"/>
+                        <text x="78" y="129" text-anchor="end">10</text>
+
+                        <line x1="90" y1="78" x2="660" y2="78" stroke="#ecf0f1" stroke-width="1"/>
+                        <text x="78" y="82" text-anchor="end">12</text>
+                    </g>
+
+                    <!-- Barras: Usabilidade 7, UX 3, Espaciabilidade 11, MIE 2 -->
+                    <!-- escala: 282px / 13 ≈ 21.69px por unidade; base y=360 -->
+                    <g font-family="Space Grotesk, sans-serif" font-weight="700" font-size="18" fill="#2C3E50">
+                        <rect x="145" y="208" width="70" height="152" fill="#3498DB"/>
+                        <text x="180" y="198" text-anchor="middle">7</text>
+
+                        <rect x="265" y="295" width="70" height="65" fill="#E67E22"/>
+                        <text x="300" y="285" text-anchor="middle">3</text>
+
+                        <rect x="385" y="121" width="70" height="239" fill="#2980B9"/>
+                        <text x="420" y="111" text-anchor="middle">11</text>
+
+                        <rect x="505" y="317" width="70" height="43" fill="#7F8C8D"/>
+                        <text x="540" y="307" text-anchor="middle">2</text>
+                    </g>
+
+                    <g font-family="Inter, sans-serif" font-size="15" fill="#34495E">
+                        <text x="180" y="382" text-anchor="middle">Usabilidade</text>
+                        <text x="300" y="382" text-anchor="middle">UX</text>
+                        <text x="420" y="382" text-anchor="middle">Espaciabilidade</text>
+                        <text x="540" y="382" text-anchor="middle">MIE</text>
+                    </g>
+                </svg>
+                <p class="chart-caption">Distribuição das evidências qualitativas por categoria analítica no sistema Mapa Cidadão.</p>
+            </div>
+            <div class="summary-panel">
+                <h3>Análise Temática</h3>
+                <ul>
+                    <li><i class="fas fa-chart-bar"></i> <span><span class="highlight">23 evidências</span> na análise dedutiva — leitura favorável do Mapa Cidadão.</span></li>
+                    <li><i class="fas fa-map-marked-alt"></i> <span><span class="highlight">Espaciabilidade (11)</span> — D1 e D3 satisfatórias; potencial em D2 e D4.</span></li>
+                    <li><i class="fas fa-mouse-pointer"></i> <span><span class="highlight">Usabilidade (7)</span> e <span class="highlight">UX (3)</span> — fluxo funcional e proposta social valorizada.</span></li>
+                    <li><i class="fas fa-filter"></i> <span><span class="highlight">Limitação central:</span> ausência de filtros — evolução sugerida por P1, P2 e P3.</span></li>
+                </ul>
+                <div class="legend-grid">
+                    <div class="legend-item"><span class="legend-swatch" style="background:#3498DB"></span> Usabilidade</div>
+                    <div class="legend-item"><span class="legend-swatch" style="background:#E67E22"></span> UX</div>
+                    <div class="legend-item"><span class="legend-swatch" style="background:#2980B9"></span> Espaciabilidade</div>
+                    <div class="legend-item"><span class="legend-swatch" style="background:#7F8C8D"></span> MIE</div>
                 </div>
-              </li>
-             
-              <li>
-                <i class="fas fa-exclamation-circle"></i>
-                <div class="item-content">
-                  <p class="item-title">
-                    Sobreposição de camadas pouco compreendida
-                  </p>
-                  <p class="item-body">
-                    Conceito de sobreposição de camadas não foi entendido na
-                    interface; leitura depende de zoom e escala (P3, P2).
-                  </p>
-                </div>
-              </li>
-              <li>
-                <i class="fas fa-exclamation-circle"></i>
-                <div class="item-content">
-                  <p class="item-title">Simbologia e clareza dos marcadores</p>
-                  <p class="item-body">
-                    Ícones e cores similares comprometem a distinção entre
-                    categorias; consenso sobre revisão da simbologia (P1, P2,
-                    P3).
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
+            </div>
         </div>
-      </div>
     </div>
-  </body>
+</body>
 </html>

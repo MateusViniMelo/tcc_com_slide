@@ -6,8 +6,7 @@
       html,body{height:100%;margin:0;padding:0}
       .slide-container {
         width: 1280px;
-        height: 720px;
-        max-height: 720px;
+        min-height: 720px;
         background-color: #F4F4F4;
         font-family: 'Inter', sans-serif;
         color: #34495E;
@@ -15,7 +14,6 @@
         flex-direction: column;
         border: 1px solid #2C3E50;
         box-sizing: border-box;
-        overflow: hidden;
       }
       .header {
         height: 84px;
@@ -23,7 +21,6 @@
         padding-left: 60px;
         border-bottom: 1px solid #2C3E50;
         box-sizing: border-box;
-        flex-shrink: 0;
       }
       h2 {
         font-family: 'Space Grotesk', sans-serif;
@@ -33,45 +30,38 @@
       }
       .main-content {
         display: flex;
-        flex-direction: column;
         flex: 1;
-        padding: 16px 40px 24px;
-        gap: 20px;
-        box-sizing: border-box;
-        overflow: hidden;
+        padding: 15px 35px;
+        gap: 25px;
       }
-      .image-section {
+      .image-column {
+        flex: 0 0 630px;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-shrink: 0;
       }
-      .image-section img {
-        max-width: 1150px;
-        max-height: 420px;
-        width: 100%;
+      .image-column img {
+        max-width: 600px;
+        max-height: 600px;
         object-fit: contain;
         border: 2px solid #2C3E50;
       }
-      .legend-section {
+      .text-column {
         flex: 1;
         display: flex;
-        align-items: flex-start;
-        border-top: 1px solid #2C3E50;
-        padding-top: 18px;
+        flex-direction: column;
+        justify-content: center;
       }
       .info-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 14px;
       }
       .info-item {
         font-size: 22px;
-        line-height: 1.25;
+        line-height: 1.2;
         display: flex;
         align-items: flex-start;
-        gap: 12px;
       }
       .number-badge {
         background-color: #3498DB;
@@ -83,6 +73,7 @@
         align-items: center;
         justify-content: center;
         font-weight: bold;
+        margin-right: 15px;
         flex-shrink: 0;
         font-size: 18px;
       }
@@ -96,21 +87,33 @@
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Interface do Mapa Cidadão: Histórico de Ocorrências</h2>
+            <h2>Interface do Mapa Cidadão: Cadastro de Ocorrência</h2>
         </div>
         <div class="main-content">
-            <div class="image-section">
-                <img src="../figuras/design_historico.png" alt="Tela de histórico de ocorrências do usuário autenticado no Mapa Cidadão">
+            <div class="image-column">
+                <img src="../figuras/design_ocorrencia.png" alt="Modal de cadastro de ocorrência no Mapa Cidadão">
             </div>
-            <div class="legend-section">
+            <div class="text-column">
                 <div class="info-grid">
                     <div class="info-item">
                         <div class="number-badge">1</div>
-                        <p><span class="highlight">Dados exibidos:</span> Tipo, endereço, cidade, estado e data de criação de cada ocorrência.</p>
+                        <p><span class="highlight">Modal de registro:</span> Formulário sobreposto ao mapa para criação de novas ocorrências.</p>
                     </div>
                     <div class="info-item">
                         <div class="number-badge">2</div>
-                        <p><span class="highlight">Status:</span> Indicadores visuais de <span class="highlight">Em Andamento</span> e <span class="highlight">Resolvida</span>.</p>
+                        <p><span class="highlight">Endereço:</span> Preenchido automaticamente com base no ponto selecionado no mapa.</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="number-badge">3</div>
+                        <p><span class="highlight">Categoria:</span> Campo obrigatório com seleção do tipo de problema (iluminação, lixo, alagamento, etc.).</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="number-badge">4</div>
+                        <p><span class="highlight">Descrição:</span> Texto livre para detalhar o problema, com limite de 250 caracteres.</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="number-badge">5</div>
+                        <p><span class="highlight">Salvar:</span> Envio da ocorrência para persistência no servidor e exibição no mapa.</p>
                     </div>
                 </div>
             </div>

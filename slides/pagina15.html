@@ -41,8 +41,8 @@
         justify-content: center;
       }
       .image-column img {
-        max-width: 600px;
-        max-height: 600px;
+        width: 600px;
+        height: 600px;
         object-fit: contain;
         border: 2px solid #2C3E50;
       }
@@ -50,15 +50,14 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        justify-content: center;
       }
       .info-grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 12px;
       }
       .info-item {
-        font-size: 22px;
+        font-size: 22px; /* Reduced slightly to fit all 7 points comfortably */
         line-height: 1.2;
         display: flex;
         align-items: flex-start;
@@ -87,35 +86,44 @@
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Interface do Mapa Cidadão: Cadastro de Ocorrência</h2>
+            <h2>Interface do Mapa Cidadão: Detalhamento</h2>
         </div>
         <div class="main-content">
             <div class="image-column">
-                <img src="../figuras/design_ocorrencia.png" alt="Modal de cadastro de ocorrência no Mapa Cidadão">
+                <img src="https://private-us-east-1.manuscdn.com/sessionFile/hgwygMoZbo8v2GuPcDzN1L/sandbox/slides_resource_iz4z9mz5u03xfgld6fyv3-a5492b36-e2b-prod-us1_1779065785951_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9maWd1cmFfbWFwYV9jaWRhZGFvXzI.png?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvaGd3eWdNb1pibzh2Mkd1UGNEek4xTC9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pejR6OW16NXUwM3hmZ2xkNmZ5djMtYTU0OTJiMzYtZTJiLXByb2QtdXMxXzE3NzkwNjU3ODU5NTFfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5bWFXZDFjbUZmYldGd1lWOWphV1JoWkdGdlh6SS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xNTYwLGhfMTU2MC9mb3JtYXQsd2VicCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=iizxUVu7VnYiBWJOEmMPyVQCXm5ZO7LOz1pPfxRqZ1ezGBnv1R2lIRs3mNYRehZv9JSORbeX8E8yETtg0vnTlhnYr5IdQ0DYRG-Y7ep6QRVygtPW8IEhTM~6gdQ38fQZ-f4LF1XuYZkQf5-Yzi1iZyph81lVmmRjtGBSxMgvEwp3ODju~TRpPJtFzsUFsoug37xgQzgjs~SOiiwoWTcRrFd~eAAs7F53~IHNZaItM0LBiFD90sonoOZWzOS9YGipXM~PxImABBMbtoH4N05l6UBmUqCu8K32S~wgAiSivQKUcrG~3xt5LoPQ4JAD8MgSoWrM5YOkbJeIq9JVdazhGg__" alt="Interface do Mapa Cidadão">
             </div>
             <div class="text-column">
                 <div class="info-grid">
                     <div class="info-item">
                         <div class="number-badge">1</div>
-                        <p><span class="highlight">Modal de registro:</span> Formulário sobreposto ao mapa para criação de novas ocorrências.</p>
+                        <p><span class="highlight">Mapa Interativo:</span> Região central para navegação.</p>
                     </div>
                     <div class="info-item">
                         <div class="number-badge">2</div>
-                        <p><span class="highlight">Endereço:</span> Preenchido automaticamente com base no ponto selecionado no mapa.</p>
+                        <p><span class="highlight">Navegação:</span> Ferramentas de zoom e deslocamento.</p>
                     </div>
                     <div class="info-item">
                         <div class="number-badge">3</div>
-                        <p><span class="highlight">Categoria:</span> Campo obrigatório com seleção do tipo de problema (iluminação, lixo, alagamento, etc.).</p>
+                        <p><span class="highlight">Marcadores:</span> Ícones e cores por categoria (alagamento, lixo, etc).</p>
                     </div>
                     <div class="info-item">
                         <div class="number-badge">4</div>
-                        <p><span class="highlight">Descrição:</span> Texto livre para detalhar o problema, com limite de 250 caracteres.</p>
+                        <p><span class="highlight">Legenda:</span> Auxílio na interpretação de tipos espaciais <span class="highlight">(D6)</span>.</p>
                     </div>
                     <div class="info-item">
                         <div class="number-badge">5</div>
-                        <p><span class="highlight">Salvar:</span> Envio da ocorrência para persistência no servidor e exibição no mapa.</p>
+                        <p><span class="highlight">Informações:</span> Detalhes da ocorrência ao clicar no marcador.</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="number-badge">6</div>
+                        <p><span class="highlight">Colaboração:</span> Registro, validação ("like") e encerramento.</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="number-badge">7</div>
+                        <p><span class="highlight">Perfil:</span> Menu de usuário e histórico de contribuições.</p>
                     </div>
                 </div>
+               
             </div>
         </div>
     </div>

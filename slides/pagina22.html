@@ -57,7 +57,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: rgba(127, 140, 141, 0.06);
+        background-color: rgba(39, 174, 96, 0.04);
       }
       .right-panel {
         flex: 1;
@@ -78,6 +78,9 @@
       }
       h3.limit {
         color: #c0392b;
+      }
+      h3.rec {
+        color: #d35400;
       }
       ul {
         list-style: none;
@@ -101,11 +104,14 @@
         flex-shrink: 0;
       }
       .main-content .section-limit li i {
-        color: #d35400;
+        color: #c0392b;
         margin-right: 14px;
         margin-top: 7px;
         font-size: 20px;
         flex-shrink: 0;
+      }
+      .main-content .section-rec li i {
+        color: #e67e22;
       }
       .main-content .item-title {
         font-family: "Space Grotesk", sans-serif;
@@ -134,42 +140,98 @@
   <body>
     <div class="slide-container">
       <div class="header">
-        <h2>Avaliação do MIE</h2>
+        <h2>Análise de Espaciabilidade</h2>
       </div>
       <div class="main-content">
         <div class="left-panel">
+         
           <h3 class="fav">Aspectos favoráveis</h3>
           <ul>
             <li>
               <i class="fas fa-check-circle"></i>
               <div class="item-content">
-                <p class="item-title">Personas e estrutura do protocolo</p>
+                <p class="item-title">Localização de ocorrências no mapa</p>
                 <p class="item-body">
-                  P1: personas <span class="highlight">bem construídas</span>,
-                  tarefas <span class="highlight">bem direcionadas</span>. P3:
-                  tarefas adequadas para provocar reflexão espacial; João e Ana
-                  trazem perspectivas distintas — dimensões, personas e tarefas
-                  cumprem o objetivo de inspeção da espaciabilidade (P1, P3).
+                  Georreferenciação atende consulta de localização; usuário
+                  identifica onde estão as ocorrências — maior consenso entre as
+                  dimensões (P2, P3).
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div class="item-content">
+                <p class="item-title">Concentrações visuais perceptíveis</p>
+                <p class="item-body">
+                  Inspeção visual permite perceber concentração de problemas em
+                  área específica da cidade (P2).
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div class="item-content">
+                <p class="item-title">Georreferenciação para intervenção</p>
+                <p class="item-body">
+                  Precisão dos marcadores apoia identificar onde intervir; (P2, P3).
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div class="item-content">
+                <p class="item-title">
+                  Associações espaciais básicas
+                </p>
+                <p class="item-body">
+                  Proximidade entre tipos de ocorrência viabiliza associações
+                  básicas e potencial de relacionar variáveis (P2, P3).
                 </p>
               </div>
             </li>
           </ul>
         </div>
         <div class="right-panel">
+         
           <div class="section-limit">
-            <h3 class="limit">Recomendações de melhoria</h3>
+            <h3 class="limit">Limitações e Recomendações de melhoria</h3>
             <ul>
               <li>
-                <i class="fas fa-lightbulb"></i>
+                <i class="fas fa-exclamation-circle"></i>
                 <div class="item-content">
                   <p class="item-title">
-                    Ampliação das tarefas do protocolo
+                    Ausência de filtros e agrupamento por tipo
                   </p>
                   <p class="item-body">
-                    P3:
-                    incluir <span class="highlight">mais tarefas</span> para
-                    identificar gargalos. Oportunidade
-                    de refinamento do MIE, não invalidação do método (P1, P3).
+                    Impossível filtrar um único tipo de padrão; tarefas
+                    analíticas não correspondem às funcionalidades atuais sem
+                    agregação (P1, P3). Convergência com
+                    <span class="highlight">filtros temporais</span> sugeridos
+                    por P1, P2 e P3.
+                  </p>
+                </div>
+              </li>
+             
+              <li>
+                <i class="fas fa-exclamation-circle"></i>
+                <div class="item-content">
+                  <p class="item-title">
+                    Sobreposição de camadas pouco compreendida
+                  </p>
+                  <p class="item-body">
+                    Conceito de sobreposição de camadas não foi entendido na
+                    interface; leitura depende de zoom e escala (P3, P2).
+                  </p>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-exclamation-circle"></i>
+                <div class="item-content">
+                  <p class="item-title">Simbologia e clareza dos marcadores</p>
+                  <p class="item-body">
+                    Ícones e cores similares comprometem a distinção entre
+                    categorias; consenso sobre revisão da simbologia (P1, P2,
+                    P3).
                   </p>
                 </div>
               </li>

@@ -52,12 +52,21 @@
       .left-panel {
         flex: 1;
         padding: 28px 52px 28px 60px;
-   
+        border-right: 1px solid #2c3e50;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: rgba(142, 68, 173, 0.04);
+        background-color: rgba(52, 152, 219, 0.04);
+      }
+      .right-panel {
+        flex: 1;
+        padding: 28px 60px 28px 52px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
       }
       .main-content h3 {
         font-family: "Space Grotesk", sans-serif;
@@ -66,6 +75,9 @@
       }
       h3.fav {
         color: #27ae60;
+      }
+      h3.limit {
+        color: #c0392b;
       }
       ul {
         list-style: none;
@@ -83,6 +95,13 @@
       }
       .main-content .left-panel li i {
         color: #27ae60;
+        margin-right: 14px;
+        margin-top: 7px;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .main-content .section-limit li i {
+        color: #d35400;
         margin-right: 14px;
         margin-top: 7px;
         font-size: 20px;
@@ -115,7 +134,7 @@
   <body>
     <div class="slide-container">
       <div class="header">
-        <h2>Análise de Experiência do Usuário</h2>
+        <h2>Análise de Usabilidade</h2>
       </div>
       <div class="main-content">
         <div class="left-panel">
@@ -125,19 +144,39 @@
               <i class="fas fa-check-circle"></i>
               <div class="item-content">
                 <p class="item-title">
-                  Utilidade para cidadão e gestão pública
+                  Cadastro e criação de ocorrência concluídos
                 </p>
                 <p class="item-body">
-                  P3: duplo valor —
-                  <span class="highlight">cidadão</span> (visão da
-                  região/bairro) e
-                  <span class="highlight">poder público</span> (demonstrar onde
-                  existem problemas). Utilidade social e institucional com
-                  expectativa de uso territorial (P3).
+                  Após autenticação, P1 completou cadastro e criou ocorrência
+                  com endereço pré-preenchido, categoria e descrição — fluxo de
+                  registro georreferenciado funcional (P1).
                 </p>
               </div>
             </li>
           </ul>
+        </div>
+        <div class="right-panel">
+          <div class="section-limit">
+            <h3 class="limit">Limitações e Recomendações de melhoria</h3>
+            <ul>
+              <li>
+                <i class="fas fa-lightbulb"></i>
+                <div class="item-content">
+                  <p class="item-title">
+                    Histórico e rastreabilidade das ocorrências
+                  </p>
+                  <p class="item-body">
+                    P1 teve dificuldado para encontrar a funcionalidade de 
+                    <span class="highlight">Histórico de ocorrências</span> no
+                    perfil; sugere reposicionar na barra superior. Função
+                    relevante para acompanhar resolução dos registros está
+                    pouco acessível — oportunidade de reorganização do menu
+                    (P1).
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

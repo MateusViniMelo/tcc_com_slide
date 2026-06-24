@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-      html,body{height:100%;margin:0;padding:0}
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
       .slide-container {
         height: 720px;
         max-height: 720px;
         width: 1280px;
-background-color: #ffffff;
+        background-color: #ffffff;
         font-family: 'Inter', sans-serif;
         color: #34495E;
         display: flex;
         flex-direction: column;
         border: 1px solid #2C3E50;
         box-sizing: border-box;
-      
         overflow: hidden;
       }
       .header {
@@ -25,6 +28,7 @@ background-color: #ffffff;
         padding-left: 60px;
         border-bottom: 1px solid #2C3E50;
         box-sizing: border-box;
+        flex-shrink: 0;
       }
       h2 {
         font-family: 'Space Grotesk', sans-serif;
@@ -35,138 +39,133 @@ background-color: #ffffff;
       .main-content {
         display: flex;
         flex: 1;
+        min-height: 0;
       }
       .text-panel {
-        flex: 1;
-        padding: 40px 60px;
-        border-right: 1px solid #2C3E50;
-      }
-      .visual-panel {
-        flex: 1;
-        padding: 40px 32px;
+        flex: 1.1;
+        padding: 48px 56px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
-        background-color: #ffffff;
-        min-width: 0;
+        justify-content: center;
+        border-right: 1px solid #2C3E50;
+        box-sizing: border-box;
       }
-      .table-title {
+      .eyebrow {
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 28px;
-        color: #E74C3C;
-        margin: 0 0 18px 0;
-        line-height: 1.2;
-      }
-      .table-caption {
-        font-size: 15px;
-        color: #7f8c8d;
-        margin: 14px 0 0 0;
-        text-align: right;
-      }
-      .criteria-table {
-        width: 100%;
-        border-collapse: collapse;
-        background-color: #ffffff;
-        font-size: 20px;
-        line-height: 1.4;
-      }
-      .criteria-table th,
-      .criteria-table td {
-        border: 1px solid #d5d8dc;
-        padding: 16px 14px;
-        vertical-align: top;
-        text-align: left;
-      }
-      .criteria-table th {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 19px;
-        color: #2C3E50;
-        background-color: #ecf0f1;
-      }
-      .criteria-table td:first-child {
+        font-size: 16px;
         font-weight: 700;
-        color: #2C3E50;
-        width: 28%;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #E74C3C;
+        margin: 0 0 16px 0;
       }
       h3 {
         font-family: 'Space Grotesk', sans-serif;
-        font-size: 32px;
-        color: #E74C3C;
-        margin: 0 0 20px 0;
+        font-size: 34px;
+        color: #2C3E50;
+        margin: 0 0 28px 0;
+        line-height: 1.25;
       }
-      ul {
+      .info-list {
         list-style: none;
         padding: 0;
         margin: 0;
       }
-      li {
-        font-size: 28px;
-        margin-bottom: 20px;
+      .info-list li {
+        font-size: 26px;
         line-height: 1.4;
+        margin-bottom: 22px;
         display: flex;
         align-items: flex-start;
+        gap: 16px;
       }
-      li i {
+      .info-list li i {
         color: #3498DB;
-        margin-right: 15px;
-        margin-top: 10px;
+        margin-top: 6px;
         font-size: 24px;
+        flex-shrink: 0;
       }
       .highlight {
         font-weight: 700;
         color: #2C3E50;
+      }
+      .award-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 8px;
+        padding: 14px 22px;
+        background-color: #fef9e7;
+        border: 2px solid #f1c40f;
+        border-radius: 8px;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: #b7950b;
+      }
+      .award-badge i {
+        color: #f1c40f;
+        font-size: 30px;
+      }
+      .visual-panel {
+        flex: 0.9;
+        padding: 40px 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+      .logo-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 420px;
+      }
+      .logo-wrap img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+      .event-caption {
+        margin-top: 28px;
+        font-size: 20px;
+        color: #7f8c8d;
+        text-align: center;
+        line-height: 1.4;
       }
     </style>
 </head>
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Interação Humano-Computador (IHC)</h2>
+            <h2>Reconhecimento Acadêmico</h2>
         </div>
         <div class="main-content">
             <div class="text-panel">
-                <h3>Definição e Objetivos</h3>
-                <ul>
-                    <li><i class="fas fa-search"></i> <span>Estudo do <span class="highlight">design, avaliação e implementação</span> de sistemas interativos.</span></li>
-                    <li><i class="fas fa-bullseye"></i> <span>Objetivo: Tornar a tecnologia mais <span class="highlight">usável, acessível e prazerosa</span> para as pessoas.</span></li>
-                   
+                <p class="eyebrow">Publicação</p>
+                <h3>Artigo submetido ao SBSC 2026</h3>
+                <ul class="info-list">
+                    <li>
+                        <i class="fas fa-file-alt"></i>
+                        <span>Submissão na <span class="highlight">Trilha de Pesquisa</span> do Simpósio Brasileiro de Sistemas Colaborativos (SBSC 2026).</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-trophy"></i>
+                        <span>Premiado com o reconhecimento <span class="highlight">Best Paper</span> do evento.</span>
+                    </li>
                 </ul>
+                <div class="award-badge">
+                    <i class="fas fa-award"></i>
+                    Best Paper
+                </div>
             </div>
             <div class="visual-panel">
-              <h3 class="table-title">Critérios clássicos de IHC</h3>
-                <table class="criteria-table">
-                    <thead>
-                        <tr>
-                            <th>Critério</th>
-                            <th>Foco</th>
-                          
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Usabilidade</td>
-                            <td>Eficácia, eficiência, satisfação</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Acessibilidade</td>
-                            <td>Inclusão de diferentes perfis</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>UX</td>
-                            <td>Emoções, valores, significados</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>Comunicabilidade</td>
-                            <td>Intenção do designer via signos</td>
-                           
-                        </tr>
-                    </tbody>
-                </table>
-               
+                <div class="logo-wrap">
+                    <img src="../figuras/sbcsc-2026-logo.png" alt="Logo SBSC 2026 — Porto Alegre">
+                </div>
+                <p class="event-caption">SBSC 2026 · Porto Alegre</p>
             </div>
         </div>
     </div>

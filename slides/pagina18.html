@@ -6,9 +6,8 @@
     <style>
       html,body{height:100%;margin:0;padding:0}
       .slide-container {
-        height: 720px;
-        max-height: 720px;
         width: 1280px;
+        min-height: 720px;
         background-color: #F4F4F4;
         font-family: 'Inter', sans-serif;
         color: #34495E;
@@ -16,7 +15,6 @@
         flex-direction: column;
         border: 1px solid #2C3E50;
         box-sizing: border-box;
-        overflow: hidden;
       }
       .header {
         height: 84px;
@@ -37,12 +35,14 @@
       }
       .left-panel {
         flex: 1;
-        padding: 40px 60px;
+        padding: 40px 50px;
         border-right: 1px solid #2C3E50;
       }
       .right-panel {
-        flex: 1;
-        padding: 40px 60px;
+        flex: 1.2;
+        padding: 40px 50px;
+        display: flex;
+        flex-direction: column;
         background-color: rgba(52, 152, 219, 0.05);
       }
       h3 {
@@ -51,6 +51,31 @@
         color: #2980B9;
         margin: 0 0 25px 0;
       }
+      .persona-box {
+        margin-bottom: 30px;
+        padding: 15px;
+        background: white;
+        border: 1px solid #CCC;
+      }
+      .persona-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .persona-header i {
+        font-size: 30px;
+        margin-right: 15px;
+        color: #3498DB;
+      }
+      .persona-name {
+        font-weight: 700;
+        font-size: 28px;
+        color: #2C3E50;
+      }
+      .persona-desc {
+        font-size: 24px;
+        line-height: 1.2;
+      }
       ul {
         list-style: none;
         padding: 0;
@@ -58,104 +83,54 @@
       }
       li {
         font-size: 26px;
-        margin-bottom: 22px;
-        line-height: 1.35;
+        margin-bottom: 15px;
+        line-height: 1.2;
         display: flex;
         align-items: flex-start;
       }
       li i {
-        color: #3498DB;
+        color: #E74C3C;
         margin-right: 15px;
         margin-top: 8px;
-        font-size: 22px;
-      }
-      .highlight {
-        font-weight: 700;
-        color: #2C3E50;
-      }
-      .participants-intro {
         font-size: 20px;
-        line-height: 1.4;
-        margin: 0 0 18px 0;
       }
-      .participants-table {
-        width: 100%;
-        border-collapse: collapse;
-        background-color: #ffffff;
-        font-size: 17px;
-        line-height: 1.35;
-        margin-bottom: 20px;
-      }
-      .participants-table th,
-      .participants-table td {
-        border: 1px solid #d5d8dc;
-        padding: 10px 12px;
-        vertical-align: top;
-        text-align: left;
-      }
-      .participants-table th {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 16px;
-        color: #2C3E50;
-        background-color: #ecf0f1;
-      }
-      .participants-table td:first-child {
+      .dim-badge {
         font-weight: 700;
-        color: #2C3E50;
-        width: 18%;
+        color: #E74C3C;
+        margin-right: 8px;
       }
     </style>
 </head>
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Coleta de Dados</h2>
+            <h2>Metodologia: Personas e Tarefas</h2>
         </div>
         <div class="main-content">
             <div class="left-panel">
-                <h3>Participantes</h3>
-                <p class="participants-intro"><span class="highlight">3 especialistas</span> em IHC do mesmo laboratório de pesquisa — estudo qualitativo exploratório (n = 3).</p>
-                <table class="participants-table">
-                    <thead>
-                        <tr>
-                            <th>Participante</th>
-                            <th>Formação</th>
-                            <th>Experiência em IHC</th>
-                            <th>Experiência complementar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>P1</td>
-                            <td>Mestranda</td>
-                            <td>~3 anos</td>
-                            <td>—</td>
-                        </tr>
-                        <tr>
-                            <td>P2</td>
-                            <td>Doutorando</td>
-                            <td>~6 anos</td>
-                            <td>Crowdsourcing georreferenciado</td>
-                        </tr>
-                        <tr>
-                            <td>P3</td>
-                            <td>Doutorando</td>
-                            <td>~4 anos</td>
-                            <td>—</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <ul>
-                    <li><i class="fas fa-handshake-slash"></i> <span>Avaliação <span class="highlight">remota e independente</span>, sem comunicação entre avaliadores.</span></li>
-                </ul>
+                <h3>Personas</h3>
+                <div class="persona-box">
+                    <div class="persona-header">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="persona-name">João (40 anos)</span>
+                    </div>
+                    <p class="persona-desc">Morador de bairro periférico. Foca em registrar iluminação e buracos e acompanhar resoluções.</p>
+                </div>
+                <div class="persona-box">
+                    <div class="persona-header">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="persona-name">Ana (27 anos)</span>
+                    </div>
+                    <p class="persona-desc">Estudante universitária. Consulta ocorrências existentes e analisa o impacto na mobilidade.</p>
+                </div>
             </div>
             <div class="right-panel">
-                <h3>Procedimento e Análise</h3>
+                <h3>Tarefas de Validação</h3>
                 <ul>
-                    <li><i class="fas fa-search"></i> <span>Inspeção MIE simulando <span class="highlight">João e Ana.</span></li>
-                    <li><i class="fas fa-file-alt"></i> <span>Relatórios individuais e <span class="highlight">entrevista semiestruturada</span> remota pós-inspeção.</span></li>
-                    <li><i class="fas fa-layer-group"></i> <span><span class="highlight">Análise temática dedutiva</span>: espaciabilidade, usabilidade, UX e MIE.</span></li>
-                    <li><i class="fas fa-project-diagram"></i> <span><span class="highlight">Triangulação</span> de achados entre os três avaliadores.</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D1:</span> Localizar todas as ocorrências de iluminação no bairro (João).</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D2:</span> Identificar áreas com maior número de alagamentos (Ana).</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D4:</span> Relacionar falta de pavimentação com alagamentos (João).</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D6:</span> Compreender a representação de cada marcador (Ana).</span></li>
                 </ul>
             </div>
         </div>
