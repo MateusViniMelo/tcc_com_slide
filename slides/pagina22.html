@@ -1,140 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
       html,body{height:100%;margin:0;padding:0}
       .slide-container {
-        width: 1280px;
-        height: 720px;
-        max-height: 720px;
-        overflow: hidden;
-        background-color: #F4F4F4;
-        font-family: 'Inter', sans-serif;
-        color: #34495E;
-        display: flex;
-        flex-direction: column;
-        border: 1px solid #2C3E50;
-        box-sizing: border-box;
+        height: 720px; max-height: 720px; width: 1280px;
+        background-color: #F4F4F4; font-family: 'Inter', sans-serif; color: #34495E;
+        display: flex; flex-direction: column; border: 1px solid #2C3E50;
+        box-sizing: border-box; overflow: hidden;
       }
       .header {
-        height: 84px;
-        padding-top: 25px;
-        padding-left: 60px;
-        border-bottom: 1px solid #2C3E50;
-        box-sizing: border-box;
-        flex-shrink: 0;
+        height: 84px; padding-top: 25px; padding-left: 60px;
+        border-bottom: 1px solid #2C3E50; box-sizing: border-box; flex-shrink: 0;
       }
-      h2 {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 38px;
-        color: #2C3E50;
-        margin: 0;
-      }
+      h2 { font-family: 'Space Grotesk', sans-serif; font-size: 38px; color: #2C3E50; margin: 0; }
       .main-content {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        min-height: 0;
-        padding: 16px 24px;
-        overflow: hidden;
+        flex: 1; min-height: 0; padding: 16px 32px 14px;
+        display: flex; flex-direction: column; box-sizing: border-box;
       }
-      .headers-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-        margin-bottom: 12px;
-        flex-shrink: 0;
+      .main-content .grid {
+        flex: 1; min-height: 0;
+        display: grid; grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr); gap: 12px;
       }
-      .column-title {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 26px;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: 10px;
+      .main-content .card {
+        background: white; border: 1px solid #2C3E50;
+        padding: 12px 14px; display: flex; flex-direction: column; gap: 6px;
+        box-sizing: border-box; overflow: hidden;
       }
-      .findings-title {
-        color: #2980B9;
-        padding-right: 12px;
-        border-right: 1px solid #2C3E50;
+      .main-content .card.pos { border-top: 3px solid #27AE60; }
+      .main-content .card.opp { border-top: 3px solid #3498DB; }
+      .main-content .card.lim { border-top: 3px solid #C0392B; }
+      .main-content .card-head {
+        display: flex; align-items: center; flex-wrap: wrap; gap: 8px; flex-shrink: 0;
       }
-      .suggestions-title {
-        color: #D35400;
-        padding-left: 12px;
+      .main-content .code {
+        font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 700;
+        color: #2980B9; background: rgba(41,128,185,0.1); padding: 2px 8px;
       }
-      .column-title i { font-size: 22px; }
-      .results-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        gap: 12px;
-        flex: 1;
-        min-height: 0;
+      .main-content .tag {
+        font-size: 10px; font-weight: 700; text-transform: uppercase;
+        padding: 2px 7px; margin-left: auto;
       }
-      .dim-item {
-        background-color: white;
-        padding: 14px 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 0;
-        overflow: hidden;
-        box-sizing: border-box;
+      .main-content .tag.pos { background: rgba(39,174,96,0.15); color: #27AE60; }
+      .main-content .tag.opp { background: rgba(52,152,219,0.15); color: #2980B9; }
+      .main-content .tag.lim { background: rgba(192,57,43,0.12); color: #C0392B; }
+      .main-content .title {
+        font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700;
+        color: #2C3E50; margin: 0; line-height: 1.25;
       }
-      .dim-item.finding { border-left: 5px solid #3498DB; }
-      .dim-item.suggestion { border-left: 5px solid #E67E22; }
-      .dim-label {
-        font-weight: 700;
-        font-size: 22px;
-        margin-bottom: 6px;
-        color: #2C3E50;
-      }
-      .dim-text {
-        font-size: 18px;
-        line-height: 1.3;
-        margin: 0;
-      }
-      .highlight { font-weight: 700; }
-      .finding .highlight { color: #2980B9; }
-      .suggestion .highlight { color: #D35400; }
+      .main-content .body { font-size: 15px; line-height: 1.32; margin: 0; flex: 1; }
+      .main-content .src { font-size: 12px; color: #7F8C8D; margin: 0; }
+      .main-content .footer-note { margin-top: 10px; font-size: 14px; color: #7F8C8D; flex-shrink: 0; }
+      .main-content .highlight { font-weight: 600; color: #2C3E50; }
+      .main-content .wide { grid-column: span 2; }
     </style>
 </head>
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Resultados: Avaliação do MIE</h2>
+            <h2>Usabilidade — 7 Evidências</h2>
         </div>
         <div class="main-content">
-            <div class="headers-row">
-                <h3 class="column-title findings-title"><i class="fas fa-check-circle"></i> Aspectos Favoráveis</h3>
-                <h3 class="column-title suggestions-title"><i class="fas fa-lightbulb"></i> Limitações e Recomendações</h3>
+            <div class="grid">
+                <div class="card pos">
+                    <div class="card-head"><span class="code">E-USA01</span><span class="tag pos">Positivo</span></div>
+                    <p class="title">Cadastro e criação de ocorrência</p>
+                    <p class="body">P1 completou cadastro e <span class="highlight">criou ocorrência</span> com endereço pré-preenchido e categoria iluminação.</p>
+                    <p class="src">P1 — inspeção</p>
+                </div>
+                <div class="card pos">
+                    <div class="card-head"><span class="code">E-USA02</span><span class="tag pos">Positivo</span></div>
+                    <p class="title">Descoberta da função de cadastro</p>
+                    <p class="body">P1: balão <span class="highlight">"cadastrar uma ocorrência"</span> mais claro que em Waze/Google Maps.</p>
+                    <p class="src">P1 — entrevista</p>
+                </div>
+                <div class="card lim">
+                    <div class="card-head"><span class="code">E-USA03</span><span class="tag lim">Limitação</span></div>
+                    <p class="title">Login pouco evidente</p>
+                    <p class="body">P1: erro ao informar sem login; cadastro via "Entrar" → "criar conta". P3: não identificou necessidade de login ao entrar.</p>
+                    <p class="src">P1 — inspeção; P3 — entrevista</p>
+                </div>
+                <div class="card opp">
+                    <div class="card-head"><span class="code">E-USA04</span><span class="tag opp">Oportunidade</span></div>
+                    <p class="title">Onboarding no primeiro acesso</p>
+                    <p class="body">P1 e P3: pop-up ou tutorial com botões, funcionalidades e <span class="highlight">necessidade de login</span>.</p>
+                    <p class="src">P1, P3 — entrevista</p>
+                </div>
+                <div class="card lim">
+                    <div class="card-head"><span class="code">E-USA05</span><span class="tag lim">Limitação</span></div>
+                    <p class="title">Interação com marcadores insuficiente</p>
+                    <p class="body">P1: hover sem contexto; descrição <span class="highlight">não aparece</span>; like/encerrar ambíguos; sucesso sem ID da ocorrência.</p>
+                    <p class="src">P1 — inspeção e entrevista</p>
+                </div>
+                <div class="card opp">
+                    <div class="card-head"><span class="code">E-USA06</span><span class="tag opp">Oportunidade</span></div>
+                    <p class="title">Histórico das ocorrências</p>
+                    <p class="body">P1 não encontrou <span class="highlight">"Minhas ocorrências"</span> no perfil; sugere reposicionar na barra superior.</p>
+                    <p class="src">P1 — entrevista</p>
+                </div>
+                <div class="card opp wide">
+                    <div class="card-head"><span class="code">E-USA07</span><span class="tag opp">Oportunidade</span></div>
+                    <p class="title">Conflito visual no formulário</p>
+                    <p class="body">P1: ícone de contagem de palavras <span class="highlight">sobreposto ao corretor ortográfico</span> — problema pontual de layout.</p>
+                    <p class="src">P1 — inspeção</p>
+                </div>
             </div>
-            <div class="results-grid">
-                <div class="dim-item finding">
-                    <div class="dim-label"><i class="fas fa-check-circle"></i> Aplicabilidade do Método</div>
-                    <p class="dim-text">Especialistas consideraram o MIE <span class="highlight">aplicável e eficaz</span>, capaz de gerar evidências relevantes e consistentes sobre espaciabilidade.</p>
-                </div>
-                <div class="dim-item suggestion">
-                    <div class="dim-label"><i class="fas fa-check-circle"></i> Aplicabilidade do Método</div>
-                    <p class="dim-text">Reforçar a <span class="highlight">centralidade do critério espacial</span> sem desconsiderar usabilidade e UX.</p>
-                </div>
-                <div class="dim-item finding">
-                    <div class="dim-label"><i class="fas fa-tasks"></i> Formulação de Tarefas</div>
-                    <p class="dim-text">Personas e cenários aproximaram a avaliação de <span class="highlight">uso real</span>, orientando decisões ao longo das tarefas D1–D6.</p>
-                </div>
-                <div class="dim-item suggestion">
-                    <div class="dim-label"><i class="fas fa-tasks"></i> Formulação de Tarefas</div>
-                    <p class="dim-text">P1/P3: descrições mais <span class="highlight">claras</span> e maior número de tarefas analíticas (análise, interpretação ou decisão).</p>
-                </div>
-                
-                <div class="dim-item finding">
-                    <div class="dim-label"><i class="fas fa-tags"></i> Categorização de Evidências</div>
-                    <p class="dim-text">O método captou <span class="highlight">múltiplas dimensões</span> de qualidade; evidências de usabilidade/UX não são falha do MIE.</p>
-                </div>
-                
-            </div>
+            <p class="footer-note">2 positivas · 3 oportunidades · 2 limitações</p>
         </div>
     </div>
 </body>

@@ -1,148 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
       html,body{height:100%;margin:0;padding:0}
       .slide-container {
-        width: 1280px;
-        height: 720px;
-        max-height: 720px;
-        overflow: hidden;
-        background-color: #F4F4F4;
-        font-family: 'Inter', sans-serif;
-        color: #34495E;
-        display: flex;
-        flex-direction: column;
-        border: 1px solid #2C3E50;
-        box-sizing: border-box;
+        height: 720px; max-height: 720px; width: 1280px;
+        background-color: #F4F4F4; font-family: 'Inter', sans-serif; color: #34495E;
+        display: flex; flex-direction: column; border: 1px solid #2C3E50;
+        box-sizing: border-box; overflow: hidden;
       }
       .header {
-        height: 84px;
-        padding-top: 25px;
-        padding-left: 60px;
-        border-bottom: 1px solid #2C3E50;
-        box-sizing: border-box;
-        flex-shrink: 0;
+        height: 84px; padding-top: 25px; padding-left: 60px;
+        border-bottom: 1px solid #2C3E50; box-sizing: border-box; flex-shrink: 0;
       }
-      h2 {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 38px;
-        color: #2C3E50;
-        margin: 0;
-      }
+      h2 { font-family: 'Space Grotesk', sans-serif; font-size: 38px; color: #2C3E50; margin: 0; }
       .main-content {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        min-height: 0;
-        padding: 16px 24px;
-        overflow: hidden;
+        flex: 1; min-height: 0; padding: 16px 32px 14px;
+        display: flex; flex-direction: column; gap: 10px; box-sizing: border-box;
       }
-      .headers-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-        margin-bottom: 12px;
-        flex-shrink: 0;
+      .main-content .grid {
+        flex: 1; min-height: 0;
+        display: grid; grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr; gap: 14px;
       }
-      .column-title {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 26px;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: 10px;
+      .main-content .card {
+        background: white; border: 1px solid #2C3E50;
+        padding: 14px 16px; display: flex; flex-direction: column; gap: 8px;
+        box-sizing: border-box; overflow: hidden;
       }
-      .findings-title {
-        color: #2980B9;
-        padding-right: 12px;
-        border-right: 1px solid #2C3E50;
+      .main-content .card.pos { border-top: 3px solid #27AE60; }
+      .main-content .card.opp { border-top: 3px solid #3498DB; }
+      .main-content .card.lim { border-top: 3px solid #C0392B; }
+      .main-content .card-head {
+        display: flex; align-items: center; flex-wrap: wrap; gap: 8px; flex-shrink: 0;
       }
-      .suggestions-title {
-        color: #D35400;
-        padding-left: 12px;
+      .main-content .code {
+        font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700;
+        color: #2980B9; background: rgba(41,128,185,0.1); padding: 3px 10px;
       }
-      .column-title i { font-size: 22px; }
-      .results-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        gap: 12px;
-        flex: 1;
-        min-height: 0;
+      .main-content .dim { font-size: 13px; color: #2980B9; font-weight: 600; line-height: 1.2; }
+      .main-content .title {
+        font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700;
+        color: #2C3E50; margin: 0; line-height: 1.28;
       }
-      .dim-item {
-        background-color: white;
-        padding: 14px 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 0;
-        overflow: hidden;
-        box-sizing: border-box;
+      .main-content .body { font-size: 16px; line-height: 1.35; margin: 0; flex: 1; }
+      .main-content .src { font-size: 13px; color: #7F8C8D; margin: 0; flex-shrink: 0; }
+      .main-content .tag {
+        font-size: 11px; font-weight: 700; text-transform: uppercase;
+        padding: 3px 8px; margin-left: auto;
       }
-      .dim-item.finding { border-left: 5px solid #3498DB; }
-      .dim-item.suggestion { border-left: 5px solid #E67E22; }
-      .dim-item--spacer { visibility: hidden; }
-      .dim-label {
-        font-weight: 700;
-        font-size: 22px;
-        margin-bottom: 6px;
-        color: #2C3E50;
+      .main-content .tag.pos { background: rgba(39,174,96,0.15); color: #27AE60; }
+      .main-content .tag.opp { background: rgba(52,152,219,0.15); color: #2980B9; }
+      .main-content .tag.lim { background: rgba(192,57,43,0.12); color: #C0392B; }
+      .main-content .summary-bar {
+        padding: 10px 16px; background: rgba(41,128,185,0.08);
+        border: 1px solid #2C3E50; font-size: 14px; line-height: 1.35; flex-shrink: 0;
       }
-      .dim-text {
-        font-size: 18px;
-        line-height: 1.3;
-        margin: 0;
-      }
-      .highlight { font-weight: 700; }
-      .finding .highlight { color: #2980B9; }
-      .suggestion .highlight { color: #D35400; }
+      .main-content .footer-note { font-size: 14px; color: #7F8C8D; flex-shrink: 0; }
+      .main-content .highlight { font-weight: 600; color: #2C3E50; }
+      .span-2 { grid-column: span 2; }
     </style>
 </head>
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Resultados: Experiência do Usuário</h2>
+            <h2>Espaciabilidade — Evidências (2/2)</h2>
         </div>
         <div class="main-content">
-            <div class="headers-row">
-                <h3 class="column-title findings-title"><i class="fas fa-check-circle"></i> Aspectos Favoráveis</h3>
-                <h3 class="column-title suggestions-title"><i class="fas fa-lightbulb"></i> Limitações e Recomendações</h3>
+            <div class="grid">
+                <div class="card lim">
+                    <div class="card-head">
+                        <span class="code">E-ESP07</span>
+                        <span class="dim">D4 · Associações espaciais</span>
+                        <span class="tag lim">Limitação</span>
+                    </div>
+                    <p class="title">Associações sem recorrência</p>
+                    <p class="body">P1: João <span class="highlight">não sustenta</span> associação lixo ↔ alagamento — apenas horário de cadastro, sem <span class="highlight">recorrência</span>. Contrasta com E-ESP06.</p>
+                    <p class="src">P1 — inspeção</p>
+                </div>
+                <div class="card opp">
+                    <div class="card-head">
+                        <span class="code">E-ESP08</span>
+                        <span class="dim">D2, D4 · Transversal</span>
+                        <span class="tag opp">Melhoria</span>
+                    </div>
+                    <p class="title">Filtros, agregação e dados temporais</p>
+                    <p class="body">P1, P2, P3 convergem: <span class="highlight">filtros por tipo, bairro, contagem e tempo</span>. Recomendação mais consensual dos avaliadores.</p>
+                    <p class="src">P1, P2, P3 — inspeção e entrevista</p>
+                </div>
+                <div class="card lim">
+                    <div class="card-head">
+                        <span class="code">E-ESP09</span>
+                        <span class="dim">D5 · Camadas</span>
+                        <span class="tag lim">Limitação</span>
+                    </div>
+                    <p class="title">Sobreposição pouco compreendida</p>
+                    <p class="body">P3: conceito de sobreposição de camadas <span class="highlight">não foi entendido</span> na interface atual.</p>
+                    <p class="src">P3 — inspeção</p>
+                </div>
+                <div class="card opp">
+                    <div class="card-head">
+                        <span class="code">E-ESP10</span>
+                        <span class="dim">D5 · Camadas</span>
+                        <span class="tag opp">Melhoria</span>
+                    </div>
+                    <p class="title">Exploração por zoom e escala</p>
+                    <p class="body">P2: D5 <span class="highlight">parcial</span> — leitura viável em zoom próximo; em escala ampla, ponteiros se acumulam — sugere filtros por distância ou tipo.</p>
+                    <p class="src">P2 — inspeção</p>
+                </div>
+                <div class="card lim span-2">
+                    <div class="card-head">
+                        <span class="code">E-ESP11</span>
+                        <span class="dim">D6 · Interpretação de tipos</span>
+                        <span class="tag lim">Limitação</span>
+                    </div>
+                    <p class="title">Simbologia e clareza dos marcadores</p>
+                    <p class="body">P1: cores similares. P3: pavimentação confunde com <span class="highlight">binóculo</span>. P2: legenda ajuda, mas <span class="highlight">cores similares</span> entre categorias — consenso sobre necessidade de revisão.</p>
+                    <p class="src">P1, P2, P3 — inspeção e entrevista</p>
+                </div>
             </div>
-            <div class="results-grid">
-                <div class="dim-item finding">
-                    <div class="dim-label"><i class="fas fa-users"></i> Proposta Social e Participativa</div>
-                    <p class="dim-text">Especialistas reconheceram o Mapa Cidadão como proposta <span class="highlight">inovadora e cívica</span>, distinta de aplicativos tradicionais de navegação.</p>
-                </div>
-                <div class="dim-item suggestion">
-                    <div class="dim-label"><i class="fas fa-users"></i> Proposta Social e Participativa</div>
-                    <p class="dim-text">A aplicação pode <span class="highlight">apresentar melhor</span> sua potencialidade logo no primeiro contato.</p>
-                </div>
-                <div class="dim-item finding">
-                    <div class="dim-label"><i class="fas fa-user-secret"></i> Anonimato</div>
-                    <p class="dim-text">Não exibir quem registrou o problema foi avaliado como <span class="highlight">ponto positivo</span> (P2), tornando o relato mais <span class="highlight">seguro e acessível</span>.</p>
-                </div>
-                <div class="dim-item suggestion dim-item--spacer" aria-hidden="true"></div>
-                <div class="dim-item finding">
-                    <div class="dim-label"><i class="fas fa-thumbs-up"></i> Validação Coletiva</div>
-                    <p class="dim-text">Mecanismo de <span class="highlight">likes</span> fortalece a confiabilidade coletiva e transmite <span class="highlight">senso de participação</span> no registro de ocorrências.</p>
-                </div>
-                <div class="dim-item suggestion">
-                    <div class="dim-label"><i class="fas fa-thumbs-up"></i> Validação Coletiva</div>
-                    <p class="dim-text">O significado do like como validação social pode ser <span class="highlight">mais evidente</span> na interface.</p>
-                </div>
-                <div class="dim-item finding">
-                    <div class="dim-label"><i class="fas fa-map"></i> Interpretação dos Dados</div>
-                    <p class="dim-text">O mapa estimula a <span class="highlight">interpretação ativa</span> de dados urbanos colaborativos e o engajamento com problemas do território.</p>
-                </div>
-                <div class="dim-item suggestion">
-                    <div class="dim-label"><i class="fas fa-map"></i> Interpretação dos Dados</div>
-                    <p class="dim-text">P1: falta <span class="highlight">vivência</span> para interpretar os dados; sugeridos padrões visuais de apps consolidados e <span class="highlight">tutoriais</span>.</p>
-                </div>
+            <div class="summary-bar">
+                <strong>Total espaciabilidade:</strong> 11 evidências — 4 positivas · 3 melhorias · 4 limitações
             </div>
+            <p class="footer-note">5 de 11 evidências · E-ESP07 a E-ESP11</p>
         </div>
     </div>
 </body>

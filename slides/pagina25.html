@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <style>
+      html, body { width: 1280px; height: 720px; margin: 0; padding: 0; overflow: hidden; }
+      .slide-container {
+        width: 1280px; height: 720px; max-height: 720px; overflow: hidden;
+        background-color: #f4f4f4; font-family: "Inter", sans-serif; color: #34495e;
+        display: flex; flex-direction: column; border: 1px solid #2c3e50; box-sizing: border-box;
+      }
+      .header {
+        height: 84px; padding-top: 25px; padding-left: 60px;
+        border-bottom: 1px solid #2c3e50; box-sizing: border-box; flex-shrink: 0;
+      }
+      h2 { font-family: "Space Grotesk", sans-serif; font-size: 38px; color: #2c3e50; margin: 0; }
+      .main-content {
+        flex: 1; min-height: 0; padding: 24px 48px 28px;
+        overflow: hidden; box-sizing: border-box;
+        display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      }
+      .syn-card {
+        display: flex; flex-direction: column; min-height: 0; overflow: hidden;
+        border: 1px solid #2c3e50; background: white; box-sizing: border-box;
+      }
+      .syn-card-top {
+        display: flex; align-items: center; gap: 12px; padding: 14px 18px;
+        border-bottom: 1px solid #2c3e50; flex-shrink: 0;
+      }
+      .syn-card-top i { font-size: 24px; }
+      .syn-card-top span {
+        font-family: "Space Grotesk", sans-serif; font-size: 24px; font-weight: 700; color: #2c3e50;
+      }
+      .syn-resultados .syn-card-top { background-color: rgba(39, 174, 96, 0.12); }
+      .syn-resultados .syn-card-top i { color: #27ae60; }
+      .syn-evolucao .syn-card-top { background-color: rgba(230, 126, 34, 0.12); }
+      .syn-evolucao .syn-card-top i { color: #e67e22; }
+      .syn-card-body {
+        list-style: none; margin: 0; padding: 16px 18px; flex: 1;
+        display: flex; flex-direction: column; gap: 12px; box-sizing: border-box;
+      }
+      .syn-card-body li {
+        display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px;
+        background-color: #f8f9fa; font-size: 19px; line-height: 1.35; flex: 1;
+        box-sizing: border-box;
+      }
+      .syn-resultados .syn-card-body li { border-left: 4px solid #27ae60; }
+      .syn-resultados .syn-card-body li i { color: #27ae60; margin-top: 5px; font-size: 14px; }
+      .syn-evolucao .syn-card-body li { border-left: 4px solid #e67e22; }
+      .syn-evolucao .syn-card-body li i { color: #e67e22; margin-top: 5px; font-size: 14px; }
+      .highlight { font-weight: 700; color: #2c3e50; }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <div class="header">
+        <h2>Síntese da Análise Temática</h2>
+      </div>
+      <div class="main-content">
+        <article class="syn-card syn-resultados">
+          <div class="syn-card-top">
+            <i class="fas fa-check-double"></i>
+            <span>Pontos fortes</span>
+          </div>
+          <ul class="syn-card-body">
+            <li>
+              <i class="fas fa-circle"></i>
+              <span><span class="highlight">Registro georreferenciado</span> funcional — cadastro, criação de ocorrências e visualização pontual.</span>
+            </li>
+            <li>
+              <i class="fas fa-circle"></i>
+              <span><span class="highlight">D1 e D3</span> satisfatórias — orientação espacial e identificação de onde intervir.</span>
+            </li>
+            <li>
+              <i class="fas fa-circle"></i>
+              <span><span class="highlight">UX social positiva</span> — proposta valorizada, engajamento comunitário (likes) e duplo valor cidadão/gestão.</span>
+            </li>
+            <li>
+              <i class="fas fa-circle"></i>
+              <span><span class="highlight">MIE adequado</span> — personas e tarefas provocam reflexão espacial produtiva.</span>
+            </li>
+          </ul>
+        </article>
+        <article class="syn-card syn-evolucao">
+          <div class="syn-card-top">
+            <i class="fas fa-arrow-up"></i>
+            <span>Evolução prioritária</span>
+          </div>
+          <ul class="syn-card-body">
+            <li>
+              <i class="fas fa-circle"></i>
+              <span><span class="highlight">Ausência de filtros</span> — limitação central, não falha estrutural; P1, P2 e P3 convergem na recomendação.</span>
+            </li>
+            <li>
+              <i class="fas fa-circle"></i>
+              <span>Filtros por <span class="highlight">tipo, bairro, tempo e contagem</span> transformariam visualização em análise territorial.</span>
+            </li>
+            <li>
+              <i class="fas fa-circle"></i>
+              <span>Melhorias incrementais: <span class="highlight">onboarding</span>, login evidente e detalhes nos marcadores.</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
