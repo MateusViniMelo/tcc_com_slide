@@ -20,7 +20,7 @@
         height: 720px;
         max-height: 720px;
         width: 1280px;
-        background-color: #faf0f0;
+        background-color: #ffffff;
         font-family: "Inter", sans-serif;
         color: #34495e;
         display: flex;
@@ -44,47 +44,78 @@
         margin: 0;
       }
       .main-content {
+        display: flex;
+        flex-direction: column;
         flex: 1;
-        padding: 40px 60px;
+        min-height: 0;
+        overflow: hidden;
+      }
+      .section {
+        flex: 1;
+        padding: 14px 50px 16px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: #faf0f0;
         min-height: 0;
+        overflow: hidden;
+      }
+      .section-contexto {
+        background-color: #ffffff;
+        justify-content: flex-start;
+        padding-top: 36px;
+      }
+      .section-objetivos {
+        background-color: #ffffff;
+      }
+      h3 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 28px;
+        margin: 0 0 6px 0;
+        flex-shrink: 0;
+      }
+      .section-contexto h3 {
+        color: #2980b9;
+      }
+      .section-objetivos h3 {
+        color: #e74c3c;
       }
       .intro {
-        font-size: 25px;
-        line-height: 1.4;
-        margin: 0 0 28px 0;
-        max-width: 1000px;
+        font-size: 23px;
+        line-height: 1.32;
+        margin: 0;
+        padding: 4px 0;
       }
       ul {
         list-style: none;
         padding: 0;
         margin: 0;
         display: flex;
-        gap: 28px;
+        flex-direction: column;
+        gap: 12px;
         flex: 1;
         min-height: 0;
+        justify-content: flex-start;
       }
       li {
-        flex: 1;
-        font-size: 26px;
-        line-height: 1.35;
+        font-size: 23px;
+        line-height: 1.32;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
-        padding: 24px 22px;
-        background-color: white;
-        border: 1px solid #d5d8dc;
+        gap: 14px;
+        padding: 4px 0;
         box-sizing: border-box;
-        border-radius: 0.25rem;
+      }
+      .section-contexto li i {
+        color: #3498db;
+      }
+      .section-objetivos li i {
+        color: #e74c3c;
       }
       li i {
-        color: #e74c3c;
-        margin-bottom: 14px;
-        font-size: 34px;
+        font-size: 28px;
         flex-shrink: 0;
+        margin-top: 2px;
       }
       .highlight {
         font-weight: 700;
@@ -98,35 +129,41 @@
         <h2>Objetivo</h2>
       </div>
       <div class="main-content">
-        <p class="intro">
-          Pesquisa em andamento: desenvolver e avaliar o
-          <span class="highlight">Mapa Cidadão</span> como aplicação de
-          crowdsourcing urbano orientada pela espaciabilidade.
-        </p>
-        <ul>
-          <li>
-            <i class="fas fa-bullseye"></i>
-            <span
-              >Demonstrar como a <span class="highlight">espaciabilidade</span>
-              orienta o Mapa Cidadão desde a concepção.</span
-            >
-          </li>
-          <li>
-            <i class="fas fa-search"></i>
-            <span
-              >Aplicar e avaliar o <span class="highlight">MIE</span> em estudo
-              preliminar com três especialistas em IHC.</span
-            >
-          </li>
-          <li>
-            <i class="fas fa-lightbulb"></i>
-            <span
-              >Operacionalizar o conceito em sistema real e produzir
-              <span class="highlight">evidências iniciais</span> sobre sua
-              aplicação.</span
-            >
-          </li>
-        </ul>
+        <div class="section section-contexto">
+          <h3>Contexto</h3>
+          <p class="intro">
+            Pesquisa em andamento: desenvolver e avaliar o
+            <span class="highlight">Mapa Cidadão</span> como aplicação de
+            crowdsourcing urbano orientada pela espaciabilidade.
+          </p>
+        </div>
+        <div class="section section-objetivos">
+          <h3>Objetivos específicos</h3>
+          <ul>
+            <li>
+              <i class="fas fa-bullseye"></i>
+              <span
+                >Demonstrar como a <span class="highlight">espaciabilidade</span>
+                orienta o Mapa Cidadão desde a concepção.</span
+              >
+            </li>
+            <li>
+              <i class="fas fa-search"></i>
+              <span
+                >Aplicar e avaliar o <span class="highlight">MIE</span> em estudo
+                preliminar com três especialistas em IHC.</span
+              >
+            </li>
+            <li>
+              <i class="fas fa-lightbulb"></i>
+              <span
+                >Operacionalizar o conceito em sistema real e produzir
+                <span class="highlight">evidências iniciais</span> sobre sua
+                aplicação.</span
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>

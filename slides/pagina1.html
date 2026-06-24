@@ -2,7 +2,7 @@
 <html lang="pt-BR">
   <head>
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <link
@@ -14,6 +14,7 @@
       body {
         height: 100%;
         margin: 0;
+        padding: 0;
       }
       .slide-container {
         height: 720px;
@@ -44,64 +45,129 @@
         z-index: 1;
       }
       .left-panel {
-        padding: 40px 60px 10px 60px; /* keep top padding for title consistency, reduce bottom padding */
+        padding: 36px 56px 28px 56px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         border-right: 1px solid #2c3e50;
+        box-sizing: border-box;
       }
       .right-panel {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         background-color: #2c3e50;
         color: #f4f4f4;
+        padding: 40px 48px;
+        box-sizing: border-box;
+        text-align: center;
       }
       .logo-container {
-        margin-bottom: 20px; /* keep original spacing above title */
+        margin-bottom: 18px;
       }
       .logo-ufpa {
-        width: 120px;
+        width: 96px;
         height: auto;
         object-fit: contain;
+      }
+      .eyebrow {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #e74c3c;
+        margin: 0 0 10px 0;
       }
       h1 {
         font-family: "Space Grotesk", sans-serif;
         font-size: 44px;
         color: #2c3e50;
-        line-height: 1.2;
-        margin-bottom: 10px; /* reduced to save vertical space */
+        line-height: 1.15;
+        margin: 0 0 12px 0;
       }
-      .authors {
-        font-size: 20px;
-        line-height: 1.45;
-        margin-bottom: 10px;
+      h1 .accent {
+        color: #e74c3c;
+      }
+      .subtitle {
+        font-size: 21px;
+        line-height: 1.35;
+        margin: 0 0 28px 0;
+        color: #34495e;
+      }
+      .meta-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 14px;
       }
-      .author-primary {
-        font-size: 22px;
-        font-weight: 400;
-        margin: 0;
-      }
-      .author-role {
-        margin: 0;
+      .meta-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
         font-size: 19px;
+        line-height: 1.35;
       }
-      .author-role .role {
-        font-weight: 700;
+      .meta-list i {
+        color: #e74c3c;
+        margin-top: 5px;
+        font-size: 18px;
+        flex-shrink: 0;
+      }
+      .meta-list .name {
+        font-weight: 600;
         color: #2c3e50;
       }
-      .institution {
-        font-size: 20px;
-        color: #e74c3c;
-        font-weight: 700;
-        margin-top: 6px; /* reduced gap */
+      .meta-list .role {
+        display: block;
+        font-size: 16px;
+        color: #7f8c8d;
+        margin-top: 2px;
       }
-      .map-icon {
-        font-size: 200px;
+      .cover-icon {
+        font-size: 160px;
         color: #e74c3c;
+        margin-bottom: 28px;
+      }
+      .right-panel h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 34px;
+        color: #f4f4f4;
+        margin: 0 0 12px 0;
+        line-height: 1.2;
+      }
+      .right-panel .lead {
+        font-size: 20px;
+        line-height: 1.45;
+        margin: 0 0 28px 0;
+        color: rgba(244, 244, 244, 0.88);
+        max-width: 420px;
+      }
+      .institution-block {
+        border-top: 1px solid rgba(244, 244, 244, 0.25);
+        padding-top: 22px;
+        width: 100%;
+        max-width: 420px;
+      }
+      .institution-name {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        margin: 0 0 6px 0;
+        color: #e74c3c;
+      }
+      .institution-meta {
+        font-size: 18px;
+        line-height: 1.45;
+        margin: 0;
+        color: rgba(244, 244, 244, 0.82);
+      }
+      .institution-meta .highlight {
+        color: #1abc9c;
+        font-weight: 600;
       }
     </style>
   </head>
@@ -150,31 +216,44 @@
               src="https://private-us-east-1.manuscdn.com/sessionFile/hgwygMoZbo8v2GuPcDzN1L/sandbox/slides_resource_iv15uc27v0y7euf19eu8m-02ba087d-e2b-prod-us2_1780359969469_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9CcmFzYW9fVUZQQS1yZW1vdmViZy1wcmV2aWV3.png?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvaGd3eWdNb1pibzh2Mkd1UGNEek4xTC9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pdjE1dWMyN3YweTdldWYxOWV1OG0tMDJiYTA4N2QtZTJiLXByb2QtdXMyXzE3ODAzNTk5Njk0NjlfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5Q2NtRnpZVzlmVlVaUVFTMXlaVzF2ZG1WaVp5MXdjbVYyYVdWMy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xNTYwLGhfMTU2MC9mb3JtYXQsd2VicCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ckXb52gxb~NHMZepHgomt4DbwJ6MAqMvpAkeij6MQrUtiqyq7LcIvPbOwDU3VJxR3u4CMPxRsYI5kE09ilz-BCwRqCLkQVbcSrDua~6LRpJ4-eXfp6H7GiSSoQYGBVgouNEQ7oMVrg7~D6WqQ5GPNFPjI0ISNhw5vXmdE7Gj7FZ006ZgF~NEhpjUxy~P4AKJuccpwJP7XiVQZOPU9lP2AI43iX5MSfcnBsfkJ6rJH2NH6FfvTDzEVjEKi6qFQ7LPJnuGzLug56AfhLqSSxUZ1Dn2B~LwxuckbqW9haxr6nekNw0d2mW61CS0pzLOZILUluRtGBOxkdwIPo401n7oPA__"
               alt="Logo UFPA"
               class="logo-ufpa"
-              style="display: inline-block; transform: translate(188.2px, 0px)"
             />
           </div>
+          <p class="eyebrow">Trabalho de Conclusão de Curso</p>
           <h1>
-            Mapa Cidadão: Uma Aplicação de Crowdsourcing com Ênfase em
-            Espaciabilidade
+            <span class="accent">Mapa Cidadão:</span> Uma Aplicação de
+            Crowdsourcing com Ênfase em Espaciabilidade
           </h1>
-          <div class="authors">
-            <p class="author-primary">Mateus Vinicius S. Melo</p>
-            <p class="author-role">
-              <span class="role">Orientadora:</span> Marcelle Pereira Mota
-            </p>
-            <p class="author-role">
-              <span class="role">Coorientador:</span> André Avelino da Silva
-              Neto
-            </p>
-          </div>
-          <div class="institution">
-            <p></p>
-            Universidade Federal do Pará - UFPA
-            <p></p>
-          </div>
+          <p class="subtitle">Mateus Vinicius S. Melo</p>
+          <ul class="meta-list">
+            <li>
+              <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
+              <span>
+                <span class="name">Profª Marcelle Pereira Mota</span>
+                <span class="role">Orientadora</span>
+              </span>
+            </li>
+            <li>
+              <i class="fas fa-user-graduate" aria-hidden="true"></i>
+              <span>
+                <span class="name">Prof. André Avelino da Silva Neto</span>
+                <span class="role">Coorientador</span>
+              </span>
+            </li>
+          </ul>
         </div>
         <div class="right-panel">
-          <i class="fas fa-map-marker-alt map-icon" aria-hidden="true"></i>
+          <i class="fas fa-map-marker-alt cover-icon" aria-hidden="true"></i>
+          <h2>Mapeamento urbano colaborativo</h2>
+          <p class="lead">
+            Dados georreferenciados orientados à interpretação espacial e à
+            participação cidadã
+          </p>
+          <div class="institution-block">
+            <p class="institution-name">Universidade Federal do Pará — UFPA</p>
+            <p class="institution-meta">
+              Curso de <span class="highlight">Sistemas de Informação</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
