@@ -2,7 +2,7 @@
 <html lang="pt-BR">
   <head>
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap"
       rel="stylesheet"
     />
     <link
@@ -17,9 +17,10 @@
         padding: 0;
       }
       .slide-container {
+        width: 1280px;
         height: 720px;
         max-height: 720px;
-        width: 1280px;
+        overflow: hidden;
         background-color: #f4f4f4;
         font-family: "Inter", sans-serif;
         color: #34495e;
@@ -27,7 +28,6 @@
         flex-direction: column;
         border: 1px solid #2c3e50;
         box-sizing: border-box;
-        overflow: hidden;
       }
       .header {
         height: 84px;
@@ -44,212 +44,199 @@
         margin: 0;
       }
       .main-content {
-        flex: 1;
-        min-height: 0;
-        padding: 16px 32px 14px;
         display: flex;
         flex-direction: column;
-        box-sizing: border-box;
-      }
-      .main-content .grid {
         flex: 1;
         min-height: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 14px;
+        padding: 16px 24px;
+        overflow: hidden;
       }
-      .main-content .card {
-        background: white;
-        border: 1px solid #2c3e50;
+      .headers-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 12px;
+        flex-shrink: 0;
+      }
+      .column-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 26px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .findings-title {
+        color: #2980b9;
+        padding-right: 12px;
+        border-right: 1px solid #2c3e50;
+      }
+      .suggestions-title {
+        color: #d35400;
+        padding-left: 12px;
+      }
+      .column-title i {
+        font-size: 22px;
+      }
+      .results-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        flex: 1;
+        min-height: 0;
+      }
+      .results-column {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-height: 0;
+      }
+      .results-column .dim-item {
+        flex: 1;
+      }
+      .dim-item {
+        background-color: white;
         padding: 14px 16px;
         display: flex;
         flex-direction: column;
-        gap: 8px;
-        box-sizing: border-box;
+        justify-content: center;
+        min-height: 0;
         overflow: hidden;
+        box-sizing: border-box;
       }
-      .main-content .card.pos {
-        border-top: 3px solid #27ae60;
+      .dim-item.finding {
+        border-left: 5px solid #3498db;
       }
-      .main-content .card.opp {
-        border-top: 3px solid #3498db;
+      .dim-item.suggestion {
+        border-left: 5px solid #e67e22;
       }
-      .main-content .card.lim {
-        border-top: 3px solid #c0392b;
+      .dim-item--spacer {
+        visibility: hidden;
       }
-      .main-content .card-head {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 8px;
-        flex-shrink: 0;
-      }
-      .main-content .code {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 16px;
+      .dim-label {
         font-weight: 700;
-        color: #2980b9;
-        background: rgba(41, 128, 185, 0.1);
-        padding: 3px 10px;
+        font-size: 22px;
+        margin-bottom: 6px;
+        color: #2c3e50;
       }
-      .main-content .dim {
-        font-size: 13px;
-        color: #2980b9;
-        font-weight: 600;
-        line-height: 1.2;
-      }
-      .main-content .title {
-        font-family: "Space Grotesk", sans-serif;
+      .dim-text {
         font-size: 18px;
+        line-height: 1.3;
+        margin: 0;
+      }
+      .highlight {
         font-weight: 700;
-        color: #2c3e50;
-        margin: 0;
-        line-height: 1.28;
       }
-      .main-content .body {
-        font-size: 16px;
-        line-height: 1.35;
-        margin: 0;
-        flex: 1;
-      }
-      .main-content .src {
-        font-size: 13px;
-        color: #7f8c8d;
-        margin: 0;
-        flex-shrink: 0;
-      }
-      .main-content .tag {
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-        padding: 3px 8px;
-        margin-left: auto;
-      }
-      .main-content .tag.pos {
-        background: rgba(39, 174, 96, 0.15);
-        color: #27ae60;
-      }
-      .main-content .tag.opp {
-        background: rgba(52, 152, 219, 0.15);
+      .finding .highlight {
         color: #2980b9;
       }
-      .main-content .tag.lim {
-        background: rgba(192, 57, 43, 0.12);
-        color: #c0392b;
-      }
-      .main-content .footer-note {
-        margin-top: 10px;
-        font-size: 14px;
-        color: #7f8c8d;
-        flex-shrink: 0;
-      }
-      .main-content .highlight {
-        font-weight: 600;
-        color: #2c3e50;
+      .suggestion .highlight {
+        color: #d35400;
       }
     </style>
   </head>
   <body>
     <div class="slide-container">
       <div class="header">
-        <h2>Espaciabilidade — Evidências (1/2)</h2>
+        <h2>Resultados: Espaciabilidade (D1–D6)</h2>
       </div>
       <div class="main-content">
-        <div class="grid">
-          <div class="card pos">
-            <div class="card-head">
-              <span class="code">E-ESP01</span>
-              <span class="dim">D1 · Orientação e direção</span>
-              <span class="tag pos">Positivo</span>
+        <div class="headers-row">
+          <h3 class="column-title findings-title">
+            <i class="fas fa-check-circle"></i> Aspectos Favoráveis
+          </h3>
+          <h3 class="column-title suggestions-title">
+            <i class="fas fa-lightbulb"></i> Limitações e Recomendações
+          </h3>
+        </div>
+        <div class="results-grid">
+          <div class="results-column">
+            <div class="dim-item finding">
+              <div class="dim-label">
+                <i class="fas fa-compass"></i> Localização de ocorrências no mapa
+              </div>
+              <p class="dim-text">
+                P2: usuário
+                <span class="highlight">entende onde estão as ocorrências</span>;
+                P3: cenário João (D1) concluído com resultado
+                <span class="highlight">OK</span>.
+              </p>
             </div>
-            <p class="title">Localização de ocorrências no mapa</p>
-            <p class="body">
-              P1, P2: usuário
-              <span class="highlight">entende onde estão as ocorrências</span>.
-              <br />
-              P3: cenário João com resultado <span class="highlight">OK</span> —
-              padrões próximos funcionam.
-            </p>
-            <p class="src">P1, P2, P3 — inspeção</p>
+
+            <div class="dim-item finding">
+              <div class="dim-label">
+                <i class="fas fa-th"></i> Concentrações visuais perceptíveis
+              </div>
+              <p class="dim-text">
+                P2: ao observar os ponteiros,
+                <span class="highlight">percebe concentração de problemas</span>
+                em área específica da cidade (D2).
+              </p>
+            </div>
+
+            <div class="dim-item finding">
+              <div class="dim-label">
+                <i class="fas fa-crosshairs"></i> Georreferenciação para intervenção
+              </div>
+              <p class="dim-text">
+                P2: localização permite
+                <span class="highlight">ir ao local afetado</span>; anonimato do
+                reportador valorizado. P3: D3
+                <span class="highlight">OK</span> — click-to-identify funcional.
+              </p>
+            </div>
+
+            <div class="dim-item finding">
+              <div class="dim-label">
+                <i class="fas fa-link"></i> Associações espaciais e potencial analítico
+              </div>
+              <p class="dim-text">
+                P2: no mesmo bairro,
+                <span class="highlight">conjunto de problemas</span> (alagamento +
+                falta de energia); P3 percebe
+                <span class="highlight">potencial analítico</span> no
+                relacionamento de dados.
+              </p>
+            </div>
           </div>
-          <div class="card opp">
-            <div class="card-head">
-              <span class="code">E-ESP02</span>
-              <span class="dim">D1 · Orientação e direção</span>
-              <span class="tag opp">Melhoria</span>
+
+          <div class="results-column">
+            <div class="dim-item suggestion">
+              <div class="dim-label">
+                <i class="fas fa-th"></i> D2: Padrões Espaciais
+              </div>
+              <p class="dim-text">
+                P1: incluir
+                <span class="highlight">filtros ou agrupamentos</span> para
+                comparar intensidade entre regiões.
+              </p>
             </div>
-            <p class="title">
-              Exibir notificação ao usuário sobre proximidade da ocorrência
-            </p>
-            <p class="body">
-              P2: D1 <span class="highlight">localiza pontos com sucesso</span>,
-              mas orientação espacial pode ser enriquecida — falta indicar
-              <span class="highlight">posição do usuário</span> em relação ao
-              problema; sugere notificação de proximidade.
-            </p>
-            <p class="src">P2 — inspeção</p>
-          </div>
-          <div class="card pos">
-            <div class="card-head">
-              <span class="code">E-ESP03</span>
-              <span class="dim">D2 · Padrões espaciais</span>
-              <span class="tag pos">Positivo</span>
+
+            <div class="dim-item suggestion">
+              <div class="dim-label">
+                <i class="fas fa-link"></i> D4: Associações Espaciais
+              </div>
+              <p class="dim-text">
+                P1/P2: indicar <span class="highlight">recorrência</span> nos
+                pontos e adicionar
+                <span class="highlight">filtros temporais</span> para sustentar
+                hipóteses espaciais.
+              </p>
             </div>
-            <p class="title">Concentrações visuais perceptíveis</p>
-            <p class="body">
-              <b>P1, P2 e P3</b> : D2 <span class="highlight">sim</span> —
-              percebe concentração de problemas em área específica.
-            </p>
-            <p class="src">P1, P2, P3 — inspeção</p>
-          </div>
-          <div class="card lim">
-            <div class="card-head">
-              <span class="code">E-ESP04</span>
-              <span class="dim">D2 · Padrões espaciais</span>
-              <span class="tag lim">Limitação</span>
+
+            <div class="dim-item suggestion">
+              <div class="dim-label">
+                <i class="fas fa-map-marker-alt"></i> D6: Tipos Espaciais
+              </div>
+              <p class="dim-text">
+                P2/P3: diferenciar
+                <span class="highlight">cores semelhantes</span> e tornar ícones
+                de <span class="highlight">iluminação e pavimentação</span> mais
+                distintos à distância.
+              </p>
             </div>
-            <p class="title">Ausência de filtros e agrupamento</p>
-            <p class="body">
-              P1: sem filtro para alagamentos. <br>
-              P2 (entrevista):
-              tarefas analíticas não correspondem ao sistema sem agregação.
-               <br>P3: cenário D2 com
-              <span class="highlight">limitação</span>. 
-            </p>
-            <p class="src">P1, P2 e P3 — inspeção e entrevista</p>
-          </div>
-          <div class="card pos">
-            <div class="card-head">
-              <span class="code">E-ESP05</span>
-              <span class="dim">D3 · Localização ideal</span>
-              <span class="tag pos">Positivo</span>
-            </div>
-            <p class="title">Georreferenciação para intervenção</p>
-            <p class="body">
-              <b>P1, P2 e P3</b> : D3 <span class="highlight">sim</span> — localização permite ir
-              ao local afetado;
-            </p>
-            <p class="src">P1, P2, P3 — inspeção</p>
-          </div>
-          <div class="card pos">
-            <div class="card-head">
-              <span class="code">E-ESP06</span>
-              <span class="dim">D4 · Associações espaciais</span>
-              <span class="tag pos">Positivo</span>
-            </div>
-            <p class="title">Associações e potencial analítico</p>
-            <p class="body">
-              P2 e P3: conjunto de problemas no mesmo bairro. Potencial de relacionar
-              variáveis (ex.: lixo ↔ alagamento).
-            </p>
-            <p class="src">P2, P3 — inspeção e entrevista</p>
           </div>
         </div>
-        <p class="footer-note">
-          6 de 11 evidências · E-ESP01 a E-ESP06 · 4 positivas · 1 melhoria
-          · 1 limitação
-        </p>
       </div>
     </div>
   </body>
