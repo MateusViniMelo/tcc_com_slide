@@ -1,36 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <style>
-      html,body{height:100%;margin:0;padding:0}
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
       .slide-container {
         position: relative;
         height: 720px;
         max-height: 720px;
         width: 1280px;
-background-color: #F4F4F4;
-        font-family: 'Inter', sans-serif;
-        color: #34495E;
+        background-color: #f4f4f4;
+        font-family: "Inter", sans-serif;
+        color: #34495e;
         display: flex;
         flex-direction: column;
-        border: 1px solid #2C3E50;
+        border: 1px solid #2c3e50;
         box-sizing: border-box;
-      
+
         overflow: hidden;
       }
       .header {
         height: 84px;
         padding-top: 25px;
         padding-left: 60px;
-        border-bottom: 1px solid #2C3E50;
+        border-bottom: 1px solid #2c3e50;
         box-sizing: border-box;
       }
       h2 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 38px;
-        color: #2C3E50;
+        color: #2c3e50;
         margin: 0;
       }
       .main-content {
@@ -38,21 +49,14 @@ background-color: #F4F4F4;
         flex: 1;
       }
       .left-panel {
-        flex: 1;
+        flex: 1.2;
         padding: 40px 60px;
-        border-right: 1px solid #2C3E50;
-      }
-      .right-panel {
-        flex: 1;
-        padding: 40px 60px;
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(46, 204, 113, 0.05);
+        
       }
       h3 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 32px;
-        color: #27AE60;
+        color: #e74c3c;
         margin: 0 0 20px 0;
       }
       ul {
@@ -62,20 +66,27 @@ background-color: #F4F4F4;
       }
       li {
         font-size: 28px;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         line-height: 1.4;
         display: flex;
         align-items: flex-start;
       }
       li i {
-        color: #27AE60;
+        color: #3498db;
         margin-right: 15px;
         margin-top: 10px;
         font-size: 24px;
       }
       .highlight {
         font-weight: 700;
-        color: #2C3E50;
+        color: #2c3e50;
+      }
+      li.source-item {
+        font-size: 22px;
+        margin-bottom: 0;
+      }
+      li.source-item em {
+        font-style: italic;
       }
     
       .slide-pagination {
@@ -90,31 +101,56 @@ background-color: #F4F4F4;
         pointer-events: none;
       }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="slide-container">
-        <div class="header">
-            <h2>Crowdsourcing e Georreferenciamento</h2>
+      <div class="header">
+        <h2>O Conceito de Espaciabilidade</h2>
+      </div>
+      <div class="main-content">
+        <div class="left-panel">
+          <h3>Um Novo Critério em IHC</h3>
+          <ul>
+            <li>
+              <i class="fas fa-plus-circle"></i>
+              <span
+                >Proposto para preencher a
+                <span class="highlight">lacuna</span> dos critérios clássicos
+                (Usabilidade, UX).</span
+              >
+            </li>
+            <li>
+              <i class="fas fa-brain"></i>
+              <span
+                >Capacidade do design de
+                <span class="highlight">estimular o pensamento espacial</span>
+                do usuário.</span
+              >
+            </li>
+            <li>
+              <i class="fas fa-map"></i>
+              <span
+                >Foco na interpretação e análise de
+                <span class="highlight">dados georreferenciados</span>.</span
+              >
+            </li>
+            <li class="source-item">
+              <i class="fas fa-book"></i>
+              <span
+                >Proposto por
+                <span class="highlight">Neto & Mota (2025)</span> em
+                <em
+                  >Caminhos para a Espaciabilidade: Como Avaliar a Relação Entre
+                  o Design de Aplicações de Mapa e o Pensamento Espacial?</em
+                >
+                (IHC).</span
+              >
+            </li>
+          </ul>
         </div>
-        <div class="main-content">
-            <div class="left-panel">
-                <h3>Inteligência Coletiva</h3>
-                <ul>
-                    <li><i class="fas fa-users"></i> <span>Atividades distribuídas realizadas por um <span class="highlight">grande número de indivíduos</span>.</span></li>
-                    <li><i class="fas fa-mobile-alt"></i> <span>Plataformas digitais como mediadoras da <span class="highlight">participação cidadã</span>.</span></li>
-                    <li><i class="fas fa-database"></i> <span>VGI: O usuário como produtor voluntário de dados espaciais.</span></li>
-                </ul>
-            </div>
-            <div class="right-panel">
-                <h3>Impacto Urbano</h3>
-                <ul>
-                    <li><i class="fas fa-chart-line"></i> <span><span class="highlight">Escalabilidade:</span> Cobertura de grandes áreas territoriais.</span></li>
-                    <li><i class="fas fa-sync"></i> <span><span class="highlight">Atualização:</span> Dados em tempo real sobre a infraestrutura da cidade.</span></li>
-                    <li><i class="fas fa-eye"></i> <span>Transparência pública e apoio à governança urbana.</span></li>
-                </ul>
-            </div>
-        </div>
+        
+      </div>
     
       <div class="slide-pagination">5</div></div>
-</body>
+  </body>
 </html>

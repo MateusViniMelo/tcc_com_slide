@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
       html,body{height:100%;margin:0;padding:0}
       .slide-container {
@@ -32,57 +33,73 @@
       .main-content {
         display: flex;
         flex: 1;
-        padding: 15px 35px;
-        gap: 25px;
       }
-      .image-column {
-        flex: 0 0 630px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .image-column img {
-        max-width: 600px;
-        max-height: 600px;
-        object-fit: contain;
-        border: 2px solid #2C3E50;
-      }
-      .text-column {
+      .left-panel {
         flex: 1;
+        padding: 40px 50px;
+        border-right: 1px solid #2C3E50;
+      }
+      .right-panel {
+        flex: 1.2;
+        padding: 40px 50px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        background-color: rgba(52, 152, 219, 0.05);
       }
-      .info-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 14px;
+      h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 32px;
+        color: #2980B9;
+        margin: 0 0 25px 0;
       }
-      .info-item {
-        font-size: 22px;
+      .persona-box {
+        margin-bottom: 30px;
+        padding: 15px;
+        background: white;
+        border: 1px solid #CCC;
+      }
+      .persona-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .persona-header i {
+        font-size: 30px;
+        margin-right: 15px;
+        color: #3498DB;
+      }
+      .persona-name {
+        font-weight: 700;
+        font-size: 28px;
+        color: #2C3E50;
+      }
+      .persona-desc {
+        font-size: 24px;
+        line-height: 1.2;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        font-size: 26px;
+        margin-bottom: 15px;
         line-height: 1.2;
         display: flex;
         align-items: flex-start;
       }
-      .number-badge {
-        background-color: #3498DB;
-        color: white;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
+      li i {
+        color: #E74C3C;
         margin-right: 15px;
-        flex-shrink: 0;
-        font-size: 18px;
+        margin-top: 8px;
+        font-size: 20px;
       }
-      .highlight {
+      .dim-badge {
         font-weight: 700;
-        color: #2C3E50;
+        color: #E74C3C;
+        margin-right: 8px;
       }
-      p { margin: 0; }
     
       .slide-pagination {
         position: absolute;
@@ -100,35 +117,34 @@
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Interface do Mapa Cidadão: Cadastro de Ocorrência</h2>
+            <h2>Metodologia: Personas e Tarefas</h2>
         </div>
         <div class="main-content">
-            <div class="image-column">
-                <img src="../figuras/design_ocorrencia.png" alt="Modal de cadastro de ocorrência no Mapa Cidadão">
-            </div>
-            <div class="text-column">
-                <div class="info-grid">
-                    <div class="info-item">
-                        <div class="number-badge">1</div>
-                        <p><span class="highlight">Modal de registro:</span> Formulário sobreposto ao mapa para criação de novas ocorrências.</p>
+            <div class="left-panel">
+                <h3>Personas</h3>
+                <div class="persona-box">
+                    <div class="persona-header">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="persona-name">João (40 anos)</span>
                     </div>
-                    <div class="info-item">
-                        <div class="number-badge">2</div>
-                        <p><span class="highlight">Endereço:</span> Preenchido automaticamente com base no ponto selecionado no mapa.</p>
-                    </div>
-                    <div class="info-item">
-                        <div class="number-badge">3</div>
-                        <p><span class="highlight">Categoria:</span> Campo obrigatório com seleção do tipo de problema (iluminação, lixo, alagamento, etc.).</p>
-                    </div>
-                    <div class="info-item">
-                        <div class="number-badge">4</div>
-                        <p><span class="highlight">Descrição:</span> Texto livre para detalhar o problema, com limite de 250 caracteres.</p>
-                    </div>
-                    <div class="info-item">
-                        <div class="number-badge">5</div>
-                        <p><span class="highlight">Salvar:</span> Envio da ocorrência para persistência no servidor e exibição no mapa.</p>
-                    </div>
+                    <p class="persona-desc">Morador de bairro periférico. Foca em registrar iluminação e buracos e acompanhar resoluções.</p>
                 </div>
+                <div class="persona-box">
+                    <div class="persona-header">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="persona-name">Ana (27 anos)</span>
+                    </div>
+                    <p class="persona-desc">Estudante universitária. Consulta ocorrências existentes e analisa o impacto na mobilidade.</p>
+                </div>
+            </div>
+            <div class="right-panel">
+                <h3>Tarefas de Validação</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D1:</span> Localizar todas as ocorrências de iluminação no bairro (João).</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D2:</span> Identificar áreas com maior número de alagamentos (Ana).</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D4:</span> Relacionar falta de pavimentação com alagamentos (João).</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D6:</span> Compreender a representação de cada marcador (Ana).</span></li>
+                </ul>
             </div>
         </div>
     

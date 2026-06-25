@@ -53,21 +53,12 @@
       .left-panel {
         flex: 1;
         padding: 28px 52px 28px 60px;
-        border-right: 1px solid #2c3e50;
+   
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: rgba(127, 140, 141, 0.06);
-      }
-      .right-panel {
-        flex: 1;
-        padding: 28px 60px 28px 52px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 32px;
+        background-color: rgba(142, 68, 173, 0.04);
       }
       .main-content h3 {
         font-family: "Space Grotesk", sans-serif;
@@ -76,9 +67,6 @@
       }
       h3.fav {
         color: #27ae60;
-      }
-      h3.limit {
-        color: #c0392b;
       }
       ul {
         list-style: none;
@@ -96,13 +84,6 @@
       }
       .main-content .left-panel li i {
         color: #27ae60;
-        margin-right: 14px;
-        margin-top: 7px;
-        font-size: 20px;
-        flex-shrink: 0;
-      }
-      .main-content .section-limit li i {
-        color: #d35400;
         margin-right: 14px;
         margin-top: 7px;
         font-size: 20px;
@@ -147,7 +128,7 @@
   <body>
     <div class="slide-container">
       <div class="header">
-        <h2>Avaliação do MIE</h2>
+        <h2>Análise de Experiência do Usuário</h2>
       </div>
       <div class="main-content">
         <div class="left-panel">
@@ -156,38 +137,20 @@
             <li>
               <i class="fas fa-check-circle"></i>
               <div class="item-content">
-                <p class="item-title">Personas e estrutura do protocolo</p>
+                <p class="item-title">
+                  Utilidade para cidadão e gestão pública
+                </p>
                 <p class="item-body">
-                  P1: personas <span class="highlight">bem construídas</span>,
-                  tarefas <span class="highlight">bem direcionadas</span>. P3:
-                  tarefas adequadas para provocar reflexão espacial; João e Ana
-                  trazem perspectivas distintas — dimensões, personas e tarefas
-                  cumprem o objetivo de inspeção da espaciabilidade (P1, P3).
+                  P3: duplo valor —
+                  <span class="highlight">cidadão</span> (visão da
+                  região/bairro) e
+                  <span class="highlight">poder público</span> (demonstrar onde
+                  existem problemas). Utilidade social e institucional com
+                  expectativa de uso territorial (P3).
                 </p>
               </div>
             </li>
           </ul>
-        </div>
-        <div class="right-panel">
-          <div class="section-limit">
-            <h3 class="limit">Recomendações de melhoria</h3>
-            <ul>
-              <li>
-                <i class="fas fa-lightbulb"></i>
-                <div class="item-content">
-                  <p class="item-title">
-                    Ampliação das tarefas do protocolo
-                  </p>
-                  <p class="item-body">
-                    P3:
-                    incluir <span class="highlight">mais tarefas</span> para
-                    identificar gargalos. Oportunidade
-                    de refinamento do MIE, não invalidação do método (P1, P3).
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     

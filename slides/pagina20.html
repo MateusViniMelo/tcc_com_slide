@@ -1,21 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <style>
-      html,body{height:100%;margin:0;padding:0}
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
       .slide-container {
         position: relative;
         height: 720px;
         max-height: 720px;
         width: 1280px;
-        background-color: #F4F4F4;
-        font-family: 'Inter', sans-serif;
-        color: #34495E;
+        background-color: #f4f4f4;
+        font-family: "Inter", sans-serif;
+        color: #34495e;
         display: flex;
         flex-direction: column;
-        border: 1px solid #2C3E50;
+        border: 1px solid #2c3e50;
         box-sizing: border-box;
         overflow: hidden;
       }
@@ -23,66 +34,107 @@
         height: 84px;
         padding-top: 25px;
         padding-left: 60px;
-        border-bottom: 1px solid #2C3E50;
+        border-bottom: 1px solid #2c3e50;
         box-sizing: border-box;
+        flex-shrink: 0;
       }
       h2 {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 38px;
-        color: #2C3E50;
+        color: #2c3e50;
         margin: 0;
       }
       .main-content {
         display: flex;
         flex: 1;
+        min-height: 0;
+        font-size: 20px;
       }
       .left-panel {
         flex: 1;
-        padding: 40px 60px;
-        border-right: 1px solid #2C3E50;
+        padding: 28px 52px 28px 60px;
+        border-right: 1px solid #2c3e50;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(39, 174, 96, 0.04);
       }
       .right-panel {
         flex: 1;
-        padding: 40px 60px;
+        padding: 28px 60px 28px 52px;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        background-color: rgba(230, 126, 34, 0.05);
+        justify-content: center;
+        gap: 32px;
       }
-      h3 {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 32px;
-        color: #2980B9;
-        margin: 0 0 20px 0;
+      .main-content h3 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 30px;
+        margin: 0 0 16px 0;
       }
-      h3.orange { color: #E67E22; }
+      h3.fav {
+        color: #27ae60;
+      }
+      h3.limit {
+        color: #c0392b;
+      }
+      h3.rec {
+        color: #d35400;
+      }
       ul {
         list-style: none;
         padding: 0;
         margin: 0;
       }
-      li {
-        font-size: 26px;
+      .main-content li {
         margin-bottom: 18px;
         line-height: 1.35;
         display: flex;
         align-items: flex-start;
       }
-      li i {
-        color: #2980B9;
-        margin-right: 15px;
-        margin-top: 8px;
-        font-size: 22px;
+      li:last-child {
+        margin-bottom: 0;
       }
-      .right-panel li i { color: #E67E22; }
+      .main-content .left-panel li i {
+        color: #27ae60;
+        margin-right: 14px;
+        margin-top: 7px;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .main-content .section-limit li i {
+        color: #c0392b;
+        margin-right: 14px;
+        margin-top: 7px;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .main-content .section-rec li i {
+        color: #e67e22;
+      }
+      .main-content .item-title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #2c3e50;
+        line-height: 1.25;
+        margin: 0 0 6px 0;
+      }
+      .main-content .item-body {
+        font-size: 20px;
+        line-height: 1.35;
+        margin: 0;
+        color: #34495e;
+      }
       .highlight {
         font-weight: 700;
-        color: #2C3E50;
+        color: #2c3e50;
       }
-      .meta {
-        margin-top: 8px;
-        font-size: 22px;
-        color: #7F8C8D;
-        font-style: italic;
+      .item-content {
+        flex: 1;
+        min-width: 0;
       }
     
       .slide-pagination {
@@ -97,32 +149,110 @@
         pointer-events: none;
       }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="slide-container">
-        <div class="header">
-            <h2>Entrevista Semiestruturada</h2>
+      <div class="header">
+        <h2>Análise de Espaciabilidade</h2>
+      </div>
+      <div class="main-content">
+        <div class="left-panel">
+         
+          <h3 class="fav">Aspectos favoráveis</h3>
+          <ul>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div class="item-content">
+                <p class="item-title">Localização de ocorrências no mapa</p>
+                <p class="item-body">
+                  Georreferenciação atende consulta de localização; usuário
+                  identifica onde estão as ocorrências — maior consenso entre as
+                  dimensões (P2, P3).
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div class="item-content">
+                <p class="item-title">Concentrações visuais perceptíveis</p>
+                <p class="item-body">
+                  Inspeção visual permite perceber concentração de problemas em
+                  área específica da cidade (P2).
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div class="item-content">
+                <p class="item-title">Georreferenciação para intervenção</p>
+                <p class="item-body">
+                  Precisão dos marcadores apoia identificar onde intervir; (P2, P3).
+                </p>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <div class="item-content">
+                <p class="item-title">
+                  Associações espaciais básicas
+                </p>
+                <p class="item-body">
+                  Proximidade entre tipos de ocorrência viabiliza associações
+                  básicas e potencial de relacionar variáveis (P2, P3).
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div class="main-content">
-            <div class="left-panel">
-                <h3>Objetivos</h3>
-                <ul>
-                    <li><i class="fas fa-map-marked-alt"></i> <span>Avaliar se o Mapa Cidadão apoia o <span class="highlight">raciocínio espacial</span> e a interpretação de dados geográficos.</span></li>
-                    <li><i class="fas fa-clipboard-check"></i> <span><span class="highlight">Validar o MIE</span> — adequação de tarefas, personas e cenários de inspeção.</span></li>
-                </ul>
-                <p class="meta">Videoconferência remota · ~50–60 min · pós-inspeção</p>
-            </div>
-            <div class="right-panel">
-                <h3 class="orange">Estrutura</h3>
-                <ul>
-                    <li><i class="fas fa-door-open"></i> <span>Abertura — perfil e primeira impressão.</span></li>
-                    <li><i class="fas fa-search"></i> <span>Design e espaciabilidade — visualizador ou ferramenta analítica?</span></li>
-                    <li><i class="fas fa-thumbs-up"></i> <span>Uso — aspectos positivos, negativos e melhorias.</span></li>
-                    <li><i class="fas fa-tasks"></i> <span>Avaliação do método — adequação das tarefas e do instrumento.</span></li>
-                </ul>
-            </div>
+        <div class="right-panel">
+         
+          <div class="section-limit">
+            <h3 class="limit">Limitações e Recomendações de melhoria</h3>
+            <ul>
+              <li>
+                <i class="fas fa-exclamation-circle"></i>
+                <div class="item-content">
+                  <p class="item-title">
+                    Ausência de filtros e agrupamento por tipo
+                  </p>
+                  <p class="item-body">
+                    Impossível filtrar um único tipo de padrão; tarefas
+                    analíticas não correspondem às funcionalidades atuais sem
+                    agregação (P1, P3). Convergência com
+                    <span class="highlight">filtros temporais</span> sugeridos
+                    por P1, P2 e P3.
+                  </p>
+                </div>
+              </li>
+             
+              <li>
+                <i class="fas fa-exclamation-circle"></i>
+                <div class="item-content">
+                  <p class="item-title">
+                    Sobreposição de camadas pouco compreendida
+                  </p>
+                  <p class="item-body">
+                    Conceito de sobreposição de camadas não foi entendido na
+                    interface; leitura depende de zoom e escala (P3, P2).
+                  </p>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-exclamation-circle"></i>
+                <div class="item-content">
+                  <p class="item-title">Simbologia e clareza dos marcadores</p>
+                  <p class="item-body">
+                    Ícones e cores similares comprometem a distinção entre
+                    categorias; consenso sobre revisão da simbologia (P1, P2,
+                    P3).
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     
       <div class="slide-pagination">20</div></div>
-</body>
+  </body>
 </html>

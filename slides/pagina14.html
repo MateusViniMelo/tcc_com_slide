@@ -2,14 +2,12 @@
 <html lang="pt-BR">
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
       html,body{height:100%;margin:0;padding:0}
       .slide-container {
         position: relative;
-        height: 720px;
-        max-height: 720px;
         width: 1280px;
+        min-height: 720px;
         background-color: #F4F4F4;
         font-family: 'Inter', sans-serif;
         color: #34495E;
@@ -17,7 +15,6 @@
         flex-direction: column;
         border: 1px solid #2C3E50;
         box-sizing: border-box;
-        overflow: hidden;
       }
       .header {
         height: 84px;
@@ -32,90 +29,60 @@
         color: #2C3E50;
         margin: 0;
       }
-      .intro-bar {
-        padding: 14px 60px;
-        border-bottom: 1px solid #2C3E50;
-        box-sizing: border-box;
-      }
-      .intro-text {
-        font-size: 22px;
-        line-height: 1.35;
-        margin: 0;
-      }
       .main-content {
         display: flex;
         flex: 1;
+        padding: 15px 35px;
+        gap: 25px;
       }
-      .panel {
+      .image-column {
+        flex: 0 0 630px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .image-column img {
+        max-width: 600px;
+        max-height: 600px;
+        object-fit: contain;
+        border: 2px solid #2C3E50;
+      }
+      .text-column {
         flex: 1;
-        padding: 28px 36px;
-        border-right: 1px solid #2C3E50;
         display: flex;
         flex-direction: column;
+        justify-content: center;
       }
-      .panel:last-child {
-        border-right: none;
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
       }
-      .panel-blue {
-        background-color: rgba(52, 152, 219, 0.05);
-      }
-      .panel-green {
-        background-color: rgba(46, 204, 113, 0.06);
-      }
-      h3 {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 28px;
-        margin: 0 0 18px 0;
-      }
-      .panel-blue h3 {
-        color: #2980B9;
-      }
-      .panel-green h3 {
-        color: #27AE60;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      li {
+      .info-item {
         font-size: 22px;
-        margin-bottom: 16px;
-        line-height: 1.4;
+        line-height: 1.2;
         display: flex;
         align-items: flex-start;
       }
-      .panel-blue li i {
-        color: #2980B9;
-      }
-      .panel-green li i {
-        color: #27AE60;
-      }
-      li i {
-        margin-right: 12px;
-        margin-top: 6px;
-        font-size: 20px;
-        width: 24px;
-        text-align: center;
+      .number-badge {
+        background-color: #3498DB;
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-right: 15px;
         flex-shrink: 0;
+        font-size: 18px;
       }
       .highlight {
         font-weight: 700;
         color: #2C3E50;
       }
-      .stack-badge {
-        display: inline-block;
-        background-color: #3498DB;
-        color: white;
-        font-size: 18px;
-        font-weight: 700;
-        padding: 4px 12px;
-        border-radius: 6px;
-        margin-bottom: 14px;
-      }
-      .stack-badge.green {
-        background-color: #27AE60;
-      }
+      p { margin: 0; }
     
       .slide-pagination {
         position: absolute;
@@ -133,41 +100,36 @@
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Especificações Técnicas</h2>
-        </div>
-        <div class="intro-bar">
-            <p class="intro-text">
-                Arquitetura <span class="highlight">cliente-servidor</span> com API REST desacoplada do frontend, separando persistência de dados e interface cartográfica.
-            </p>
+            <h2>Interface do Mapa Cidadão: Cadastro de Ocorrência</h2>
         </div>
         <div class="main-content">
-            <div class="panel panel-blue">
-                <span class="stack-badge">Backend — API</span>
-                <h3>Servidor</h3>
-                <ul>
-                    <li><i class="fab fa-php"></i> <span><span class="highlight">PHP 8.4</span> como linguagem de execução no servidor.</span></li>
-                    <li><i class="fas fa-server"></i> <span><span class="highlight">Laravel 12</span> estruturando a API REST — autenticação, ocorrências e validação social.</span></li>
-                    <li><i class="fas fa-exchange-alt"></i> <span>Comunicação via <span class="highlight">endpoints JSON</span> consumidos pelo cliente web.</span></li>
-                </ul>
+            <div class="image-column">
+                <img src="../figuras/design_ocorrencia.png" alt="Modal de cadastro de ocorrência no Mapa Cidadão">
             </div>
-            <div class="panel panel-green">
-              <span class="stack-badge green">Frontend — Cliente</span>
-              <h3>Interface Web</h3>
-              <ul>
-                  <li><i class="fab fa-vuejs"></i> <span><span class="highlight">Nuxt 3</span> (Vue.js) para a aplicação web reativa e componentizada.</span></li>
-                  <li><i class="fas fa-map"></i> <span><span class="highlight">OpenStreetMap</span> como base cartográfica colaborativa do mapa interativo.</span></li>
-                 
-              </ul>
-          </div>
-            <div class="panel panel-blue">
-                <span class="stack-badge">Banco de Dados</span>
-                <h3>Persistência</h3>
-                <ul>
-                    <li><i class="fas fa-database"></i> <span><span class="highlight">PostgreSQL 13</span> como banco de dados relacional do sistema.</span></li>
-                    <li><i class="fas fa-globe-americas"></i> <span><span class="highlight">PostGIS 3.5</span> para armazenamento e consulta de dados geoespaciais das ocorrências.</span></li>
-                </ul>
+            <div class="text-column">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="number-badge">1</div>
+                        <p><span class="highlight">Modal de registro:</span> Formulário sobreposto ao mapa para criação de novas ocorrências.</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="number-badge">2</div>
+                        <p><span class="highlight">Endereço:</span> Preenchido automaticamente com base no ponto selecionado no mapa.</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="number-badge">3</div>
+                        <p><span class="highlight">Categoria:</span> Campo obrigatório com seleção do tipo de problema (iluminação, lixo, alagamento, etc.).</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="number-badge">4</div>
+                        <p><span class="highlight">Descrição:</span> Texto livre para detalhar o problema, com limite de 250 caracteres.</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="number-badge">5</div>
+                        <p><span class="highlight">Salvar:</span> Envio da ocorrência para persistência no servidor e exibição no mapa.</p>
+                    </div>
+                </div>
             </div>
-            
         </div>
     
       <div class="slide-pagination">14</div></div>

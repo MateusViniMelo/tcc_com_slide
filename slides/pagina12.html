@@ -1,28 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+      html,body{height:100%;margin:0;padding:0}
       .slide-container {
         position: relative;
         height: 720px;
         max-height: 720px;
         width: 1280px;
-        background-color: #f4f4f4;
-        font-family: "Inter", sans-serif;
-        color: #34495e;
+        background-color: #F4F4F4;
+        font-family: 'Inter', sans-serif;
+        color: #34495E;
         display: flex;
         flex-direction: column;
-        border: 1px solid #2c3e50;
+        border: 1px solid #2C3E50;
         box-sizing: border-box;
         overflow: hidden;
       }
@@ -30,19 +23,18 @@
         height: 84px;
         padding-top: 25px;
         padding-left: 60px;
-        border-bottom: 1px solid #2c3e50;
+        border-bottom: 1px solid #2C3E50;
         box-sizing: border-box;
       }
       h2 {
-        font-family: "Space Grotesk", sans-serif;
+        font-family: 'Space Grotesk', sans-serif;
         font-size: 38px;
-        color: #2c3e50;
+        color: #2C3E50;
         margin: 0;
       }
       .intro-bar {
-        padding: 16px 60px;
-        border-bottom: 1px solid #2c3e50;
-       
+        padding: 14px 60px;
+        border-bottom: 1px solid #2C3E50;
         box-sizing: border-box;
       }
       .intro-text {
@@ -51,27 +43,78 @@
         margin: 0;
       }
       .main-content {
+        display: flex;
         flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 24px 40px 32px;
-        box-sizing: border-box;
-        background-color: #e1edf9;
       }
-      .figure-wrapper {
-        width: 100%;
-        height: 100%;
+      .panel {
+        flex: 1;
+        padding: 28px 36px;
+        border-right: 1px solid #2C3E50;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
       }
-      .figure-wrapper img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-     
-        background-color: #ffffff;
+      .panel:last-child {
+        border-right: none;
+      }
+      .panel-blue {
+        background-color: rgba(52, 152, 219, 0.05);
+      }
+      .panel-green {
+        background-color: rgba(46, 204, 113, 0.06);
+      }
+      h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 28px;
+        margin: 0 0 18px 0;
+      }
+      .panel-blue h3 {
+        color: #2980B9;
+      }
+      .panel-green h3 {
+        color: #27AE60;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        font-size: 22px;
+        margin-bottom: 16px;
+        line-height: 1.4;
+        display: flex;
+        align-items: flex-start;
+      }
+      .panel-blue li i {
+        color: #2980B9;
+      }
+      .panel-green li i {
+        color: #27AE60;
+      }
+      li i {
+        margin-right: 12px;
+        margin-top: 6px;
+        font-size: 20px;
+        width: 24px;
+        text-align: center;
+        flex-shrink: 0;
+      }
+      .highlight {
+        font-weight: 700;
+        color: #2C3E50;
+      }
+      .stack-badge {
+        display: inline-block;
+        background-color: #3498DB;
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 4px 12px;
+        border-radius: 6px;
+        margin-bottom: 14px;
+      }
+      .stack-badge.green {
+        background-color: #27AE60;
       }
     
       .slide-pagination {
@@ -86,27 +129,47 @@
         pointer-events: none;
       }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="slide-container">
-      <div class="header">
-        <h2>Metodologia</h2>
-      </div>
-      <div class="intro-bar">
-        <p class="intro-text">
-          Abordagem qualitativa e exploratória, estruturada em quatro etapas
-          sequenciais — do desenvolvimento do sistema à análise dos resultados.
-        </p>
-      </div>
-      <div class="main-content">
-        <div class="figure-wrapper">
-          <img
-            src="../figuras/figura_etapas_3.jpg"
-            alt="Etapas da metodologia: Desenvolvimento do Sistema, Definição de Personas e Tarefas, Coleta de Dados e Análise dos Resultados"
-          />
+        <div class="header">
+            <h2>Especificações Técnicas</h2>
         </div>
-      </div>
+        <div class="intro-bar">
+            <p class="intro-text">
+                Arquitetura <span class="highlight">cliente-servidor</span> com API REST desacoplada do frontend, separando persistência de dados e interface cartográfica.
+            </p>
+        </div>
+        <div class="main-content">
+            <div class="panel panel-blue">
+                <span class="stack-badge">Backend — API</span>
+                <h3>Servidor</h3>
+                <ul>
+                    <li><i class="fab fa-php"></i> <span><span class="highlight">PHP 8.4</span> como linguagem de execução no servidor.</span></li>
+                    <li><i class="fas fa-server"></i> <span><span class="highlight">Laravel 12</span> estruturando a API REST — autenticação, ocorrências e validação social.</span></li>
+                    <li><i class="fas fa-exchange-alt"></i> <span>Comunicação via <span class="highlight">endpoints JSON</span> consumidos pelo cliente web.</span></li>
+                </ul>
+            </div>
+            <div class="panel panel-green">
+              <span class="stack-badge green">Frontend — Cliente</span>
+              <h3>Interface Web</h3>
+              <ul>
+                  <li><i class="fab fa-vuejs"></i> <span><span class="highlight">Nuxt 3</span> (Vue.js) para a aplicação web reativa e componentizada.</span></li>
+                  <li><i class="fas fa-map"></i> <span><span class="highlight">OpenStreetMap</span> como base cartográfica colaborativa do mapa interativo.</span></li>
+                 
+              </ul>
+          </div>
+            <div class="panel panel-blue">
+                <span class="stack-badge">Banco de Dados</span>
+                <h3>Persistência</h3>
+                <ul>
+                    <li><i class="fas fa-database"></i> <span><span class="highlight">PostgreSQL 13</span> como banco de dados relacional do sistema.</span></li>
+                    <li><i class="fas fa-globe-americas"></i> <span><span class="highlight">PostGIS 3.5</span> para armazenamento e consulta de dados geoespaciais das ocorrências.</span></li>
+                </ul>
+            </div>
+            
+        </div>
     
       <div class="slide-pagination">12</div></div>
-  </body>
+</body>
 </html>

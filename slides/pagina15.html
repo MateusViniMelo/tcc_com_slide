@@ -7,7 +7,8 @@
       .slide-container {
         position: relative;
         width: 1280px;
-        min-height: 720px;
+        height: 720px;
+        max-height: 720px;
         background-color: #F4F4F4;
         font-family: 'Inter', sans-serif;
         color: #34495E;
@@ -15,6 +16,7 @@
         flex-direction: column;
         border: 1px solid #2C3E50;
         box-sizing: border-box;
+        overflow: hidden;
       }
       .header {
         height: 84px;
@@ -22,6 +24,7 @@
         padding-left: 60px;
         border-bottom: 1px solid #2C3E50;
         box-sizing: border-box;
+        flex-shrink: 0;
       }
       h2 {
         font-family: 'Space Grotesk', sans-serif;
@@ -31,37 +34,45 @@
       }
       .main-content {
         display: flex;
+        flex-direction: column;
         flex: 1;
-        padding: 15px 35px;
-        gap: 25px;
+        padding: 16px 40px 24px;
+        gap: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
       }
-      .image-column {
-        flex: 0 0 630px;
+      .image-section {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
       }
-      .image-column img {
-        width: 600px;
-        height: 600px;
+      .image-section img {
+        max-width: 1150px;
+        max-height: 420px;
+        width: 100%;
         object-fit: contain;
         border: 2px solid #2C3E50;
       }
-      .text-column {
+      .legend-section {
         flex: 1;
         display: flex;
-        flex-direction: column;
+        align-items: flex-start;
+        border-top: 1px solid #2C3E50;
+        padding-top: 18px;
       }
       .info-grid {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        width: 100%;
       }
       .info-item {
-        font-size: 22px; /* Reduced slightly to fit all 7 points comfortably */
-        line-height: 1.2;
+        font-size: 22px;
+        line-height: 1.25;
         display: flex;
         align-items: flex-start;
+        gap: 12px;
       }
       .number-badge {
         background-color: #3498DB;
@@ -73,7 +84,6 @@
         align-items: center;
         justify-content: center;
         font-weight: bold;
-        margin-right: 15px;
         flex-shrink: 0;
         font-size: 18px;
       }
@@ -99,44 +109,23 @@
 <body>
     <div class="slide-container">
         <div class="header">
-            <h2>Interface do Mapa Cidadão: Detalhamento</h2>
+            <h2>Interface do Mapa Cidadão: Histórico de Ocorrências</h2>
         </div>
         <div class="main-content">
-            <div class="image-column">
-                <img src="https://private-us-east-1.manuscdn.com/sessionFile/hgwygMoZbo8v2GuPcDzN1L/sandbox/slides_resource_iz4z9mz5u03xfgld6fyv3-a5492b36-e2b-prod-us1_1779065785951_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9maWd1cmFfbWFwYV9jaWRhZGFvXzI.png?x-oss-process=image/resize,w_1560,h_1560/format,webp&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvaGd3eWdNb1pibzh2Mkd1UGNEek4xTC9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pejR6OW16NXUwM3hmZ2xkNmZ5djMtYTU0OTJiMzYtZTJiLXByb2QtdXMxXzE3NzkwNjU3ODU5NTFfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5bWFXZDFjbUZmYldGd1lWOWphV1JoWkdGdlh6SS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xNTYwLGhfMTU2MC9mb3JtYXQsd2VicCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=iizxUVu7VnYiBWJOEmMPyVQCXm5ZO7LOz1pPfxRqZ1ezGBnv1R2lIRs3mNYRehZv9JSORbeX8E8yETtg0vnTlhnYr5IdQ0DYRG-Y7ep6QRVygtPW8IEhTM~6gdQ38fQZ-f4LF1XuYZkQf5-Yzi1iZyph81lVmmRjtGBSxMgvEwp3ODju~TRpPJtFzsUFsoug37xgQzgjs~SOiiwoWTcRrFd~eAAs7F53~IHNZaItM0LBiFD90sonoOZWzOS9YGipXM~PxImABBMbtoH4N05l6UBmUqCu8K32S~wgAiSivQKUcrG~3xt5LoPQ4JAD8MgSoWrM5YOkbJeIq9JVdazhGg__" alt="Interface do Mapa Cidadão">
+            <div class="image-section">
+                <img src="../figuras/design_historico.png" alt="Tela de histórico de ocorrências do usuário autenticado no Mapa Cidadão">
             </div>
-            <div class="text-column">
+            <div class="legend-section">
                 <div class="info-grid">
                     <div class="info-item">
                         <div class="number-badge">1</div>
-                        <p><span class="highlight">Mapa Interativo:</span> Região central para navegação.</p>
+                        <p><span class="highlight">Dados exibidos:</span> Tipo, endereço, cidade, estado e data de criação de cada ocorrência.</p>
                     </div>
                     <div class="info-item">
                         <div class="number-badge">2</div>
-                        <p><span class="highlight">Navegação:</span> Ferramentas de zoom e deslocamento.</p>
-                    </div>
-                    <div class="info-item">
-                        <div class="number-badge">3</div>
-                        <p><span class="highlight">Marcadores:</span> Ícones e cores por categoria (alagamento, lixo, etc).</p>
-                    </div>
-                    <div class="info-item">
-                        <div class="number-badge">4</div>
-                        <p><span class="highlight">Legenda:</span> Auxílio na interpretação de tipos espaciais <span class="highlight">(D6)</span>.</p>
-                    </div>
-                    <div class="info-item">
-                        <div class="number-badge">5</div>
-                        <p><span class="highlight">Informações:</span> Detalhes da ocorrência ao clicar no marcador.</p>
-                    </div>
-                    <div class="info-item">
-                        <div class="number-badge">6</div>
-                        <p><span class="highlight">Colaboração:</span> Registro, validação ("like") e encerramento.</p>
-                    </div>
-                    <div class="info-item">
-                        <div class="number-badge">7</div>
-                        <p><span class="highlight">Perfil:</span> Menu de usuário e histórico de contribuições.</p>
+                        <p><span class="highlight">Status:</span> Indicadores visuais de <span class="highlight">Em Andamento</span> e <span class="highlight">Resolvida</span>.</p>
                     </div>
                 </div>
-               
             </div>
         </div>
     
