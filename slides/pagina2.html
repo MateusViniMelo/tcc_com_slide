@@ -46,40 +46,36 @@
       }
       .main-content {
         display: flex;
-        flex-direction: column;
         flex: 1;
         min-height: 0;
-        overflow: hidden;
       }
-      .section {
+      .left-panel,
+      .right-panel {
         flex: 1;
-        padding: 14px 50px 16px;
+        padding: 36px 52px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: 0;
-        overflow: hidden;
+        box-sizing: border-box;
       }
-     
-      .section-motivacao {
-        background-color: #ffffff;
-        justify-content: flex-start;
-        padding-top: 36px;
+      .left-panel {
+        border-right: 1px solid #2c3e50;
+        background-color: rgba(231, 76, 60, 0.05);
       }
-      .section-problema {
-        background-color: #ffffff;
+      .right-panel {
+        background-color: rgba(52, 152, 219, 0.05);
       }
       h3 {
         font-family: "Space Grotesk", sans-serif;
-        font-size: 28px;
-        margin: 0 0 6px 0;
+        font-size: 30px;
+        margin: 0 0 22px 0;
         flex-shrink: 0;
       }
-      .section-motivacao h3 {
-        color: #2980b9;
-      }
-      .section-problema h3 {
+      .left-panel h3 {
         color: #e74c3c;
+      }
+      .right-panel h3 {
+        color: #2980b9;
       }
       ul {
         list-style: none;
@@ -87,29 +83,24 @@
         margin: 0;
         display: flex;
         flex-direction: column;
-        gap: 12px;
-        flex: 1;
-        min-height: 0;
-        justify-content: flex-start;
+        gap: 18px;
       }
       li {
-        font-size: 23px;
-        line-height: 1.32;
+        font-size: 24px;
+        line-height: 1.35;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         gap: 14px;
-        padding: 4px 0;
-        box-sizing: border-box;
       }
-      .section-motivacao li i {
-        color: #3498db;
-      }
-      .section-problema li i {
+      .left-panel li i {
         color: #e74c3c;
       }
+      .right-panel li i {
+        color: #3498db;
+      }
       li i {
-        font-size: 28px;
+        font-size: 26px;
         flex-shrink: 0;
         margin-top: 2px;
       }
@@ -117,7 +108,6 @@
         font-weight: 700;
         color: #2c3e50;
       }
-    
       .slide-pagination {
         position: absolute;
         bottom: 16px;
@@ -137,8 +127,37 @@
         <h2>Introdução</h2>
       </div>
       <div class="main-content">
-        <div class="section section-motivacao">
-          <h3>Motivação</h3>
+        <div class="left-panel">
+          <h3>Problemas Urbanos</h3>
+          <ul>
+            <li>
+              <i class="fas fa-city"></i>
+              <span
+                >Cidades enfrentam desafios recorrentes de
+                <span class="highlight">infraestrutura e serviços</span>:
+                iluminação, pavimentação, alagamentos e lixo.</span
+              >
+            </li>
+            <li>
+              <i class="fas fa-eye-slash"></i>
+              <span
+                >Muitas ocorrências permanecem
+                <span class="highlight">pouco visíveis</span> para moradores e
+                gestão pública, dificultando priorização e resposta.</span
+              >
+            </li>
+            <li>
+              <i class="fas fa-map-marked-alt"></i>
+              <span
+                >A <span class="highlight">distribuição espacial</span> desses
+                problemas é essencial para identificar áreas críticas e orientar
+                ações coletivas.</span
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="right-panel">
+          <h3>Motivação para a construção do software</h3>
           <ul>
             <li>
               <i class="fas fa-eye"></i>
@@ -163,37 +182,9 @@
             </li>
           </ul>
         </div>
-        <div class="section section-problema">
-          <h3>Problema</h3>
-          <ul>
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <span
-                >Apps de mapeamento colaborativo focam na
-                <span class="highlight">visualização pontual</span>,
-                usando o mapa apenas como localização.</span
-              >
-            </li>
-            <li>
-              <i class="fas fa-chart-area"></i>
-              <span
-                >Esse enfoque limita a identificação de
-                <span class="highlight">padrões, áreas críticas e associações</span>
-                entre problemas urbanos.</span
-              >
-            </li>
-            <li>
-              <i class="fas fa-brain"></i>
-              <span
-                >Lacuna entre a <span class="highlight">coleta colaborativa de dados</span>
-                e o apoio efetivo ao raciocínio espacial e à compreensão
-                territorial.</span
-              >
-            </li>
-          </ul>
-        </div>
       </div>
-    
-      <div class="slide-pagination">2</div></div>
+
+      <div class="slide-pagination">2</div>
+    </div>
   </body>
 </html>
