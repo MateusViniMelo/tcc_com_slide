@@ -8,7 +8,8 @@
       .slide-container {
         position: relative;
         width: 1280px;
-        min-height: 720px;
+        height: 720px;
+        max-height: 720px;
         background-color: #F4F4F4;
         font-family: 'Inter', sans-serif;
         color: #34495E;
@@ -16,6 +17,7 @@
         flex-direction: column;
         border: 1px solid #2C3E50;
         box-sizing: border-box;
+        overflow: hidden;
       }
       .header {
         height: 84px;
@@ -36,12 +38,12 @@
       }
       .left-panel {
         flex: 1;
-        padding: 40px 50px;
+        padding: 30px 45px;
         border-right: 1px solid #2C3E50;
       }
       .right-panel {
         flex: 1.2;
-        padding: 40px 50px;
+        padding: 30px 45px;
         display: flex;
         flex-direction: column;
         background-color: rgba(52, 152, 219, 0.05);
@@ -53,7 +55,7 @@
         margin: 0 0 25px 0;
       }
       .persona-box {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         padding: 15px;
         background: white;
         border: 1px solid #CCC;
@@ -74,8 +76,9 @@
         color: #2C3E50;
       }
       .persona-desc {
-        font-size: 24px;
-        line-height: 1.2;
+        font-size: 20px;
+        line-height: 1.35;
+        margin: 0;
       }
       ul {
         list-style: none;
@@ -83,9 +86,9 @@
         margin: 0;
       }
       li {
-        font-size: 26px;
-        margin-bottom: 15px;
-        line-height: 1.2;
+        font-size: 20px;
+        margin-bottom: 14px;
+        line-height: 1.35;
         display: flex;
         align-items: flex-start;
       }
@@ -127,23 +130,23 @@
                         <i class="fas fa-user-circle"></i>
                         <span class="persona-name">João (40 anos)</span>
                     </div>
-                    <p class="persona-desc">Morador de bairro periférico. Foca em registrar iluminação e buracos e acompanhar resoluções.</p>
+                    <p class="persona-desc">Morador de bairro periférico. Utiliza o Mapa Cidadão para registrar ocorrências próximas à sua residência, como iluminação pública defeituosa e buracos na via. </p>
                 </div>
                 <div class="persona-box">
                     <div class="persona-header">
                         <i class="fas fa-user-circle"></i>
                         <span class="persona-name">Ana (27 anos)</span>
                     </div>
-                    <p class="persona-desc">Estudante universitária. Consulta ocorrências existentes e analisa o impacto na mobilidade.</p>
+                    <p class="persona-desc">Estudante universitária. Utiliza o sistema para consultar ocorrências já registradas na região onde mora e, eventualmente, criar novos registros, como acúmulo de lixo ou alagamentos.</p>
                 </div>
             </div>
             <div class="right-panel">
                 <h3>Tarefas de Validação</h3>
                 <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D1:</span> Localizar todas as ocorrências de iluminação no bairro (João).</span></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D2:</span> Identificar áreas com maior número de alagamentos (Ana).</span></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D4:</span> Relacionar falta de pavimentação com alagamentos (João).</span></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D6:</span> Compreender a representação de cada marcador (Ana).</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D1:</span> João deseja localizar todas as ocorrências de iluminação no bairro dele.</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D2:</span> Ana quer identificar quais áreas da cidade apresentam maior número de alagamentos.</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D4:</span> João tenta perceber se os problemas de falta de pavimentação registrados no seu bairro estão relacionados a ocorrências de alagamentos.</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span><span class="dim-badge">D6:</span> Ana precisa compreender claramente cada marcador no mapa.</span></li>
                 </ul>
             </div>
         </div>
